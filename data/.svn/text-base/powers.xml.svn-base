@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Lost_Labyrinth_Powers>
+  <power name="Magic Light" id="1" effect_name="duration" effect_strength="2" adjust_attribute_name="Light" duration_bonus_attribute_name="Spell Power" duration_multiplier="10" tile="6" cost="1" cost_attribute_name="Mana" animation="green stars">
+    <name language="Deutsch">Lichtzauber</name>
+	<description language="English">Conjures a small magical light and increases the light radius by +2 for the duration of Spellpower x 10 turns.</description>
+	<description language="Deutsch">Beschwört eine kleine schwebende Kugel aus magischem Licht, welche den Charakter begleitet und die Sichtweite um +2 Felder für die Dauer von Zaubermacht x 10 Runden erhöht.</description>
+    <requirement attribute_name="Basic Spellcasting" value="1"/>
+  </power>
+  <power name="Starlight" id="2" effect_name="duration" effect_strength="1" adjust_attribute_name="Light" duration_bonus_attribute_name="Spell Power" duration_multiplier="100" tile="7" cost="1" cost_attribute_name="Mana" animation="blue stars">
+    <name language="Deutsch">Sternenlicht</name>
+	<description language="English">Summons the light of the stars around the character and increases the light radius by +1 for the duration of Spellpower x 25 turns.</description>
+	<description language="Deutsch">Ruft das Licht der Sterne herbei, welches die Sichtweite des Charakters um +1 für die Dauer von Zaubermacht x 25 Runden erhöht.</description>
+    <requirement attribute_name="Astromancy" value="1"/>
+  </power>
+  <power name="Moonlight" id="3" effect_name="duration" effect_strength="3" adjust_attribute_name="Light" duration_bonus_attribute_name="Spell Power" duration_multiplier="25" tile="3" cost="2" cost_attribute_name="Mana" animation="blue stars">
+    <name language="Deutsch">Mondlicht</name>
+	<description language="English">Summons the light of the moon around the character and increases the light radius by +3 for the duration of Spellpower x 25 turns.</description>
+	<description language="Deutsch">Ruft das Licht des Mondes herbei, welches die Sichtweite des Charakters um +3 für die Dauer von Zaubermacht x 25 Runden erhöht.</description>
+    <requirement attribute_name="Astromancy" value="2"/>
+  </power>
+  <power name="Sunlight" id="4" effect_name="duration" effect_strength="4" adjust_attribute_name="Light" duration_bonus_attribute_name="Spell Power" duration_multiplier="10" tile="8" description="" cost="2" cost_attribute_name="Mana" animation="yellow stars">
+    <name language="Deutsch">Sonnenlicht</name>
+	<description language="English">Summons the light of the sun around the character and increases the light radius by +4 for the duration of Spellpower x 10 turns.</description>
+	<description language="Deutsch">Ruft das Licht der Sonne herbei, welches die Sichtweite des Charakters um +4 für die Dauer von Zaubermacht x 10 Runden erhöht.</description>
+    <requirement attribute_name="Astromancy" value="3"/>
+  </power>
+  <power name="Lockpicking" id="5" effect_name="transform field" end_turn="yes" tile="1" description="Tries to open a locked door or chest." success_attribute_name="Lockpicking" failure_message="You are unable to pick this lock." failure_sound="ow" success_message="You successfully pick this lock!" class="lock" sound="key" wrong_use_message="There's no lock to pick here." wrong_use_sound="huh" range="1" field_effect="unlock">
+    <name language="Deutsch">Schlösser öffnen</name>
+	<message type="success" language="English">You successfully pick this lock!</message>
+	<message type="success" language="Deutsch">Dir gelingt es, das Schloss zu öffnen!</message>
+	<message type="failure" language="English">You are unable to pick this lock.</message>
+	<message type="failure" language="Deutsch">Dir gelingt es nicht, das Schloss zu öffnen.</message>
+	<message type="wrong use" language="English">There's no lock to pick here.</message>
+	<message type="wrong use" language="Deutsch">Hier ist kein Schloss, das Du öffnen kannst.</message>
+	<message type="already used" language="English">You are still unable to pick this lock.</message>
+    <message type="already used" language="Deutsch">Dir gelingt es immer noch nicht, das Schloss zu öffnen.</message>
+	<description language="Deutsch">Der Charakter versucht, eine verschlossene Tür oder Truhe ohne den passenden Schlüssel zu öffnen.</description>
+    <requirement attribute_name="Lockpicking" value="1"/>
+  </power>
+  <power name="Zap" id="6" effect_name="attack" effect_strength="5" strength_randomized="yes" end_turn="yes" tile="4" strength_bonus_attribute_name="Spell Power" cost="1" cost_attribute_name="Mana" animation="purple fireball" range="2" class="magic">
+    <name language="Deutsch">Zap</name>
+	<description language="English">Throws a bolt of magical energy at an enemy. The bolt does 1-6 (+Spellpower) points of magical damage.</description>
+	<description language="Deutsch">Wirft einen kleinen Blitz aus arkaner Energie auf einen Gegner. Der Blitz bewirkt 1-6 (+Zaubermacht) Punkte magischen Schaden.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+    <requirement attribute_name="Basic Spellcasting" value="2"/>
+  </power>
+  <power name="Burning Mana" id="7" effect_name="transform field" effect_strength="2" strength_bonus_attribute_name="Spell Power" tile="5" animation="mixed stars" range="1" class="fire" wrong_use_sound="huh" sound="flame" modify_attribute_name="Mana">
+    <name language="Deutsch">Brennendes Mana</name>
+	<description language="English">Extinguishes a fire and increases the mana of the spellcaster by 2 + Spellpower points.</description>
+	<description language="Deutsch">Bringt ein Feuer zum Verlöschen und erhöht das Mana des Charakters um 2 + Zaubermacht Punkte.</description>
+	<message type="wrong use" language="English">There's no fire here.</message>
+	<message type="wrong use" language="Deutsch">Hier ist kein Feuer.</message>
+    <requirement attribute_name="Pyromancy" value="1"/>
+  </power>
+  <power name="Firebolt" id="8" effect_name="attack" effect_strength="12" end_turn="yes" tile="2" strength_bonus_attribute_name="Spell Power" success_attribute_name="Pyromancy" success_attribute_multiplier="10" success_bonus="40" cost="1" cost_attribute_name="Mana" failure_sound="failure" animation="red fireball" range="2" class="fire">
+    <name language="Deutsch">Feuerschlag</name>
+	<description language="English">Throws a bolt of fire at an enemy. The bold does 1-12 (+Spellpower) points of fire damage.</description>
+	<description language="Deutsch">Wirft ein Geschoss aus magischem Feuer auf einen Gegner. Das Geschoss bewirkt 1-12 (+Zaubermacht) Punkte Feuerschaden.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+    <requirement attribute_name="Pyromancy" value="2"/>
+  </power>
+  <power name="Dead Man's Gold" id="9" effect_name="transform field" tile="9" effect_strength="1" strength_bonus_attribute_name="Spell Power" animation="mixed stars" range="1" class="skeleton" wrong_use_sound="huh" modify_attribute_name="Gold" end_turn="yes" success_message="You gain [power_strength] gold from the Dead.">
+    <name language="Deutsch">Totengold</name>
+	<description language="English">Transforms a skeleton into a bag of gold: the character recieves (Spellpower) gold pieces.</description>
+	<description language="Deutsch">Verwandelt ein am Boden liegendes Skelett in einen Beutel Gold; der Charakter erhält (Zaubermacht) Goldstücke.</description>
+	<message type="wrong use" language="English">There are no bones here.</message>
+	<message type="wrong use" language="Deutsch">Hier sind keine Knochen.</message>
+	<message type="success" language="English">You gain [power_strength] gold from the Dead.</message>
+	<message type="success" language="Deutsch">DU erhältst [power_strength] Gold von den Toten.</message>
+    <requirement attribute_name="Necromancy" value="2"/>
+  </power>
+  <power name="Bear's Strength" id="10" effect_name="duration" effect_strength="5" adjust_attribute_name="Strength" duration_bonus_attribute_name="Spell Power" duration_multiplier="5" tile="10" cost="1" cost_attribute_name="Mana" animation="green circle">
+    <name language="Deutsch">Bärenstärke</name>
+	<description language="English">Summons the Strength of the Bear; the spellcaster gets a bonus of +5 to Strength for the duration of Spellpower x 5 turns.</description>
+	<description language="Deutsch">Erhöht die Stärke des Charakters um +5 für die Dauer von Zaubermacht x 5 Runden.</description>
+    <requirement attribute_name="Druid Magic" value="1"/>
+  </power>
+  <power name="Sneaking" id="11" tile="11" activates_ability_name="Sneaking" effect_name="activate ability">
+    <name language="Deutsch">Schleichen</name>
+	<description language="English">Instead of attacking a monster in melee, the character tries instead to sneak by without getting noticed.</description>
+	<description language="Deutsch">Statt ein Monster im Nahkampf zu attackieren, versucht der Charakter sich umbemerkt vorbeizuschleichen.</description>
+  </power>
+  <power name="Backstab" id="12" tile="12" activates_ability_name="Backstabbing" effect_name="activate ability">
+    <name language="Deutsch">Heimlicher Angriff</name>
+	<description language="English">An attack from the shadows - the Sneaking value of the character is used instead of his/her attack value. This attack bypasses armor and defenses, but it cannot be used against alerted monsters.</description>
+	<description language="Deutsch">Ein Angriff aus dem Verborgenen - der Schleichen-Wert wird anstelle des Angriffswertes verwendet. Der Angriff ignoriert Rüstung und Abwehr des Monsters; er kann alerdings nicht gegen alamierte Monster verwendet werden.</description>
+	<requirement attribute_name="Backstabbing" value="1"/>
+  </power>
+  <power name="Cure Tomb Rot" id="13" tile="13" effect_name="deplete attribute" deplete_attribute_name="Tomb Rot" cost="5" cost_attribute_name="Mana" success_attribute_name="Healing Magic" success_attribute_multiplier="10" success_bonus="70" failure_sound="failure" animation="grey circle">
+    <name language="Deutsch">Grabesfäule heilen</name>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+	<description language="English">Cures the character from the dreaded Tomb Rot disease.</description>
+	<description language="Deutsch">Heilt den Charakter von der gefürchteten Grabesfäule.</description>
+	<requirement attribute_name="Healing Magic" value="3"/>
+  </power>
+  <power name="Cure Coughing Disease" id="14" tile="14" effect_name="deplete attribute" deplete_attribute_name="Coughing Cold" cost="3" cost_attribute_name="Mana" success_attribute_name="Healing Magic" success_attribute_multiplier="10" success_bonus="70" failure_sound="failure" animation="aqua circle">
+    <name language="Deutsch">Keuchhusten heilen</name>
+	<description language="English">Cures the character from the Coughing Cold.</description>
+	<description language="Deutsch">Heilt den Charakter von einem Keuchhusten.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+	<requirement attribute_name="Healing Magic" value="2"/>
+  </power>
+  <power name="Ease Pain" id="15" tile="15" effect_name="modify attribute" effect_strength="1" strength_bonus_attribute_name="Spell Power" modify_attribute_name="Hitpoints" cost="2" cost_attribute_name="Mana" success_attribute_name="Healing Magic" success_attribute_multiplier="10" success_bonus="70" failure_sound="failure" animation="blue circle" end_turn="yes" cooldown="10">
+    <name language="Deutsch">Schmerzen lindern</name>
+	<description language="English">Eases the pain of wounds of the character and heals 1 + (Spell Power) hitpoints.</description>
+	<description language="Deutsch">Lindert den Schmerz von Wunden des Charakters und bringt bis zu 1 + (Zaubermacht) verlorene Lebenspunkte zurück.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+	<requirement attribute_name="Healing Magic" value="1"/>
+  </power>
+  <power name="Cure Poison" id="16" tile="16" effect_name="modify attribute" modify_attribute_name="Poisoned" effect_strength="2" strength_bonus_attribute_name="Spell Power" strength_multiplier="-1" cost="4" cost_attribute_name="Mana" success_attribute_name="Healing Magic" success_attribute_multiplier="10" success_bonus="50" failure_sound="failure" animation="green circle" cooldown="10" end_turn="yes">
+    <name language="Deutsch">Vergiftung heilen</name>
+	<description language="English">Cures the character from poison: reduces strength of poison by (2 + Spell Power) points.</description>
+	<description language="Deutsch">Heilt den Charakter von Vergiftungen: reduziert die Stärke von Vergiftungen um (2 + Zaubermacht) Punkte.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+	<requirement attribute_name="Healing Magic" value="5"/>
+  </power>
+  <power name="Slow" id="17" tile="17" effect_name="apply effect to monster" monster_effect="slowed" success_attribute_name="Witchcraft" success_attribute_multiplier="10" success_bonus="70" cost="1" cost_attribute_name="Mana" animation="skull circle" end_turn="yes" class="magic">
+    <name language="Deutsch">Verlangsamen</name>
+	<description language="English">Bonds of arcance energy restrict the movement of one monster: the slowed creature can move only 1 space per turn.</description>
+	<description language="Deutsch">Arkane Fesseln verlangsamen ein Monster: die verlangsamte Kreatur vermag sich nur noch ein Feld pro Runde zu bewegen.</description>
+	<requirement attribute_name="Witchcraft" value="1"/>
+  </power>
+  <power name="Weaken" id="18" tile="18" effect_name="apply effect to monster" monster_effect="weakened" success_attribute_name="Necromancy" success_attribute_multiplier="10" success_bonus="70" cost="1" cost_attribute_name="Mana" animation="skull stars" end_turn="yes" class="death">
+    <name language="Deutsch">Schwächen</name>
+	<description language="English">A weakened monster causes only half damage in melee combat.</description>
+	<description language="Deutsch">Ein geschwächtes Monster bewirkt nur halben Schaden im Nahkampf.</description>
+	<requirement attribute_name="Necromancy" value="1"/>
+  </power>
+  <power name="Magic Shield" id="19" tile="19" effect_name="modify attribute" modify_attribute_name="Magic Shield" effect_strength="0" strength_bonus_attribute_name="Spell Power" strength_multiplier="10" cost="4" cost_attribute_name="Mana" animation="blue stars" end_turn="yes">
+    <name language="Deutsch">Magisches Schutzschild</name>
+	<description language="English">Conjures a magic shield around the caster that protects him/her from damage. The shield slowly loses its strength over time.</description>
+	<description language="Deutsch">Beschwört ein magisches Schutzschild um den Zauberer herum, welches ihn vor Schaden schützt. Das Schild verliert mit der Zeit an Stärke.</description>
+	<requirement attribute_name="Basic Spellcasting" value="3"/>
+  </power>
+  <power name="Bark Skin" id="20" effect_name="duration" effect_strength="3" adjust_attribute_name="Armor" duration_bonus_attribute_name="Spell Power" duration_multiplier="5" tile="20" cost="2" cost_attribute_name="Mana" animation="green circle">
+    <name language="Deutsch">Rindenhaut</name>
+	<description language="English">The skin of the caster is hardened by this spell: the armor value of the spellcaster increases by +3 for the duration of Spellpower x 5 turns.</description>
+	<description language="Deutsch">Die Haut des Charakters gewinnt durch diesen Zauber an Widerstandskraft: der Rüstungswert erhöht sich um +3 für die Dauer von Zaubermacht x 5 Runden.</description>
+	<requirement attribute_name="Druid Magic" value="2"/>
+  </power>
+  <power name="Weapon Magic" id="21" tile="21" effect_name="duration" effect_strength="25" adjust_attribute_name="Attack" duration_bonus_attribute_name="Spell Power" duration_multiplier="5"  cost="1" cost_attribute_name="Mana" animation="red circle">
+    <name language="Deutsch">Waffenzauber</name>
+	<description language="English">A small cantrip increases the attack value of the character by +25% for the duration of Spell Power x 5 turns.</description>
+	<description language="Deutsch">Ein kleiner Zauber erhöht den Angriffswert des Charakters um +25% für die Dauer von Zaubermacht x 5 Runden.</description>
+    <requirement attribute_name="Warlock" value="1"/>
+  </power>
+  <power name="Confuse" id="22" tile="22" class="illusion|mind" effect_name="apply effect to monster" monster_effect="confused" success_attribute_name="Imagomancy" success_attribute_multiplier="10" success_bonus="60" cost="1" cost_attribute_name="Mana" animation="mixed stars" end_turn="yes">
+    <name language="Deutsch">Verwirren</name>
+	<description language="English">This strange cantrip confuses the mind of a monster; a confused monster runs around aimlessly.</description>
+	<description language="Deutsch">Dieser seltsame Zauber verwirrt die Gedanken eines Monsters; das verwirrte Monster läuft völlig ziellos umher.</description>
+	<requirement attribute_name="Imagomancy" value="1"/>
+  </power>
+  <power name="Strength Boost" id="23" tile="23" effect_name="duration" effect_strength="10" adjust_attribute_name="Strength" duration="5" cost="10" cost_attribute_name="Battle Rage (current)" animation="red circle">
+    <name language="Deutsch">Stärkeschub</name>
+	<description language="English">The battle rage provides the fighter with immense powers: +10 to strength for the duration of 5 turns.</description>
+	<description language="Deutsch">Die Kampfeswut verleiht dem Krieger gewaltige Kräfte: Stärke +10 für die Dauer von 5 Runden.</description>
+	<requirement attribute_name="Battle Rage" value="3"/>
+  </power>
+  <power name="Shield Spell" id="24" tile="24" effect_name="duration" effect_strength="10" adjust_attribute_name="Defense" duration_bonus_attribute_name="Spell Power" duration_multiplier="10" cost="2" cost_attribute_name="Mana" animation="red circle">
+    <name language="Deutsch">Schildzauber</name>
+	<description language="English">This protection spell increases the defense of the warlock by +10% for the duration of Spell Power x 10 turns.</description>
+	<description language="Deutsch">Dieser Schutzzauber erhöht die Abwehr des Warlocks um +10% für die Dauer von Zaubermacht x 5 Runden.</description>
+	<requirement attribute_name="Warlock" value="2"/>
+  </power>
+  <power name="Blur" id="25" tile="25" effect_name="duration" effect_strength="20" adjust_attribute_name="Defense" duration_bonus_attribute_name="Spell Power" duration_multiplier="5" cost="2" cost_attribute_name="Mana" animation="mixed stars">
+    <name language="Deutsch">Unschärfezauber</name>
+    <description language="English">A small illusion let the caster appear slightly blurred; defense +20% for the duration of Spell Power x 5 turns.</description>
+	<description language="Deutsch">Eine kleine Illusion bewirkt, dass der Zauberer in den Augen seiner Feinde unscharf erscheint; Abwehr +20% für die Dauer von Zaubermacht x 5 Runden.</description>
+  <requirement attribute_name="Imagomancy" value="2"/>
+  </power>
+  <power name="Witchsight" id="26" tile="26" effect_name="duration" effect_strength="25" adjust_attribute_name="Perception" duration_bonus_attribute_name="Spell Power" duration_multiplier="5" cost="2" cost_attribute_name="Mana" animation="green stars">
+    <name language="Deutsch">Hexensicht</name>
+	<description language="English">Arcane powers increase the senses of the witch: perception +20% for the duration of Spell Power x 5 turns.</description>
+	<description language="Deutsch">Arkane Kräfte schärfen alle Sinne der Hexe: Wahrnehmung +20% für die Dauer von Zaubermacht x 5 Runden.</description>
+	<requirement attribute_name="Witchcraft" value="2"/>
+  </power>
+  <power name="Sea of Flames" id="27" tile="27" effect_name="area attack" effect_strength="5" end_turn="yes" strength_bonus_attribute_name="Spell Power" success_attribute_name="Pyromancy" success_attribute_multiplier="10" success_bonus="50" cost="3" cost_attribute_name="Mana" failure_sound="failure" animation="fire flood" class="fire|magic" cooldown="5">
+    <name language="Deutsch">Flammenmeer</name>
+	<description language="English">Summons the fires of Gehenna to burn all enemies within sight; each monster takes 1 - (Spell Power + 5) points of fire damage.</description>
+	<description language="Deutsch">Beschwört die Feuer von Gehenna, die alle Gegner in Sichtweite verbrennen und jedem Monster 1 - (Spell Power + 5) Punkte Feuerschaden zufügen.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+	<requirement attribute_name="Pyromancy" value="3"/>
+  </power>
+  <power name="Summon Winds" id="28" tile="28" effect_name="area attack" effect_strength="5" end_turn="yes" strength_bonus_attribute_name="Spell Power" success_attribute_name="Aeromancy" success_attribute_multiplier="10" success_bonus="50" cost="1" cost_attribute_name="Mana" failure_sound="failure" animation="wind flood" class="air|magic" affects_only_monster_class="flying">
+    <name language="Deutsch">Winde rufen</name>
+	<description language="English">Summons strong winds that cause 1 - (Spell Power + 5) points of damage to all flying creatures within sight.</description>
+	<description language="Deutsch">Ruft starke Winde herbei, welche 1 - (Zaubermacht + 5) Punkte Schaden bei allen fliegenden Monstern in Sichtweite bewirken.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+	<requirement attribute_name="Aeromancy" value="1"/>
+  </power>
+  <power name="Windwalker" id="29" tile="29" effect_name="duration" effect_strength="3" adjust_attribute_name="Speed" duration_bonus_attribute_name="Spell Power" duration_multiplier="5" cost="1" cost_attribute_name="Mana" animation="aqua stars">
+    <name language="Deutsch">Windschreiter</name>
+	<description language="English">Helpful winds move along the caster, increasing his speed by +3 for the duration of Spell Power x 5 turns.</description>
+	<description language="Deutsch">Hilfreiche Winde begleiten den Zauberer und erhöhen seine Bewegungsweite um +3 für die Dauer von Zaubermacht x 5 Runden.</description>
+	<requirement attribute_name="Aeromancy" value="2"/>
+  </power>
+  <power name="Banish Undead" id="30" tile="30" effect_name="area attack" effect_strength="10" end_turn="yes" strength_bonus_attribute_name="Spell Power" success_attribute_name="White Magic" success_attribute_multiplier="10" success_bonus="50" cost="2" cost_attribute_name="Mana" failure_sound="failure" animation="cross flood" class="magic" affects_only_monster_class="undead">
+    <name language="Deutsch">Untote bannen</name>
+	<description language="English">Blazing rays of divine magic cause 1 - (Spell Power + 10) points of damage to each undead creature within sight.</description>
+	<description language="Deutsch">Leuchtende Strahlen der Macht der Alten Götter bewirken 1 - (Spell Power + 10) Punkte Schaden auf jede untote Kreatur in Sichtweite.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+    <requirement attribute_name="White Magic" value="4"/>
+  </power>
+  <power name="Divine Blast" id="31" tile="31" effect_name="attack" strength_randomized="yes" strength_bonus_attribute_name="Spell Power" randomized_strength_bonus="20" success_attribute_name="White Magic" success_attribute_multiplier="10" success_bonus="60" cost="1" cost_attribute_name="Mana" failure_sound="failure" animation="blue lightning" class="divine" affects_only_monster_class="undead|demon|devil">
+    <name language="Deutsch">Heiliger Schlag</name>
+	<description language="English">The powers of the Old Gods strike down at one monster and cause 0 to 20 (+Spell Power) points of damage. Affects only undead, demons or devils.</description>
+	<description language="Deutsch">Die Macht der Alten Götter wird auf ein Monster geschleudert und bewirkt (Zaubermacht) bis (Zaubermacht x 2) Punkte Schaden. Wirkt nur auf Untote, Dämonen oder Teufel.</description>
+	<message type="failure" language="English">The spell fizzles!</message>
+	<message type="failure" language="Deutsch">Der Zauber misslingt!</message>
+	<requirement attribute_name="White Magic" value="2"/>
+  </power>
+  <power name="Meditation" id="32" tile="32" effect_name="modify attribute" strength_bonus_attribute_name="Spell Power" animation="blue stars" modify_attribute_name="Mana" cooldown="25">
+    <name language="Deutsch">Meditation</name>
+	<description language="English">The spellcaster meditates for one turn and regains (Spell Power) points of mana.</description>
+	<description language="Deutsch">Der Zauberer meditiert für eine Runde und erhält (Zaubermacht) Punkte Mana zurück.</description>
+	<requirement attribute_name="Basic Spellcasting" value="3"/>
+  </power>
+  <power name="Divine Protection" id="33" tile="33" effect_name="duration" effect_strength="5" adjust_attribute_name="Armor" duration_bonus_attribute_name="Spell Power" duration_multiplier="5" cost="3" cost_attribute_name="Mana" animation="aqua circle">
+    <name language="Deutsch">Göttlicher Schutz</name>
+	<description language="English">The Old Gods grant the character their protection: +5 armor for the duration of Spell Power x 5 turns.</description>
+	<description language="Deutsch">Die Alten Götter verleihen dem Charakter ihren Schutz: Rüstung +5 für die Dauer von Zaubermacht x 5 Runden.</description>
+	<requirement attribute_name="White Magic" value="3"/>
+  </power>
+  <power name="Prayer" id="34" tile="34" effect_name="use field" effect_strength="7" strength_bonus_attribute_name="Spell Power" animation="aqua circle" range="1" class="shrine" wrong_use_sound="huh" modify_attribute_name="Mana" end_turn="yes" field_effect="pray">
+    <name language="Deutsch">Gebet</name>
+	<description language="English">The character prays at a shrine; the Old Gods grant him/her (Spellpower + 6) mana points.</description>
+	<description language="Deutsch">Der Charakter betet an einem Schrein; die Alten Götter verleihen ihm dafür (Zaubermacht + 6) Punkte Mana.</description>
+	<message type="success" language="English">You pray to the Old Ones and regain [power_strength] mana.</message>
+	<message type="success" language="Deutsch">Du betest zu den Alten Göttern und erhältst [power_strength] Mana.</message>
+	<message type="already used" language="English">The Old Ones are not listening to your prayers.</message>
+	<message type="already used" language="Deutsch">Die Alten Götter erhören Dich nicht.</message>
+	<message type="wrong use" language="English">There's no shrine here.</message>
+	<message type="wrong use" language="Deutsch">>Hier ist kein Schrein.</message>
+	<requirement attribute_name="White Magic" value="1"/>
+  </power>
+  <power name="Heal" id="35" tile="35" effect_name="modify attribute" effect_strength="10" strength_bonus_attribute_name="Spell Power" modify_attribute_name="Hitpoints" cost="3" cost_attribute_name="Mana" success_attribute_name="Healing Magic" success_attribute_multiplier="10" success_bonus="70" failure_message="The spell fizzles." failure_sound="failure" animation="blue circle" end_turn="yes" cooldown="25">
+    <name language="Deutsch">Heilen</name>
+	<description language="English">Heals the wounds of the character: he/she regains 10 + (Spell Power) lost hitpoints.</description>
+	<description language="Deutsch">Heilt die Wunden des Charakters und bringt bis zu 10 + (Zaubermacht) verlorene Lebenspunkte zurück.</description>
+	<requirement attribute_name="Healing Magic" value="4"/>
+  </power>
+  <power name="Sleep" id="36" tile="36" effect_name="apply effect to monster" monster_effect="sleep" success_attribute_name="Witchcraft" success_attribute_multiplier="10" success_bonus="40" cost="3" cost_attribute_name="Mana" animation="purple stars" end_turn="yes" class="mind|magic">
+    <name language="Deutsch">Schlafzauber</name>
+	<description language="English">Puts a monster to sleep; the monster will awaken again if it is attacked or the character stops nearby.</description>
+	<description language="Deutsch">Versetzt ein Monster in einen magischen Schlummer; das Monster wird erwachen, wenn es attackiert wird oder der Charakter in unmittelbarer Nähe stehenbleibt.</description>
+	<requirement attribute_name="Witchcraft" value="3"/>
+  </power>
+  <power name="Liquid Mana" id="37" tile="37" effect_name="use field" effect_strength="10" strength_bonus_attribute_name="Spell Power" animation="blue circle" range="1" class="water" wrong_use_sound="huh" modify_attribute_name="Mana" end_turn="yes" field_effect="draw mana" cooldown="25">
+    <name language="Deutsch">Blaues Mana</name>
+	<description language="English">The caster draws magickal power from a nearby body of water and gains (Spell Power + 10) mana points.</description>
+	<description language="Deutsch">Der Charakter zieht magische Energie aus einer grösseren Wasserfläche und erhält (Zaubermacht + 10) Punkte Mana zurück.</description>
+	<message type="success" language="English">You draw magickal power from the body of water and gain [power_strength] mana.</message>
+    <message type="success" language="Deutsch">Du zieht magische Energie aus der Wasserfläche und erhältst [power_strength] Punkte Mana.</message>
+    <message type="already used" language="English">You are not able to gain more energy from this body of water.</message>
+	<message type="already used" language="Deutsch">Du bist nicht in der Lage, erneut Energie aus dieser Wasserfläche zu ziehen.</message>
+	<message type="wrong use" language="English">There's no body of water here.</message>
+	<message type="wrong use" language="Deutsch">Hier befindet sich keine grössere Wasserfläche.</message>
+	<requirement attribute_name="Aquamancy" value="1"/>
+  </power>
+  <power name="Deep Mana" id="38" tile="38" effect_name="use field" effect_strength="5" strength_bonus_attribute_name="Spell Power" animation="red circle" range="1" class="dungeon entrance" wrong_use_sound="huh" modify_attribute_name="Mana" end_turn="yes" field_effect="draw mana">
+    <name language="Deutsch">Tiefes Mana</name>
+	<description language="English">The caster draws magickal power from the depths of the earth from a nearby dungeon entrance or from a staircase leading down and gains (Spell Power + 5) mana.</description>
+	<description language="Deutsch">Der Charakter zieht magische Energie aus einem Verlieseingang oder einer in die Tiefe führenden Treppe und erhält (Zaubermacht + 5) Punkte Mana.</description>
+	<message type="success" language="English">You draw magickal power from the depths and gain [power_strength] mana.</message>
+	<message type="success" language="Deutsch">Du ziehst magische Energie aus der Tiefe und erhältst [power_strength] Punkte Mana.</message>
+	<message type="already used" language="English">You are not able to gain more energy from here.</message>
+	<message type="already used" language="Deutsch">Du bist niicht in der Lage, erneut Energie von diesem Ort zu beziehen.</message>
+	<message type="wrong use" language="English">There's no dungeon entrance or staircase here.</message>
+	<message type="wrong use" language="Deutsch">Hier befindet sich weder ein Verlieseingang noch eine Treppe.</message>
+	<requirement attribute_name="Geomancy" value="1"/>
+  </power>
+  <power name="Mana from the Woods" id="39" tile="39" effect_name="use field" effect_strength="5" strength_bonus_attribute_name="Spell Power" animation="green circle" range="1" class="plant" wrong_use_sound="huh" modify_attribute_name="Mana" end_turn="yes" field_effect="draw mana" cooldown="25">
+    <name language="Deutsch">Mana der Wälder</name>
+	<description language="English">The caster draws magickal power from nearby trees and plants and gains (Spell Power + 5) mana.</description>
+	<description language="Deutsch">Der Charakter zieht magische Energie aus Bäumen und Pflanzen in der Nähe und gewinnt (Zaubermacht + 5) Punkte Mana.</description>
+	<message type="success" language="English">You draw magickal power from this plant and gain [power_strength] mana.</message>
+	<message type="success" language="Deutsch">Du ziehst magische Energie aus dieser Pflanze und erhältst [power_strength] Punkte Mana.</message>
+	<message type="already used" language="English">You are not able to gain more energy from here.</message>
+	<message type="already used" language="Deutsch">Du bist niicht in der Lage, erneut Energie von diesem Ort zu beziehen.</message>
+	<message type="wrong use" language="English">There's no plant here.</message>
+	<message type="wrong use" language="Deutsch">Hier befindet sich keine Pflanze.</message>
+	<requirement attribute_name="Druid Magic" value="1"/>
+  </power>
+  <power name="Disarm Trap" id="40" effect_name="transform field" end_turn="yes" tile="40" description="Tries to disarm a trap." success_attribute_name="Trap Lore" failure_sound="ow" class="trap" sound="key" wrong_use_sound="huh" range="1" field_effect="disarm">
+    <name language="Deutsch">Falle entschärfen</name>
+	<message type="success" language="English">You successfully disarm this trap!</message>
+	<message type="success" language="Deutsch">Dir gelingt es, die Falle zu entschärfen!</message>
+	<message type="failure" language="English">You are unable to disarm this trap.</message>
+	<message type="failure" language="Deutsch">Dir gelingt es nicht, die Falle zu entschärfen.</message>
+	<message type="wrong use" language="English">There's no trap here.</message>
+	<message type="wrong use" language="Deutsch">Hier ist keine Falle.</message>
+	<message type="already used" language="English">You are still unable to disarm this trap.</message>
+    <message type="already used" language="Deutsch">Dir gelingt es immer noch nicht, diese Falle zu entschärfen.</message>
+	<description language="Deutsch">Der Charakter versucht, eine Falle zu entschärfen.</description>
+    <requirement attribute_name="Trap Lore" value="1"/>
+  </power>
+</Lost_Labyrinth_Powers>

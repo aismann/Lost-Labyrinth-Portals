@@ -1,0 +1,62 @@
+#labels Phase-Design,Phase-Deploy,Featured
+=Items XML File Documentation=
+
+==Tag "item"==
+Describes the properties of an item. List of available attributes:
+ * *name*: name of the item (string; mandatory)
+ * *id*: unique ID of item (integer; ranges from 1 to 32000; mandatory)
+ * *class*: name of item class to which the item belongs to (string; optional; default: "")
+ * *tile*: nr of graphical tile (from the file "graphics/items.png") for display (integer; mandatory; ranges from 0 to 32000)
+ * *tile_equipped*: nr of graphical tile (from the file "graphics/items.png") for display when item is equipped (used for items that change appearance when equipped, like light sources) (integer; optional; default: -1 => no change; ranges from -1 to 32000)
+ * *weight*: the weight of the item in 1/10 pound (integer; optional; default: 0; ranges from 0 to 32000)
+ * *starting_equipment*: the number of items the characters starts the game with (integer; optional; default: 0)
+ * *can_be_equipped*: item can be equipped (string; "yes"/"no"; optional; default: "no")
+ * *description*: description of the item (string; optional; default: "")
+ * *price*: price of the item in gold pieces (integer; optional; default: 0; ranges from 0 to 32000)
+ * *fuel*: number of fuel units item possesses (used mainly for light sources) (integer; optional; default: 0; ranges from 0 to 32000)
+ * *fuel_consumed_per_turn*: number of fuel units consumed each turn as long as the item is equipped; if fuel reaches 0, the item no longer functions / can be equipped (integer; optional; default: 0; ranges from 0 to 32000)
+ * *fuel_name*: name for fuel / fuel units; "[fuel]" gets replaced by current number of fuel units when displayed (string; optional; default: "")
+ * *fuel_randomized*: the amount of fuel is randomized when the item is created (string; "yes"/"no"; optional; default: "no")
+ * *use_name*: name of action to use item (string; optional; default: "" => item cannot be used)
+ * *consumed_after_use*: the item vanishes after being used (string; "yes"/"no"; optional; default: "no")
+ * *turn_ends_after_use*: the current turn ends and the inventory is closed after the item has been used (string; "yes"/"no"; optional; default: "no")
+ * *use_message*: the message that is displayed when the item is being used (string; optional; default: "")
+ * *fuel_consumed_per_use*: number of fuel units consumed with each use; if the number of current fuel units reaches 0, the item can no longer be used (used for water containers etc)(integer; optional; default: 0; ranges from 0 to 32000)
+ * *artefact*: the item is a magic artefact; an artefact bonus is created for this item (string; "yes"/"no"; optional; default: "no")
+ * *equipment_limit*: maximum number of items for this item class that can be equipped at the same time (integer; optional; ranges from 0 to 32000; default: 0 => no limit)
+ * *identified*: the item is identified at the start of the game (string; "yes"/"no"; optional; default: "yes")
+ * *identified_when_used*: the item is identified when used (string; "yes"/"no"; optional; default: "no")
+ * *use_animation*: name of animation displayed when item is used; see ListofAnimations (string; optional; default: "" => no animation)
+
+===Tag "ability_bonus"===
+Describes a bonus / malus to an ability / attribute provided when the item gets used or is equipped. Has to be nested inside the "item" tag. Maximum number of ability boni per item: 5. List of available attributes:
+ * *attribute*: ID of the attribute for the bonus (integer; optional; ranges from 1 to 255; default: 0)
+ * *attribute_name*: name of the attribute for the bonus  (string; optional; used for ability reference by name)
+ * *value*: the value of the bonus / malus (integer; optional; ranges from -32000 to 32000; default: 0)
+ * *magic_bonus_multiplier*: multiplier applied to the magic bonus of the item to determine the final bonus for the attribute; applies only to artefacts (integer; ranges from 0 to 32000; optional; default: 0)
+ * *duration*: the duration the bonus is applied in turns; if this attribute is set, the bonus is only temporary (integer; ranges from 0 to 32000; optional; default: 0)
+
+===Tag "unequip"===
+Names an item class that gets unequipped when this item is equipped. Has to be nested inside the "item" tag. Maximum number of item classes that are unequipped per item: 5. List of available attributes:
+ * *class*: name of item class that gets unequipped (string; mandatory)
+
+===Tag "name"===
+Name of the item in another language. Has to be nested inside the "item" tag. List of attributes:
+ * *language*: name of the language (string; mandatory)
+
+===Tag "description"===
+Description of the item in another language. Has to be nested inside the "item" tag. List of attributes:
+ * *language*: name of the language (string; mandatory)
+
+===Tag "class_name"===
+Name of the item class in another language. Has to be nested inside the "item" tag. List of attributes:
+ * *language*: name of the language (string; mandatory)
+
+===Tag "fuel_name"===
+Name of the fuel in another language. Has to be nested inside the "item" tag. List of attributes:
+ * *language*: name of the language (string; mandatory)
+
+===Tag "message"===
+Message displayed when item is used. Has to be nested inside the "item" tag. List of attributes:
+ * *language*: name of the language (string; mandatory)
+ * *type*: type of usage (string; "use"/"equip"; mandatory)

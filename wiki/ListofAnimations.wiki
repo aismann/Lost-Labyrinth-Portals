@@ -1,0 +1,31 @@
+=List of Animations=
+ * *blue stars*: displays a cloud of flickering blue stars
+ * *red stars*: displays a cloud of flickering red stars
+ * *purple stars*: displays a cloud of flickering purple stars
+ * *green stars*: displays a cloud of flickering green stars
+ * *yellow stars*: displays a cloud of flickering yellow stars
+ * *aqua stars*: displays a cloud of flickering aqua stars
+ * *grey stars*: displays a cloud of flickering grey stars
+ * *skull stars*: displays a cloud of flickering small skulls
+ * *mixed stars*: displays a cloud of flickering stars in all colors
+ * *blue circle*: displays a circle of dancing blue stars
+ * *red circle*: displays a circle of dancing red stars
+ * *purple circle*: displays a circle of dancing purple stars
+ * *green circle*: displays a circle of dancing green stars
+ * *yellow circle*: displays a circle of dancing yellow stars
+ * *aqua circle*: displays a circle of dancing aqua stars
+ * *grey circle*: displays a circle of dancing grey stars
+ * *skull circle*: displays a circle of dancing small skulls
+ * *red fireball*: displays a ball of red fire moving across the screen
+ * *blue fireball*: displays a ball of blue fire moving across the screen
+ * *green fireball*: displays a ball of green fire moving across the screen
+ * *purple fireball*: displays a ball of purple fire moving across the screen
+ * *lightning*: displays a cloud of yellow lightning moving across the screen
+ * *blue lightning*: displays a cloud of blue lightning moving across the screen
+ * *red cloud*: displays a red cloud with numbers for 1/4 seconds
+ * *green cloud*: displays a green cloud with numbers for 1/4 seconds
+ * *magic shield*: displays a transparent purple shield with numbers for 1/4 seconds
+ * *battle rage*: displays the battle rage symbol with numbers for 1/4 seconds
+ * *fire flood*: fills the whole screen with flames for 1/4 seconds
+ * *wind flood*: fills the whole screen with whirlwinds for 1/4 seconds
+ * *cross flood*: fills the whole screen with crosses for 1/4 seconds

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Lost_Labyrinth_Items>
+  <item name="Torch" id="1" class="Light source" can_be_equipped="yes" tile="45" tile_equipped="46" weight="2" starting_equipment="3" fuel="100" fuel_consumed_per_turn="1" fuel_name="burns for [fuel] turns" price="1">
+    <ability_bonus attribute_name="Light" value="2"/>
+	<unequip class="Light source"/>
+	<name language="Deutsch">Fackel</name>
+	<description language="English">The torch is a basic equipment item that provides light in the dark dungeon dephts. A lit torch increases the light radius by +2 for the duration of 100 turns.</description>
+	<description language="Deutsch">Die Fackel gehört zur Grundausstattung jedes Abenteurers; sie spendet Licht in den dunklen Tiefen der Labyrinthe und erhöht den Sichtradius des Charakters um +2.</description>
+	<class_name language="Deutsch">Lichtquelle</class_name>
+	<fuel_name language="English">burns for [fuel] turns</fuel_name>
+	<fuel_name language="Deutsch">brennt für [fuel] Runden</fuel_name>
+  </item>
+  <item name="Dagger" id="2" class="One-handed weapon" can_be_equipped="yes" tile="0" weight="5" starting_equipment="1" price="2">
+    <ability_bonus attribute_name="Damage" value="1"/>
+    <ability_bonus attribute_name="Backstabbing" value="3"/>
+    <unequip class="One-handed weapon"/>
+	<unequip class="Two-handed weapon"/>
+	<name language="Deutsch">Dolch</name>
+	<description language="English">The dagger is small, hand-held weapon that provides a small bonus in melee combat. It is highly useful for hidden attacks.</description>
+	<description language="Deutsch">Der Dolch ist eine kleine Nahkampfwaffe, die hervorragend für heimliche Angriffe geeignet ist.</description>
+	<class_name language="Deutsch">Einhandwaffe</class_name>
+  </item>
+  <item name="Longsword" id="3" class="One-handed weapon" can_be_equipped="yes" tile="2" weight="25" price="20">
+    <ability_bonus attribute_name="Attack" value="10"/>
+	<ability_bonus attribute_name="Damage" value="2"/>
+	<ability_bonus attribute_name="Backstabbing" value="-1"/>
+	<unequip class="One-handed weapon"/>
+	<unequip class="Two-handed weapon"/>
+	<name language="Deutsch">Langschwert</name>
+	<class_name language="Deutsch">Einhandwaffe</class_name>
+	<description language="English">The longsword is the weapon of choice for the ambitious fighter. Forged from hardened steel, it is capable of punching through most armors.</description>
+	<description language="Deutsch">Das Langschwert ist die Standardwaffe aller ambitionierten Krieger. Geschmiedet aus gehärtetem Stahl ist das Langschwert in der Lage, auch die schwerste Rüstung zu durchbohren.</description>
+  </item>
+  <item name="Greatsword" id="4" class="Two-handed weapon" can_be_equipped="yes" tile="1" weight="20" price="30">
+    <ability_bonus attribute_name="Attack" value="10"/>
+	<ability_bonus attribute_name="Damage" value="3"/>
+	<ability_bonus attribute_name="Backstabbing" value="-2"/>
+	<unequip class="Two-handed weapon"/>
+    <unequip class="One-handed weapon"/>
+	<unequip class="Shield"/>
+	<name language="Deutsch">Bihänder</name>
+	<class_name language="Deutsch">Zweihandwaffe</class_name>
+	<description language="English">The greatsword is an immense sword suitable for fighters who prefer combat with two-handed weapons.</description>
+	<description language="Deutsch">Der Bihänder ist ein gewaltiges Schwert, geeignet für Krieger, die den Kampf mit Zweihandwaffen bevorzugen.</description> 
+  </item>
+  <item name="Buckler" id="5" class="Shield" can_be_equipped="yes" tile="29" weight="15" starting_equipment="0" price="10">
+    <ability_bonus attribute_name="Defense" value="10"/>
+    <unequip class="Shield"/>
+	<unequip class="Two-handed weapon"/>
+	<name language="Deutsch">Faustschild</name>
+	<class_name language="Deutsch">Schild</class_name>
+	<description language="English">A buckler is a small shield that provides the fighter with the ability to deflect blows in melee combat.</description>
+	<description language="Deutsch">Ein Faustschild ist ein kleines Schild, mit welchem der Krieger gegnerische Attacken abwehren kann.</description>
+  </item>
+  <item name="Whip" id="6" class="One-handed weapon" can_be_equipped="yes" tile="3" weight="4" price="10" starting_equipment="0">
+    <ability_bonus attribute_name="Attack" value="20"/>
+	<unequip class="One-handed weapon"/>
+	<unequip class="Two-handed weapon"/>
+	<name language="Deutsch">Peitsche</name>
+	<class_name language="Deutsch">Einhandwaffe</class_name>
+	<description language="English">The whip is a flexible weapon; it provides the user with a large attack bonus, but causes not much damage in combat.</description>
+	<description language="Deutsch">Die Peitsche verleiht dem Charakter einen grossen Trefferbonus; leider bewirkt sie nicht viel Schaden im Kampf.</description>
+  </item>
+  <item name="Mace" id="7" class="One-handed weapon" can_be_equipped="yes" tile="4" weight="10" price="2" starting_equipment="0">
+    <ability_bonus attribute_name="Attack" value="15"/>
+	<ability_bonus attribute_name="Damage" value="1"/>
+	<unequip class="Two-handed weapon"/>
+	<name language="Deutsch">Streitkolben</name>
+	<class_name language="Deutsch">Einhandwaffe</class_name>
+	<description language="English">Maces are standard equipment for most foot soldiers because they are easy to handle and are cheap to aquire.</description>
+	<description language="Deutsch">Streitkolben gehören zur Standardausrüstung vieler Soldaten, da sie einfach zu handhaben und nicht allzu teuer sind.</description>
+  </item>
+  <item name="Bread" id="8" class="Food" tile="43" weight="2" price="3" starting_equipment="1" use_name="Eat" consumed_after_use="yes" use_message="The bread tastes delicious!" turn_ends_after_use="yes">
+    <ability_bonus attribute_name="Hunger" value="-100"/>
+	<name language="Deutsch">Brot</name>
+	<class_name language="Deutsch">Nahrung</class_name>
+	<description language="English">A tasty slice of bread is valued highly in the dark dungeon dephts where food is scarce.</description>
+	<description language="Deutsch">Ein frischer Brotlaib wird hoch geschätzt in den lichtlosen Tiefen der Labyrinthe, wo die Nahrung knapp ist.</description>
+  </item>
+  <item name="Waterskin" id="9" class="Water container" tile="192" weight="5" price="5" starting_equipment="1" use_name="Drink" turn_ends_after_use="yes" fuel="3" fuel_consumed_per_use="1">
+    <ability_bonus attribute_name="Thirst" value="-50"/>
+	<name language="Deutsch">Wasserschlauch</name>
+	<class_name language="Deutsch">Wasserbehälter</class_name>
+	<description language="English">The waterskin provides the adventurer with enough water to survive the dryest deserts.</description>
+	<description language="Deutsch">Ein gefüllter Wasserschlauch enthält genug Wasser, um selbst in der heissesten Wüste überleben zu können.</description>
+	<fuel_name language="English">contains [fuel] portions</fuel_name>
+	<fuel_name language="Deutsch">enthält [fuel] Portionen</fuel_name>
+  </item>
+  <item name="Iron Key" id="10" class="Key" tile="230" weight="5" price="25" starting_equipment="0" use_name="Unlock" turn_ends_after_use="yes" consumed_after_use="yes">
+    <name language="Deutsch">Eherner Schlüssel</name>
+	<class_name language="Deutsch">Schlüssel</class_name>
+	<description language="English">An iron key can be used to unlock iron doors.</description>
+	<description language="Deutsch">Ein eherner Schlüssel kann dazu verwendet werden, eherne Türen aufzuschliessen.</description>
+  </item>
+  <item name="Magic Sword" id="11" class="One-handed weapon" can_be_equipped="yes" tile="154" weight="10" price="20" starting_equipment="0" artefact="yes">
+    <ability_bonus attribute_name="Attack" value="10" magic_bonus_multiplier="5"/>
+	<ability_bonus attribute_name="Damage" value="2"/>
+    <unequip class="One-handed weapon"/>
+	<unequip class="Two-handed weapon"/>
+	<name language="Deutsch">Magisches Schwert</name>
+	<class_name language="Deutsch">Einhandwaffe</class_name>
+	<description language="English">Magic swords are the stuff of legend; forged from meteor ore, they fight with their own mystical strength.</description>
+	<description language="Deutsch">Magische Schwerter sind Bestandteil vieler Heldensagen; geschmiedet aus Meteoreisen, verleihen sie ihrem Träger mystische Kräfte im Kampf.</description>
+  </item>
+  <item name="Belt of Giant Strength" id="12" tile="144" class="Belt" can_be_equipped="yes" weight="3" price="100" starting_equipment="0" artefact="yes">
+    <ability_bonus attribute_name="Strength" magic_bonus_multiplier="1"/>
+	<unequip class="Belt"/>
+	<name language="Deutsch">Gürtel der Riesenkräfte</name>
+	<class_name language="Deutsch">Gürtel</class_name>
+	<description language="English">Made out the raw hide of the mountain gryphon, the belt has the ability to increase the strength of the wearer.</description>
+	<description language="Deutsch">Hergestellt aus dem Fell des Berggreifs, verleiht dieser Gürtel seinem Träger Riesenkräfte.</description>
+  </item>
+  <item name="Ring of Forgotten Dreams" id="13" tile="148" class="Ring" can_be_equipped="yes" weight="1" price="100" starting_equipment="0" artefact="yes" equipment_limit="2">
+    <ability_bonus attribute_name="Hitpoints" magic_bonus_multiplier="3"/>
+	<name language="Deutsch">Ring der Vergessenen Träume</name>
+	<class_name language="Deutsch">Ring</class_name>
+	<description language="English">This magic ring is imbued with the essence of Forgotten Dreams and glows with an inner light.</description>
+	<description language="Deutsch">In diesem magischen Ring wurde die Essenz Vergessener Träume eingeschlossen; daher verfügt er über ein geheimnisvolles Glühen.</description> 
+  </item>
+  <item name="Ring of Hidden Desires" id="14" tile="148" class="Ring" can_be_equipped="yes" weight="1" price="100" starting_equipment="0" artefact="yes" equipment_limit="2">
+    <ability_bonus attribute_name="Perception" magic_bonus_multiplier="10"/>
+	<name language="Deutsch">Ring des Verborgenen Verlangens</name>
+	<class_name language="Deutsch">Ring</class_name>
+	<description language="English">This magic ring is imbued with the essences of Hidden Desires; it sharpens every sense of its wearer.</description>
+	<description language="Deutsch">In diesem Ring ist die Essenz Verborgenen Verlangens eingeschlossen; er schärft daher alle Sinne seines Trägers.</description>
+  </item>
+  <item name="Ring of the Minotaur Lords" id="15" tile="148" class="Ring" can_be_equipped="yes" weight="1" price="100" starting_equipment="0"  artefact="yes" equipment_limit="2">
+    <ability_bonus attribute_name="Battle Rage" magic_bonus_multiplier="1"/>
+	<name language="Deutsch">Ring der Minotaurkönige</name>
+	<class_name language="Deutsch">Ring</class_name>
+	<description language="English">This magic ring is valued highly among minotaurs because it makes its wearer unstoppable in battle.</description>
+	<description language="Deutsch">Dieser Ring besitzt hohes Ansehen bei den Minotauren, denn er bewirkt, dass sein Träger im Kampf unaufhaltsam ist.</description>
+  </item>
+  <item name="Leather Armor" id="16" tile="31" class="Armor" can_be_equipped="yes" weight="100" price="50" starting_equipment="0">
+    <ability_bonus attribute_name="Armor" value="2"/>
+	<name language="Deutsch">Lederrüstung</name>
+	<class_name language="Deutsch">Rüstung</class_name>
+	<unequip class="Armor"/>
+	<description language="English">A leather armor provides basic protection against damage without incurring any penalties.</description>
+	<description language="Deutsch">Die Lederrüstung bietet einen geringen Schutz gegen Schaden im Kampf, ohne den Charakter zu verlamgsamen.</description>
+  </item>
+  <item name="Hardened Leather Armor" id="17" tile="32" class="Armor" can_be_equipped="yes" weight="200" price="100" starting_equipment="0">
+    <ability_bonus attribute_name="Armor" value="3"/>
+	<ability_bonus attribute_name="Sneaking" value="-10"/>
+	<unequip class="Armor"/>
+	<name language="Deutsch">Gehärtete Lederrüstung</name>
+	<class_name language="Deutsch">Rüstung</class_name>
+	<description language="English">Hardened leather armor provides improved protection in combat, but is unsuitable for sneaking around.</description>
+	<description language="Deutsch">Die gehärtete Lederrüstung bietet einen verbesserten Schutz im Kampf, ist aber ungeeignet für Charaktere, die sich lautlos bewegen wollen.</description>
+  </item>
+  <item name="Chain Mail" id="18" tile="34" class="Armor" can_be_equipped="yes" weight="300" price="200" starting_equipment="0">
+    <name language="Deutsch">Kettenhemd</name>
+    <ability_bonus attribute_name="Armor" value="4"/>
+	<ability_bonus attribute_name="Sneaking" value="-20"/>
+	<unequip class="Armor"/>
+	<class_name language="Deutsch">Rüstung</class_name>
+	<description language="English">Chain mail provides much better protection than leather armor, but it's clumsy and makes a lot of noise.</description>
+	<description language="Deutsch">Ein Kettenhemd bietet wesentlich besseren Schutz als eine Lederrüstung; allerdings ist es auch recht schwer und laut.</description>
+  </item>
+  <item name="Scale Armor" id="19" tile="33" class="Armor" can_be_equipped="yes" weight="400" price="300" starting_equipment="0">
+    <name language="Deutsch">Schuppenpanzer</name>
+    <ability_bonus attribute_name="Armor" value="5"/>
+	<ability_bonus attribute_name="Sneaking" value="-30"/>
+	<ability_bonus attribute_name="Speed" value="-1"/>
+	<unequip class="Armor"/>
+	<class_name language="Deutsch">Rüstung</class_name>
+	<description language="English">Scale armor provides high protection in combat, but it also slows the wearer down.</description>
+	<description language="Deutsch">Der Schuppenpanzer bietet einen hohen Schutzfaktor im Kampf, aber sie verlangsamt ihren Träger.</description>
+  </item>
+  <item name="Plate Armor" id="20" tile="35" class="Armor" can_be_equipped="yes" weight="500" price="500" starting_equipment="0">
+    <name language="Deutsch">Plattenpanzer</name>
+	<ability_bonus attribute_name="Armor" value="6"/>
+	<ability_bonus attribute_name="Sneaking" value="-40"/>
+	<ability_bonus attribute_name="Speed" value="-2"/>
+	<unequip class="Armor"/>
+	<class_name language="Deutsch">Rüstung</class_name>
+	<description language="English">Plate armor provides total protection, but it also makes the character slow and encumbered.</description>
+	<description language="Deutsch">Der Plattenpanzer bietet massiven Schutz, aber er beschwert und verlangsamt den Träger auch erheblich.</description>
+  </item>
+  <item name="Gothic Plate Armor" id="21" tile="36" class="Armor" can_be_equipped="yes" weight="600" price="800" starting_equipment="0">
+    <name language="Deutsch">Gotischer Plattenpanzer</name>
+    <ability_bonus attribute_name="Armor" value="7"/>
+	<ability_bonus attribute_name="Sneaking" value="-50"/>
+	<ability_bonus attribute_name="Speed" value="-2"/>
+	<unequip class="Armor"/>
+	<description language="English">Gothic Plate Armor provides maximum protection, but it also slows the character down.</description>
+	<description language="Deutsch">Der gotische Plattenpanzer bietet maximalen Schutz; diese Rüstung ist allerdings auch extrem schwer und unbequem.</description>
+  </item>
+  <item name="Lesser Healing Potion" id="22" tile="90" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Schwacher Heiltrank</name>
+	<description language="English">A Lesser Healing Potion heals 5 hitpoints.</description>
+	<description language="Deutsch">Ein schwacher Heiltrank bringt 5 Lebenspunkte zurück.</description>
+	<message type="use" language="English">You feel a little better.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich ein wenig besser.</message>
+	<ability_bonus attribute_name="Hitpoints" value="5"/>
+  </item>
+  <item name="Lesser Healing Potion" id="23" tile="91" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Schwacher Heiltrank</name>
+	<description language="English">A Lesser Healing Potion heals 5 hitpoints.</description>
+	<description language="Deutsch">Ein schwacher Heiltrank bringt 5 Lebenspunkte zurück.</description>
+	<message type="use" language="English">You feel a little better.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich ein wenig besser.</message>
+	<ability_bonus attribute_name="Hitpoints" value="5"/>
+  </item>
+   <item name="Lesser Healing Potion" id="24" tile="92" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Schwacher Heiltrank</name>
+	<description language="English">A Lesser Healing Potion heals 5 hitpoints.</description>
+	<description language="Deutsch">Ein schwacher Heiltrank bringt 5 Lebenspunkte zurück.</description>
+	<message type="use" language="English">You feel a little better.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich ein wenig besser.</message>
+	<ability_bonus attribute_name="Hitpoints" value="5"/>
+  </item>
+  <item name="Healing Potion" id="25" tile="93" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="25" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Heiltrank</name>
+	<description language="English">A Healing Potion heals 25 hitpoints.</description>
+	<description language="Deutsch">Ein Heiltrank bringt 25 Lebenspunkte zurück.</description>
+	<message type="use" language="English">You feel better.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich besser.</message>
+	<ability_bonus attribute_name="Hitpoints" value="25"/>
+  </item>
+  <item name="Healing Potion" id="26" tile="94" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="25" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Heiltrank</name>
+	<description language="English">A Healing Potion heals 25 hitpoints.</description>
+	<description language="Deutsch">Ein Heiltrank bringt 25 Lebenspunkte zurück.</description>
+	<message type="use" language="English">You feel better.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich besser.</message>
+	<ability_bonus attribute_name="Hitpoints" value="25"/>
+  </item>
+  <item name="Greater Healing Potion" id="27" tile="95" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="50" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Schwacher Heiltrank</name>
+	<description language="English">A Greater Healing Potion heals 100 hitpoints.</description>
+	<description language="Deutsch">Ein Starker Heiltrank bringt 100 Lebenspunkte zurück.</description>
+	<message type="use" language="English">You feel much better.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich viel besser.</message>
+	<ability_bonus attribute_name="Hitpoints" value="100"/>
+  </item>
+  <item name="Mana Potion" id="28" tile="96" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Manatrank</name>
+	<description language="English">An Energy Potion brings back 25 mana points.</description>
+	<description language="Deutsch">Ein Manatrank bringt 25 Punkte Mana zurück.</description>
+	<message type="use" language="English">You feel refreshed.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich erfrischt.</message>
+	<ability_bonus attribute_name="Mana" value="25"/>
+  </item>
+  <item name="Mana Potion" id="29" tile="97" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Manatrank</name>
+	<description language="English">An Energy Potion brings back 25 mana points.</description>
+	<description language="Deutsch">Ein Manatrank bringt 25 Punkte Mana zurück.</description>
+	<message type="use" language="English">You feel refreshed.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich erfrischt.</message>
+	<ability_bonus attribute_name="Mana" value="25"/>
+  </item>
+  <item name="Mana Potion" id="30" tile="98" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes">
+    <name language="Deutsch">Manatrank</name>
+	<description language="English">An Energy Potion brings back 25 mana points.</description>
+	<description language="Deutsch">Ein Manatrank bringt 25 Punkte Mana zurück.</description>
+	<message type="use" language="English">You feel refreshed.</message>
+	<message type="use" language="Deutsch">Du fühlst Dich erfrischt.</message>
+	<ability_bonus attribute_name="Mana" value="25"/>
+  </item>
+  <item name="Poison Potion" id="31" tile="99" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="green stars">
+    <name language="Deutsch">Gifttrank</name>
+	<description language="English">A Poison Potion increases the poisoning by 5 points.</description>
+	<description language="Deutsch">Ein Gifttrank erhöht die Giftstufe um 5 Punkte.</description>
+	<message type="use" language="English">That was poison in this potion!</message>
+	<message type="use" language="Deutsch">In diesem Trank war Gift!</message>
+	<ability_bonus attribute_name="Poisoned" value="5"/>
+  </item>
+  <item name="Elixir of Strength" id="32" tile="100" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="500" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="red stars">
+    <name language="Deutsch">Elixier der Stärke</name>
+	<description language="English">An Elixir of Strength increases the strength of the character permamently by one point.</description>
+	<description language="Deutsch">Ein Elixir der Stärke erhöht die Stärke des Charakters permanent um einen Punkt.</description>
+	<message type="use" language="English">You feel much stronger!</message>
+	<message type="use" language="Deutsch">Du fühlst Dich wesentlich stärker!</message>
+	<ability_bonus attribute_name="Strength" value="1"/>
+  </item>
+  <item name="Elixir of Dexterity" id="33" tile="101" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="500" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="yellow stars">
+    <name language="Deutsch">Elixier der Geschicklichkeit</name>
+	<description language="English">An Elixir of Dexterity increases the dexterity of the character permamently by one point.</description>
+	<description language="Deutsch">Ein Elixir der Geschicklichkeit erhöht die Geschicklichkeit des Charakters permanent um einen Punkt.</description>
+	<message type="use" language="English">You feel much more agile!</message>
+	<message type="use" language="Deutsch">Du fühlst Dich wesentlich gewandter!</message>
+	<ability_bonus attribute_name="Dexterity" value="1"/>
+  </item>
+  <item name="Elixir of Intelligence" id="34" tile="102" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="500" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="blue stars">
+    <name language="Deutsch">Elixier der Intelligenz</name>
+	<description language="English">An Elixir of Intelligence increases the intelligence of the character permamently by one point.</description>
+	<description language="Deutsch">Ein Elixir der Intelligenz erhöht die Intelligenz des Charakters permanent um einen Punkt.</description>
+	<message type="use" language="English">You feel much smarter!</message>
+	<message type="use" language="Deutsch">Du fühlst Dich wesentlich schlauer!</message>
+	<ability_bonus attribute_name="Intelligence" value="1"/>
+  </item>
+  <item name="Potion of Speed" id="35" tile="103" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="25" turn_ends_after_use="no" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="aqua circle">
+    <name language="Deutsch">Trank der Schnelligkeit</name>
+	<description language="English">A Potion of Speed increases the movement of the character by +5 for the duraion of 25 turns.</description>
+	<description language="Deutsch">Ein Trank der Schnelligkeit erhöht die Bewegungsweite des Charakters um +5 für die Dauer von 25 Runden.</description>
+	<message type="use" language="English">You feel faster...</message>
+	<message type="use" language="Deutsch">Du fühlst Dich schneller...</message>
+	<ability_bonus attribute_name="Speed" value="5" duration="25"/>
+  </item>
+  <item name="Potion of Magic" id="36" tile="104" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="25" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="purple circle">
+    <name language="Deutsch">Trank der Magie</name>
+	<description language="English">A Potion of Magic increases the spell power by +5 for the duration of 25 turns.</description>
+	<description language="Deutsch">Ein Trank der Magie erhöht die Zaubermacht um +5 für die Dauer von 25 Runden.</description>
+	<message type="use" language="English">You feel the flow of arcane energies ...</message>
+	<message type="use" language="Deutsch">Du fühlst arkane Energien um Dich herum ...</message>
+	<ability_bonus attribute_name="Spell Power" value="5" duration="25"/>
+  </item>
+  <item name="Potion of Invisibility" id="37" tile="105" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="25" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="grey circle">
+    <name language="Deutsch">Trank der Unsichtbarkeit</name>
+	<description language="English">A Potion of Invisibility increases the sneaking by +70% for the duration of 25 turns.</description>
+	<description language="Deutsch">Ein Trank der Unsichtbarkeit erhöht den Schleichen-Wert um +70% für the duration of 25 turns.</description>
+	<message type="use" language="English">You get invisible ...</message>
+	<message type="use" language="Deutsch">Du wirst unsichtbar ...</message>
+	<ability_bonus attribute_name="Sneaking" value="75" duration="25"/>
+  </item>
+  <item name="Potion of Cure Poison" id="38" tile="106" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="20" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="green circle">
+    <name language="Deutsch">Gegengift</name>
+	<description language="English">The Potion of Cure Poison reduces the poison level by 10 points.</description>
+	<description language="Deutsch">Das Gegengift reduziert die Vergiftungen um 10 Punkte.</description>
+	<message type="use" language="English">You feel better ...</message>
+	<message type="use" language="Deutsch">Du fühlst Dich besser ...</message>
+	<ability_bonus attribute_name="Poisoned" value="-10"/>
+  </item>
+  <item name="Potion of Cure Blindness" id="39" tile="107" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="20" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="grey circle">
+    <name language="Deutsch">Trank der Heilung von Erblindung</name>
+	<description language="English">The Potion of Cure Blindness reduces the duration of blindness by 25 turns.</description>
+	<description language="Deutsch">Der Trank der Heilung von Erblindung reduziert die Dauer einer Erblindung um 25 Runden.</description>
+	<message type="use" language="English">You can see clearer now.</message>
+	<message type="use" language="Deutsch">Deine Augen klären sich.</message>
+	<ability_bonus attribute_name="Blind" value="-10"/>
+  </item>
+  <item name="Potion of Blindness" id="40" tile="108" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="grey circle">
+    <name language="Deutsch">Trank der Erblindung</name>
+	<description language="English">The Potion of Blindness increases the duration of blindness by 25 turns.</description>
+	<description language="Deutsch">Der Trank der Erblindung erhöht die Dauer der Erblindung um 25 Runden.</description>
+	<message type="use" language="English">Everything grows darker... </message>
+	<message type="use" language="Deutsch">Alles wird dunkel... </message>
+	<ability_bonus attribute_name="Blind" value="25"/>
+  </item>
+  <item name="Potion of Cure Cold" id="41" tile="109" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="20" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="aqua circle">
+    <name language="Deutsch">Trank der Heilung von Keuchhusten</name>
+	<description language="English">The Potion of Cure Cold reduces the duration of the Coughing Cold by 25 turns.</description>
+	<description language="Deutsch">Der Trank Heilung von Keuchhusten reduziert die Dauer von Keuchhusten um 25 Runden.</description>
+	<message type="use" language="English">You can breathe better now... </message>
+	<message type="use" language="Deutsch">Du kannst nun viel besser atmen... </message>
+	<ability_bonus attribute_name="Coughing Cold" value="-25"/>
+  </item>
+  <item name="Potion of Coughing Cold" id="42" tile="110" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="aqua circle">
+    <name language="Deutsch">Trank des Keuchhustens</name>
+	<description language="English">The Potion of Coughing Cold increases the duration of the Coughing Cold by 25 turns.</description>
+	<description language="Deutsch">Der Trank des Keuchhustens erhöht die Dauer von Keuchhusten um 25 Runden.</description>
+	<message type="use" language="English">You start coughing... </message>
+	<message type="use" language="Deutsch">Du fängst an, zu husten... </message>
+	<ability_bonus attribute_name="Coughing Cold" value="25"/>
+  </item>
+  <item name="Potion of Liquid Fire" id="43" tile="111" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="red cloud">
+    <name language="Deutsch">Trank des Flüssigen Feuers</name>
+	<description language="English">The Potion of Liquid Fire reduces the hitpoints by 9.</description>
+	<description language="Deutsch">Der Trank des Flüssigen Feuers reduziert die Lebenspunkte um 9.</description>
+	<message type="use" language="English">The potion burns like fire!</message>
+	<message type="use" language="Deutsch">Der Trank brennt wie Feuer!</message>
+	<ability_bonus attribute_name="Hitpoints" value="-9"/>
+  </item>
+  <item name="Potion of Battle" id="44" tile="112" class="Potion" use_name="Drink" consumed_after_use="yes" weight="1" price="10" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" use_animation="red stars">
+    <name language="Deutsch">Trank des Kampfes</name>
+	<description language="English">The Potion of Battle increases the attack by +30% for the duration of 25 turns.</description>
+	<description language="Deutsch">Der Trank des Kampfes erhöht den Angriff um +30% für die Dauer von 25 Runden.</description>
+	<message type="use" language="English">You feel more confident...</message>
+	<message type="use" language="Deutsch">Du fühlst Dich selbstbewusster...</message>
+	<ability_bonus attribute_name="Attack" value="30" duration="25"/>
+  </item>
+  <item name="Staff of Magic Missiles" id="45" tile="176" class="Staff" use_name="Zap" weight="5" price="100" turn_ends_after_use="yes" starting_equipment="0" identified="no" identified_when_used="yes" fuel="12" fuel_consumed_per_use="1" power_name="Zap">
+    <name language="Deutsch">Stab der Magischen Geschosse</name>
+	<description language="English">The Staff of Magic Missiles shoots out bursts of magickal ernergy at an enemy.</description>
+	<description language="Deutsch">Der Stab der Magischen Geschosse feuert Blitze aus magischer Energy auf einen Feind.</description>
+	<fuel_name language="English">[fuel] charges</fuel_name>
+	<fuel_name language="Deutsch">[fuel] Ladung(en)</fuel_name>
+  </item>
+</Lost_Labyrinth_Items>

@@ -1,0 +1,37 @@
+#labels Featured,Phase-Design,Phase-Deploy
+=Monsters XML File Documentation=
+
+==Tag "monster"==
+Describes the properties of a monster / enemy. List of available attributes:
+ * *id*: unique ID of monster (integer; mandatory; ranges from 1 to 255)
+ * *name*: name of monster (string; mandatory)
+ * *tile*: nr of graphical tile (from the file "graphics/monster.png") for display (integer; mandatory; ranges from 0 to 32000)
+ * *attack*: attack value of monster in percentage; the ability to hit the character in melee combat (integer; optional; ranges from 0 to 32000; default: 0)
+ * *defense*: defense value of the monster in percentage; the ability to dodge blows in melee combat; this value gets substracted from the attack attribute of the character to determine the hit chance of the character against this monster (integer; optional; ranges from 0 to 32000; default: 0)
+ * *strength*: strength of the monster; determines the amount of damage (from 0 to strength + 2) a successful hit against the character from the monster causes (integer; optional; ranges from 0 to 32000; default: 0)
+ * *hitpoints*: the maximum hitpoints of the monster; each successful attack against the monster reduces its hithpoints; if the hitpoints reach 0, the monster dies (integer; optional; ranges from 0 to 32000; default: 1)
+ * *armor*: the armor value of the monster; the damage the monster receives in melee combat gets reduced by this value (integer; optional; ranges from 0 to 32000; default: 0)
+ * *level*: the minimum dungeon level at which the monster appears (integer; optional; ranges from 1 to 32000; default: 1)
+ * *speed*: the number of spaces the monster moves each turn if alerted (integer; optional; ranges from 0 to 32000; default: 0 => the monster does not move at all)
+ * *class*: string list of classes (separated by "|") the monster belongs to (string; optional; default: "")
+ * *flying*: flying monsters can pass over some obstacles when moving (string; optional; "yes"/"no"; default: "no")
+ * *vulnerable*: string list of power classes (separated by "|") the monster is vulnerable to; an attack by a class the monster is vulnerable to causes double damage (string; optional; default: "")
+ * *resistance*: string list of power classes (separated by "|") the monster is resistant to; an attack by a class the monster is resistant to causes half damage (rounded down) (string; optional; default: "")
+ * *immune*: string list of power classes (separated by "|") the monster is immune to; an attack by a class the monster is immune to causes no damage (string; optional; default: "")
+ * *regeneration*: the number of hitpoints the monster regains at the end of each turn (integer; optional; ranges from 0 to 32000; default: 0)
+
+===Tag "name"===
+The name of the monster in another language. Has to be nested inside the "monster" tag. List of available attributes:
+ * *language*: the name of the language (string; mandatory)
+
+===Tag "affliction"===
+An affliction caused by the monster to the character upon an successful melee attack. Has to be nested inside the "monster" tag. List of available attributes:
+ * *class*: string list of power classes (separated by "|") the affliction belongs to (string; optional; default: "")
+ * *chance*: percentage that determines if the affliction is caused successfully (integer; optional; ranges from 0 to 100; default: 100)
+ * *attribute*: ID of the afflicted attribute (integer; optional; ranges from 1 to 255; default: 0)
+ * *attribute_name*: name of the afflicted attribute (string; optional; default: ""; used for ability reference by name)
+ * *value*: the value by which the afflicted attribute gets modified (integer; optional; ranges from -32000 to 32000; default: 0)
+ * *randomized*: determines if thze value is randomized (ranging from 0 to "value") (string; optional; "yes"/"no"; default: "no")
+ * *animation*: name of animation displayed when affliction is caused; see ListofAnimations (string; optional; default: "" => no animation is shown)
+ * *sound*: name of the OGG sound file (from the "sound" directory, without the ".ogg" suffix) that is played when the affliction is caused (string; optional; default: "" => no sound is played)
+ * *message*: message that is displayed when the affliction is caused (string; optional; default: "" => no message gets displayed)

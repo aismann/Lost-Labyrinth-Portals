@@ -1,0 +1,87 @@
+#labels Featured,Phase-Implementation,Phase-Deploy
+=Powers XML File Documentation=
+
+==Tag "power"==
+Describes the properties of a power / spell. List of available attributes:
+ * *id*: unique ID of power (integer; mandatory; ranges from 1 to 32000)
+ * *name*: name of power (string; mandatory)
+ * *description*: description of power (string; optional; default: "")
+ * *tile*: nr of graphical tile (from the file "graphics/powers.png") used for display (integer; optional; default: 0)
+ * *effect_name*: effect of power (string; mandatory); list of available power effects:
+   * _attack_: attacks a monster
+   * _area attack_: attacks all monsters on screen
+   * _duration_: modifies an attribute for a specific duration
+   * _transform field_: transforms a map field into another
+   * _use field_: marks a map field as used
+   * _activate ability_: toggles an ability to between activated an deactivated status
+   * _deplete attribute_: sets an attribute to zero
+   * _modify attribute_: modifies an attribute
+   * _apply effect to monster_: applies a specific effect to a monster
+ * *effect_strength*: strength of effect (integer; optional; default: 0; ranges from 0 to 32000)
+ * *strength_bonus_attribute*: ID of attribute that counts as bonus towards the effect strength (integer; optional; default: 0)
+ * *strength_bonus_attribute_name*: name of attribute that counts as bonus towards the effect strength (string; optional; default: ""; used for ability reference by name)
+ * *strength_multiplier*: multiplier applied to attribute to determine effect strength of power (integer; optional; default: 1; ranges from 0 to 32000)
+ * *strength_divisor*: divisor applied to attribute to determine effect strength of power (integer; optional; default: 1; ranges from 1 to 32000)
+ * *strength_randomized*: effect strength is randomized (from 0 to max strength)(string; "yes"/"no"; optional; default: "no")
+ * *randomized_strength_bonus*: bonus applied to effect strength after randomization (integer; optional; default: 0; ranges from 0 to 32000)
+ * *randomized_strength_bonus_attribute*: ID of attribute that counts as bonus towards effect strength after randomization (integer; optional; default: 0; ranges from 0 to 255)
+ * *randomized_strength_bonus_attribute_name*: name of attribute that counts as bonus towards effect strength after randomization (string; optional; default: ""; used for ability reference by name)
+ * *randomized_strength_multiplier*: multiplier applied to attribute after randomization to determine effect strength (integer; optional; default: 1; ranges from 0 to 32000)
+ * *randomized_strength_divisor*: divisor applied to attribute after randomization to determine effect strength (integer; optional; default: 1; ranges from 1 to 32000)
+ * *animation*: name of animation displayed if power was successfully used; see ListofAnimations (string; optional; default: "" => no animation)
+ * *end_turn*: the current turn ends if this power is used (string; "yes"/"no"; optional; default: "no")
+ * *sound*: name of the OGG sound file (from the "sound" directory, without the ".ogg" suffix) that is played when the power is successfully used (string; optional; default: "" => no sound is played)
+ * *failure_sound*: name of the OGG sound file (from the "sound" directory, without the ".ogg" suffix) that is played when the power is unsuccessfully used (string; optional; default: "" => no sound is played)
+ * *wrong_use_sound*: name of the OGG sound file (from the "sound" directory, without the ".ogg" suffix) that is played when the power is used wrongly (eg on a false target)(string; optional; default: "" => no sound is played)
+ * *success_attribute*: ID of attribute used to determine success chance of power (integer; optional; default: 0; ranges from 0 to 255)
+ * *success_attribute_name*: name of attribute used to determine success chance of power (string; optional; default: ""; used for ability reference by name; if neither _success_attribute_ or _success_attribute_name_ is set, success chance of power equals 100%)
+ * *success_bonus*: bonus applied to power success chance (integer; optional; default: 0; ranges from -32000 to 32000)
+ * *success_attribute_multiplier*: multiplier applied to attribute to determine success chance for power (integer; optional; default: 1; ranges from 0 to 32000)
+ * *success_attribute_divisor*: divisor applied to attribute to determine success chance for power (integer; optional; default: 1; ranges from 1 to 32000)
+ * *success_message*: message displayed if power was used successfully (string; optional; default: "" => no message is displayed)
+ * *failure_message*: message displayed if power was used unsuccessfully (string; optional; default: "" => no message is displayed)
+ * *wrong_use_message*: message displayed if power was used wrongly (eg on a wrong target)(string; optional; default: "" => no message is displayed)
+ * *already_used_message*: message displayed if power was already used on that target and cannot be used again on the same target (string; optional; default: "" => no message is displayed)
+ * *cost*: cost of power; an attribute is reduced by this amount each time the power is used; if the value of the attribute is less than the cost, the power cannot be used (normally used for Mana)(integer; optional; default: 0; ranges from -32000 to 32000)
+ * *cost_attribute*: ID of attribute that gets reduced by the cost (integer; optional; default: 0; ranges from 1 to 255)
+ * *cost_attribute_name*: name of the attribute that gets reduced by the cost each time the power is used (string; optional; default: ""; used for ability reference by name)
+ * *class*: string list of power classes (separated by "|") to which the power belongs to; power classes are not fixed - new ones can be invented with each new power (string; optional; default: "")
+ * *range*: the range of the power (integer; 0 => the character; 1 => one space away; 2 => complete screen; optional; default: 0)
+ * *modify_attribute*: ID of attribute that gets modified by this power (integer; optional; default: 0; ranges from 0 to 255)
+ * *modify_attribute_name*: name of attribute that gets modified by this power (string; optional; default: ""; used for ability reference by name)
+ * *adjust_attribute*: ID of attribute that gets temporary adjustment by this power (integer; optional; default: 0; ranges from 0 to 255)
+ * *adjust_attribute_name*: name of attribute that gets temporary adjustment by this power (string; optional; default: ""; used for ability reference by name)
+ * *duration*: duration of adjustment in turns (integer; optional; default: 0)
+ * *duration_bonus_attribute*: ID of attribute applied as bonus towards the duration (integer; optional; default: 0; ranges from 0 to 255)
+ * *duration_bonus_attribute_name*: name of attribute applied as bonus towards the duration (string; optional; default: ""; used for ability reference by name)
+ * *duration_multiplier*: multiplier applied to attribute to determine duration bonus (integer; optional; default: 1; ranges from 1 to 32000)
+ * *duration_divisor*: divisor applied to attribute to determine duration bonus (integer; optional; default: 1; ranges from 1 to 32000)
+ * *activates_ability_id*: ID of ability that gets activated by this power (integer; optional; default: 0; ranges from 0 to 255)
+ * *activates_ability_name*: name of ability that gets activated by this power (string; otpional; default: ""; used for ability reference by name)
+ * *deplete_attribute_id*: ID of attribute that is set to zero by this power (integer; optional; default: 0; ranges from 0 to 255)
+ * *deplete_attribute_name*: name of attribute that is set to zero by this power (string; optional; default: ""; used for ability reference by name)
+ * *cooldown*: number of turns until the power can be used again (integer; optional; default: 0; ranges from 0 to 32000)
+ * *monster_effect*: name of effect that is applied to a monster by this power (string; optional; default: ""); list of available effects:
+   * _slowed_: the monster can move only one space per turn
+   * _weakened_: the monster causes half damage in combat
+   * _confused_: the movement of the monster is randomly determined
+   * _sleep_: the status _activated_ is removed from the monster
+
+===Tag "requirement"===
+Describes one requirement for the character to meet to have access to that power. Has to be nested inside the "power" tag. Maximum number of requirements per power: 3. List of available attributes:
+ * *attribute*: ID of attribute for the requirement (integer; optional; default: 0; ranges from 1 to 255)
+ * *attribute_name*: name of the attribute for the requirement (string; optional; default: ""; used for ability reference by name)
+ * *value*: the minimum value of the attribute for the requirement to be met (integer; mandatory; ranges from 0 to 32000)
+
+===Tag "name"===
+The name of the power in another language. Has to be nested inside the "power" tag. List of available attributes:
+ * *language*: name of the language (string; mandatory)
+
+===Tag "description"===
+The description of the power in another language. Has to be nested inside the "power" tag. List of available attributes:
+ * *language*: name of the language (string; mandatory)
+
+===Tag "message"===
+A message that appear when the power is used. Has to be nested inside the "power" tag. List of available attributes:
+ * *language*: name of the language the message is written in (string; mandatory)
+ * *type*: the type of the message; (string; "success"/"failure"/"wrong use"/"already used"; mandatory)

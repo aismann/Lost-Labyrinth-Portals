@@ -1,0 +1,106 @@
+#labels Phase-Implementation,Phase-Deploy,Featured
+=Abilities XML File Format Documentation=
+
+==Tag "ability"==
+Describes the properties of an ability.
+List of available attributes:
+ * *id*: unique ID of ability (integer; mandatory; ranges from 1 to 255)
+ * *name*: name of ability; is used for reference in other definition files (string; mandatory)
+ * *tile*: nr of graphical tile (from the file "graphics/abilities.png") used for display of ability (integer; mandatory)
+ * *color*: color used for display of ability (string; mandatory; color code format => "$bbggrr", where rr stands for red color, gg for green and bb for blue color; hexadecimal format from 00 to ff)
+ * *attribute*: ability is also an attribute (string, "yes"/"no"; optional, default: "no")
+ * *depletable*: ability can be depleted and replenished (like hitpoints or mana) (string, "yes"/"no"; optional, default: "no")
+ * *percentage*: ability is used as a percentage value (0 - 100%) and displayed as such (string, "yes"/"no"; optional, default: "no")
+ * *displayed_as_bonus*: ability is displayed as bonus/malus, with a leading "+" or "-" sign (string, "yes"/"no"; optional, default: "no")
+ * *randomizer_ability*: another ability counts with a randomized bonus (from 0 up to the attribute value) towards this attribute (integer; optional)
+ * *randomizer_ability_name*: name of ability that counts with a randomized bonus (from 0 up to the attribute value) towards this attribute (string: optional)
+ * *main_screen*: deprecated; see _display_ (string, "yes"/"no"; optional, default: "no")
+ * *attribute_start_value*: start value for this attribute; ranges from -32000 to 32000 (integer; optional; default: 0)
+ * *xp*: ability can be gained with experience (string, "yes"/"no"; optional, default: "no")
+ * *game_ends*: the game ends if ability is higher or lower than this treshold value (used for hitpoints e.g.) (string, "higher"/"lower"/""; optional, default: "")
+ * *game_ends_val*: the game ends if ability is higher or lower than this treshold value (used for hitpoints e.g.) (integer; ranges from -32000 to 32000; optional; default: 0)
+ * *not_shown_if_zero*: deprecated; see _display_ tag
+ * *minimum*: minimum value attribute can be reduced to (optional; default: -1 => no minimum)
+ * *change_per_turn*: amount by which this ability changes at the end of each turn (integer; ranges from -32000 to 32000; optional; default: 0)
+ * *change_per_turn_chance*: percentual chance for attribute to get modified at the end of each turn (integer; ranges from 0 to 100; optional; default: 0)
+ * *turn_ends_if_lower*: the current turn ends if this ability gets lower than this value (integer; ranges from -32000 to 32000; optional; default: -32000)
+ * *restore_at_end_of_turn*: at the end of the turn this attribute is restored to its maximum value (used for movement) (string: "yes"/"no"; optional; default: "no")
+ * *attack_melee*: this attribute is used for attack in melee combat (percentage); (string: "yes"/"no"; optional; default: "no")
+ * *critical_hit_melee*: this attribute is used to determine critical hits in melee combat (percentage); (string: "yes"/"no"; optional; default: "no")
+ * *defense_melee*: this attribute is used for defense in melee combat (attack is reduced by defense to get hit chance) (string: "yes"/"no"; optional; default: "no")
+ * *damage_in_melee*: attribute is used to determine damage in melee combat (string: "yes"/"no"; optional; default: "no")
+ * *modify_with_each_kill*: each time the character kills a monster, this attribute gets modified by this value (integer; ranges from -32000 to 32000; optional; default: 0)
+ * *lightradius*: attribute is used to determine light radius (string: "yes"/"no"; optional; default: "no")
+ * *modify_per_point_of_damage*: the value by which this attribute is modified each time the character receives a point of damage (integer; ranges from -32000 to 32000; optional; default: 0)
+ * *sneaking*: attribute is used for sneaking (percentage) (string: "yes"/"no"; optional; default: "no")
+ * *backstab*: attribute is used for backstabbing (string: "yes"/"no"; optional; default: "no")
+ * *perception_tile_class*: name of tile class this ability can be used to detect hidden tiles (string; optional; default: ""; "all" means all hidden regardless of tile class)
+ * *modify_attribute*: ID of attribute that gets modified by this attribute each turn (integer; ranges from 0 to 255; optional; default: 0)
+ * *modify_attribute_name*: name of attribute that gets modified by this attribute each turn (string; optional; default: "")
+ * *modify_multiplier*: multiplier applied to this attribute before the modified amount is determined (optional; ranges from 1 to 32000; default: 1)
+ * *modify_divisor*: divisor applied to this attribute before the modified amount is determined (optional; ranges from 1 to 32000; default: 1)
+ * *modify_animation*: name of animation displayed each time the modification takes place (see _animations_) (string; optional; default: "")
+ * *modify_sound*: name of OGG sound file (name without suffix ".ogg"; file must be located in directory "sounds") played each time the modification takes place (string; optional; default: "")
+ * *armor*: attribute is used for armor => reduces damage in melee by a random amount ranging from 0 to the value of thir attribute (string: "yes"/"no"; optional; default: "no")
+ * *movement*: attribute is used to determine movement of character (string: "yes"/"no"; optional; default: "no")
+ * *buffer_for_attribute*: ID of attribute that is "shielded" by this ability: each time the attribute gets reduced, this attribute is reduced instead (up to a minimum of 0) (integer; ranges from 0 to 255; opional; default: 0)
+ * *buffer_for_attribute_name*: name of attribute that is "shielded" by this ability: each time the attribute gets reduced, this attribute is reduced instead (up to a minimum of 0) (integer; ranges from 0 to 255; opional; default: 0)
+
+===Tag "attribute_bonus"===
+Describes one bonus the ability provides to other attributes each time it gets chosen in the experience screen. Has to be nested in an "ability" tag.
+List of avilable attributes:
+ * *attribute*: ID of attribute this ability provides a bonus to each time it is chosen in the experience screen (integer; ranges from 0 to 255; optional; default: 0; if not set, use attribute "name" instead)
+ * *name*: name of attribute this ability provides a bonus to each time it is chosen in the experience screen (string; optional; default: ""; used for ability reference by name)
+ * *bonus*: bonus value applied to attribute each time this ability gets chosenin the epxerience screen (integer; ranges from -32000 to 32000; mandatory)
+ * *displayed*: bonus gets displayed in experience screen (string: "yes"/"no"; optional; default: "no")
+
+===Tag "cap"===
+Describes one attribute cap (a maximum limit for the attribute; the attribute cannot get larger than this value). Has to be nested in an "ability" tag. List of avilable attributes:
+ * *ability*: ID of ability/attribute that is used to determine the cap (integer; ranges from 1-255; default: 0; optional; if not set, ability reference by name is used instead)
+ * *name*: name of ability/attribute that is used to determine the cap (string; optional; used for ability reference by name)
+ * *bonus*: a bonus value that gets added to the total to determine the cap value (integer; ranges from -32000 to 32000; optional; default: 0)
+ * *multiplier*: a multiplier applied to the attribute value to determine the cap value (integer; ranges from 1 to 32000; optional; default: 1)
+ * *divisor*: a divisor applied to the attribute to determine the cap value (integer; ranges from 1 to 32000; optional; default: 1)
+
+===Tag "requirement"===
+Describes one requirement that has to be met for the character to be able to select this ability in the experience screen. Has to be nested in an "ability" tag. List of avilable attributes:
+ * *attribute*: ID of attribute used for this requirement (integer; ranges from 1-255; default: 0; optional; if not set, ability reference by name is used instead)
+ * *name*: name of ability/attribute that is used for this requirement (string; optional; used for ability reference by name)
+ * *value*: the minimum value the attribute has to have for the character to have this requirement fulfilled (integer; ranges from -32000 to 32000; optional; default: 0)
+
+===Tag "display"===
+Describes one place where this ability gets displayed. Has to be nested in an "ability" tag. List of avilable attributes:
+ * *type*: the place where the attribute gets displayed (string; "main screen status panel" / "character info"; mandatory)
+ * *start_value*: the start value of the attribute to determine if the value gets displayed (integer; ranges from -32000 to 32000; mandatory)
+ * *end_value*: the end value of the attribute to determine id the value gets displayed (integer; ranges from -32000 to 32000; mandatory)
+ * *message*: the first message line of the display; {{{[value]}}} gets replaced by the actual value of the attribute (string; mandatory)
+ * *message2*: the second message line of the display; {{{[value]}}} gets replaced by the actual value of the attribute (string; optional; default: "")
+ * *color*: color code to determine the text color of the display (hex number; ranges from $000000 to $ffffff; format: $bbggrr with b=blue, g=green and r=red; mandatory)
+ * *expanded_value_display*: the value of the attribute gets displayed as "current value / maximum value" (used for depletable attributes) (string; "yes"/"no"; optional; default: "no")
+
+===Tag "name"===
+Name of the ability in different languages. Has to be nested in an "ability" tag. List of avilable attributes:
+ * *language*: name of the language used (string; mandatory)
+
+===Tag "description"===
+Description of the ability in different languages. Has to be nested in an "ability" tag. List of avilable attributes:
+ * *language*: name of the languages used (string; mandatory)
+
+===Tag "game_ends_message"===
+Message displayed if "game_ends" condition of this ability has been met. Has to be nested in an "ability" tag. List of avilable attributes:
+ * *language*: name of the language used (string; mandatory)
+
+===Tag "adjustment"===
+Ability adjusts other attributes if larger than zero. Has to be nested in an "ability" tag. List of avilable attributes:
+ * *attribute*: ID of attribute that gets adjusted (integer; ranges from 1 to 255; optional)
+ * *attribute_name*: name of attribute that gets adjusted (string; optional; used for ability reference by name)
+ * *value*: absolute value by which the attribute gets adjusted (integer; ranges from -32000 to 32000; optional; default: 0)
+ * *percentage*: percentage value by which the attribute gets adjusted (integer; ranges from 0 to 100; optional; default: 100)
+ * *percentage_attribute_multiplier*: value that gets multiplied with parent attribute to determine percentage by which this attribute gets adjusted (integer; optional; ranges from -32000 to 32000; default: 0)
+ * *percentage_bonus*: bonus added to value above to determine percentage by which this attribute gets modified (integer; optional; ranges from -32000 to 32000; default: 0)
+
+===Tag "starting_equipment"===
+Character gets some items as additional starting equipment when choosing this ability at character generation. Has to be nested inside the "ability" tag. Maximum number of starting equipment entries: 3. List of available attributes:
+ * *item*: item ID of the starting equipment item (integer; optional; default: 0; ranges from 0 to 32000)
+ * *item_name*: name of the starting equipment item (string; optional; default: ""; used for item reference by name)
+ * *amount*: the amount of starting equipment items (integer; optional; default: 1; ranges from 1 to 32000)

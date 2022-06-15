@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Lost_Labyrinth_Messages Lost_Labyrinth_version="0.1.0">
+  <message id="1">
+    <text language="English">Characterinfo:</text>
+	<text language="Deutsch">Charakterinfo:</text>
+  </message>
+  <message id="2">
+    <text language="English">Press RETURN to leave</text>
+	<text language="Deutsch">Zurück mit Taste RETURN</text>
+  </message>
+  <message id="3">
+    <text language="English">not available</text>
+	<text language="Deutsch">nicht verfügbar</text>
+  </message>
+  <message id="4">
+    <text language="English">capped</text>
+	<text language="Deutsch">max. Wert erreicht</text>
+  </message>
+  <message id="5">
+    <text language="English">current value</text>
+	<text language="Deutsch">aktueller Wert</text>
+  </message>
+  <message id="6">
+    <text language="English">capped at</text>
+	<text language="Deutsch">max. Wert</text>
+  </message>
+  <message id="7">
+    <text language="English">Required</text>
+	<text language="Deutsch">Voraussetzungen</text>
+  </message>
+  <message id="8">
+    <text language="English">New Power</text>
+	<text language="Deutsch">Neuer Zauber / neues Talent</text>
+  </message>
+  <message id="9">
+    <text language="English">You gain some experience!</text>
+	<text language="Deutsch">Du gewinnst an Erfahrung!</text>
+  </message>
+  <message id="10">
+    <text language="English">Choose the starting abilities for your new character</text>
+	<text language="Deutsch">Wähle die Eigenschaften Deines Charakters</text>
+  </message>
+  <message id="11">
+    <text language="English">Strength</text>
+	<text language="Deutsch">Stärke</text>
+  </message>
+  <message id="12">
+    <text language="English">Duration</text>
+	<text language="Deutsch">Dauer</text>
+  </message>
+  <message id="13">
+    <text language="English">Inventory</text>
+	<text language="Deutsch">Ausrüstung</text>
+  </message>
+  <message id="14">
+    <text language="English">items</text>
+	<text language="Deutsch">Gegenstände</text>
+  </message>
+  <message id="15">
+    <text language="English">Amount</text>
+	<text language="Deutsch">Menge</text>
+  </message>
+  <message id="16">
+    <text language="English">Weight</text>
+	<text language="Deutsch">Gewicht</text>
+  </message>
+  <message id="17">
+    <text language="English">pound</text>
+	<text language="Deutsch">Pfund</text>
+  </message>
+  <message id="18">
+    <text language="English">Drop</text>
+	<text language="Deutsch">Ablegen</text>
+  </message>
+  <message id="19">
+    <text language="English">Cancel</text>
+	<text language="Deutsch">Abbrechen</text>
+  </message>
+  <message id="20">
+    <text language="English">Only [limit] of this item type ([item_class]) can be equipped at the same time.</text>
+	<text language="Deutsch">Maximal [limit] Gegenstände dieses Typs ([item_class]) können gleichzeitig verwendet werden.</text>
+  </message>
+  <message id="21">
+    <text language="English">Pick up the following items</text>
+	<text language="Deutsch">Folgende Gegenstände können aufgenommen werden</text>
+  </message>
+  <message id="22">
+    <text language="English">There are no items here to pick up!</text>
+	<text language="Deutsch">Es befinden sich hier keine Gegenstände, die Du aufnehmen könntest!</text>
+  </message>
+  <message id="23">
+    <text language="English">You pick up an item</text>
+	<text language="Deutsch">Du nimmst einen Gegenstand auf</text>
+  </message>
+  <message id="24">
+    <text language="English">You pick up some items</text>
+	<text language="Deutsch">Du nimmst einige Gegenstände auf</text>
+  </message>
+  <message id="25">
+    <text language="English">Level</text>
+	<text language="Deutsch">Ebene</text>
+  </message>
+  <message id="26">
+    <text language="English">An item lies here on the ground</text>
+	<text language="Deutsch">Ein Gegenstand liegt hier auf dem Boden</text>
+  </message>
+  <message id="27">
+    <text language="English">Some items are lying here on the ground</text>
+	<text language="Deutsch">Einige Gegenstände liegen hier auf dem Boden</text>
+  </message>
+  <message id="28">
+    <text language="English">You enter the [dungeon_name] level [dungeon_level]</text>
+	<text language="Deutsch">Du betrittst das [dungeon_name] Ebene [dungeon_level]</text>
+  </message>
+  <message id="29">
+    <text language="English">New Game</text>
+	<text language="Deutsch">Neues Spiel</text>
+  </message>
+  <message id="30">
+    <text language="English">Continue Game</text>
+	<text language="Deutsch">Spiel fortsetzen</text>
+  </message>
+  <message id="31">
+    <text language="English">Exit</text>
+	<text language="Deutsch">Spiel beenden</text>
+  </message>
+  <message id="32">
+    <text language="English">Unequip</text>
+	<text language="Deutsch">Zurücklegen</text>
+  </message>
+  <message id="33">
+    <text language="English">Equip</text>
+	<text language="Deutsch">Verwenden</text>
+  </message>
+  <message id="34">
+    <text language="English">Drop all</text>
+	<text language="Deutsch">Alles ablegen</text>
+  </message>
+  <message id="35">
+    <text language="English">Use a power</text>
+	<text language="Deutsch">Zauber / Talent anwenden</text>
+  </message>
+  <message id="36">
+    <text language="English">Success chance</text>
+	<text language="Deutsch">Erfolgschance</text>
+  </message>
+  <message id="37">
+    <text language="English">Cost</text>
+	<text language="Deutsch">Kosten</text>
+  </message>
+  <message id="38">
+    <text language="English">Range</text>
+	<text language="Deutsch">Reichweite</text>
+  </message>
+  <message id="39">
+    <text language="English">self</text>
+	<text language="Deutsch">Charakter</text>
+  </message>
+  <message id="40">
+    <text language="English">touch</text>
+	<text language="Deutsch">Berührung</text>
+  </message>
+  <message id="41">
+    <text language="English">sight</text>
+	<text language="Deutsch">Sichtweite</text>
+  </message>
+  <message id="42">
+    <text language="English">The monster notices you!</text>
+	<text language="Deutsch">Das Monster bemerkt Dich!</text>
+  </message>
+  <message id="43">
+    <text language="English">You sneak unnoticed past the monster...</text>
+	<text language="Deutsch">Du schleichst unbemerkt an dem Monster vorbei...</text>
+  </message>
+  <message id="44">
+    <text language="English">You were killed by a</text>
+	<text language="Deutsch">Du wurdest getötet durch:</text>
+  </message>
+  <message id="45">
+    <text language="English">You successfully backstab the monster for [damage] points of damage!</text>
+	<text language="Deutsch">Dein heimlicher Angriff ist erfolgreich und bewirkt [damage] Punkte Schaden!</text>
+  </message>
+  <message id="46">
+    <text language="English">You do not have enough [attribute_name] to use this power.</text>
+	<text language="Deutsch">Du verfügst nicht über genügend [attribute_name],</text>
+  </message>
+  <message id="47">
+    <text language="English"></text>
+	<text language="Deutsch">um diesen Zauber bzw. dieses Talent anzuwenden.</text>
+  </message>
+  <message id="48">
+    <text language="English">You have to wait at least [cooldown] turn(s) to use this power again.</text>
+	<text language="Deutsch">Du musst mindestens [cooldown] Runde(n) warten, bis dieser Zauber / dieses Talent wieder eingesetzt werden kann.</text>
+  </message>
+  <message id="49">
+    <text language="English">Cooldown: [cooldown] turns</text>
+	<text language="Deutsch">Cooldown: [cooldown] Runden</text>
+  </message>
+  <message id="50">
+    <text language="English">The monster regenerates: Hitpoints + [value]</text>
+	<text language="Deutsch">Das Monster regeneriert sich: Lebenspunkte + [value]</text>
+  </message>
+  <message id="51">
+    <text language="English">This monster is immune against this power!</text>
+	<text language="Deutsch">Dieses Monster ist immun gegen diesen Zauber bzw. dieses Talent!</text>
+  </message>
+  <message id="52">
+    <text language="English">This monster is already affected by this power.</text>
+	<text language="Deutsch">Dieses Monster ist bereits von diesem Zauber bzw. Talent betroffen.</text>
+  </message>
+  <message id="53">
+    <text language="English">The monster has successfully resisted your power!</text>
+	<text language="Deutsch">Das Monster hat erfolgreich Deinem Zauber / Talent widerstanden!</text>
+  </message>
+  <message id="54">
+    <text language="English">Unidentified item</text>
+	<text language="Deutsch">Nicht identifizierter Gegenstand</text>
+  </message>
+</Lost_Labyrinth_Messages>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tile_type_definition filename="tiles_valley.png" Lost_Labyrinth_version="0.1.0">
+  <tile_type id="0" solid="yes" transparent="yes" name="house">
+  </tile_type>
+  <tile_type id="1" solid="yes" transparent="yes" name="house">
+  </tile_type>
+  <tile_type id="2" name="grass">
+  </tile_type>
+  <tile_type id="3" solid="yes" name="stone">
+  </tile_type>
+  <tile_type id="4" name="bush" class="plant">
+  </tile_type>
+  <tile_type id="5" name="stairs down" class="dungeon entrance">
+  </tile_type>
+  <tile_type id="10" solid="yes" transparent="yes" name="house">
+  </tile_type>
+  <tile_type id="11" solid="yes" transparent="yes" name="house">
+  </tile_type>
+  <tile_type id="12" solid="yes" transparent="yes" name="well">
+  </tile_type>
+  <tile_type id="13" solid="yes" transparent="yes" name="tree" class="plant">
+  </tile_type>
+  <tile_type id="14" solid="yes" transparent="yes" name="tree" class="plant">
+  </tile_type>
+  <tile_type id="20" solid="yes" transparent="yes" name="house">
+  </tile_type>
+  <tile_type id="21" solid="yes" transparent="yes" name="house">
+  </tile_type>
+  <tile_type id="22" solid="yes" name="empty">
+  </tile_type>
+  <tile_type id="23" transparent="yes" name="tree" class="plant">
+  </tile_type>
+  <tile_type id="24" transparent="yes" name="tree" class="plant">
+  </tile_type>
+  <tile_type id="30" transparent="yes" name="house">
+  </tile_type>
+  <tile_type id="31" transparent="yes" name="house">
+  </tile_type>
+</tile_type_definition>

@@ -1,5 +1,5 @@
 # Lost-Labyrinth-Portals 3.0 (PureBasic 6.00)
-Version 2.0 was written by Frank.Malota
+## Version 2.0 was written by Frank.Malota
 
 'Lost Labyrinth Portals' is a coffee-break roguelike game written in Purebasic.
 
@@ -20,4 +20,8 @@ The game will be available for Windows, Linux and Mac OS.
 Previous versions of the game can be found at: 
 * http://www.lostlabyrinth.com 
 * http://laby.toybox.de
+
+
+Lost Labyrinth DX is completely rewritten from scratch in C++ and uses SDL2
+* https://www.labydx.com/
 

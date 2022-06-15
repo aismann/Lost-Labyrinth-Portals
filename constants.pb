@@ -880,9 +880,9 @@ Global Dim item_db.item_db_struct(#MAX_NUMBER_OF_ITEMS) ; item database
 Global NewList item_on_map.item_on_map_struct() ; items on current map
 Global NewList dungeon_on_map.dungeon_struct() ; dungeons on current map
 Global Dim message_list$(#MAX_NUMBER_OF_MESSAGES); list of messages (for foreign languages)
+Global isSoundSupported.b = #True; InitSound() works/fails
 
-; IDE Options = PureBasic 4.30 (Windows - x86)
-; CursorPosition = 56
-; FirstLine = 24
-; Folding = -
+; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
+; CursorPosition = 882
+; FirstLine = 835
 ; CompileSourceDirectory

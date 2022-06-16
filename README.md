@@ -33,11 +33,14 @@ The game will be available for Windows, Linux and Mac OS.
 'Lost Labyrinth Portals' 2.0 
 - Written by Frank.Malota (PureBasic 4.30) : https://www.findbestopensource.com/product/lost-labyrinth-portals
 
-
 ### Lost Labyrinth
-* Lost Labyrinth (PureBasic): http://www.lostlabyrinth.com 
-* Lost Labyrinth (Blitz Basic): http://laby.toybox.de
+* Lost Labyrinth written by Frank Dobele (PureBasic): http://www.lostlabyrinth.com 
+* Lost Labyrinth written by Frank.Malota(Blitz Basic): http://laby.toybox.de  (link no longer works)
 
 ### Lost Labyrinth DX 
-- Lost Labyrinth DX (C++/SDL2): https://www.labydx.com/
+- Lost Labyrinth DX created by Johan Jansen (C++/SDL2): https://www.labydx.com/
 
+### History of 'Lost Labyrinth':
+The game was first programmed in 1991 on the Atari ST with STOS BASIC by Frank Malota. At that time the graphics had a size of 16×16 dots and 16 colors. Scrolling was still blockwise at that time. A version in C++ followed, but it was never really playable. 
+Later the whole game was rewritten from scratch with Blitz Basic. This version already had clean pixel-by-pixel scrolling, and the graphics were 32×32 pixels with 256 colors.
+The PureBasic version was written mainly to make the game run on Linux. It now also runs cleanly under Windows and has surpassed the original in most respects.

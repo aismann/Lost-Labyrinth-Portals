@@ -11,6 +11,23 @@
 # Lost-Labyrinth-Portals 3.0 (PureBasic 6.00)
 'Lost Labyrinth Portals' is a coffee-break roguelike game written in Purebasic.
 
+### Game mechanics
+The game can be controlled with keyboard. The focus is not on defeating monsters, but on reaching new levels. 
+At the beginning of the game, the character's abilities can be freely chosen, so there are no fixed character classes. 
+Each character has its own tactics. Unlike other Nethack successors, a game in Lost Labyrinth lasts relatively short, and the fun lies in trying out different combinations of abilities, not in leading a character to the end of the game.
+
+### Keys
+- UP/DOWN/LEFT/RIGHT: Player & Menue management
+- LEFT-ALT-ENTER: toggle between windowed screen and fullscreen
+- C: Character info
+- U: Use power
+- P: Pickup items
+- I: open Inventory
+- E: End turn
+- T: Trigger test
+- RETURN: Remove game paused status
+- F1: Mouse and keyboard released
+
 Game features: 
 * Nice graphics; smooth scrolling 
 * randomly generated dungeons 

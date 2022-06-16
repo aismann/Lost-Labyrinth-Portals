@@ -10,8 +10,10 @@
 
 # Lost-Labyrinth-Portals 3.0 (PureBasic 6.00)
 'Lost Labyrinth Portals' is a coffee-break roguelike game written in Purebasic.
+
+### Screenshots
 ![image](https://user-images.githubusercontent.com/8652787/174069366-f422d91e-79da-4907-be45-367661f17268.png)
-![image](https://user-images.githubusercontent.com/8652787/174069504-d87ea316-4ef9-4e57-84a4-1dc1d087ccbd.png)
+![image](https://user-images.githubusercontent.com/8652787/174069583-ebfd8f9c-9ac0-4e3f-9da0-9d098f50e493.png)
 
 
 

@@ -71,7 +71,7 @@ Later the whole game was rewritten from scratch with Blitz Basic. This version a
 
 The PureBasic version was written by Frank Dobele mainly to make the game run on Linux. It now also runs cleanly under Windows and has surpassed the original in most respects.
 
-### Licese for sound and graphic sets
+### License for sound and graphic sets
 I'm not sure which license the sound and graphic files having.
 So for the moment they are only placeholders.
 Any information about the license will be help to use/change this files.

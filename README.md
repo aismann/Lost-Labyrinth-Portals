@@ -21,7 +21,8 @@ Each character has its own tactics. Unlike other Nethack successors, a game in L
 - LEFT-ALT-ENTER: toggle between windowed screen and fullscreen
 - C: Character info
 - U: Use power
-- P: Pickup items
+- P: Pickup items 
+- SPACE: Select items (Pickup)
 - I: open Inventory
 - E: End turn
 - T: Trigger test

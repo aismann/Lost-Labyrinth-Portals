@@ -14,8 +14,8 @@
 ### Screenshots
 ![image](https://user-images.githubusercontent.com/8652787/174069366-f422d91e-79da-4907-be45-367661f17268.png)
 ![image](https://user-images.githubusercontent.com/8652787/174069583-ebfd8f9c-9ac0-4e3f-9da0-9d098f50e493.png)
-
-
+![image](https://user-images.githubusercontent.com/8652787/174097155-1c83e3fb-9d99-4abd-ae87-8034249c22cf.png)
+![image](https://user-images.githubusercontent.com/8652787/174097396-746682ad-19a6-4094-803f-92b303217772.png)
 
 ### Game mechanics
 The game can be controlled with keyboard. The focus is not on defeating monsters, but on reaching new levels. 

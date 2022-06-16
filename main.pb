@@ -545,10 +545,10 @@ EndIf
 
 End
 ; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
-; CursorPosition = 10
+; CursorPosition = 9
 ; Folding = -------------
 ; Optimizer
-; EnableOnError
-; Executable = portals_3.0_PB6.0.exe
+; Executable = Portals_3.0_32bit.exe
 ; DisableDebugger
 ; CompileSourceDirectory
+; Compiler = PureBasic 6.00 Beta 10 (Windows - x86)

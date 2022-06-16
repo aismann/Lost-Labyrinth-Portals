@@ -22,10 +22,10 @@ The game will be available for Windows, Linux and Mac OS.
 
 'Lost Labyrinth Portals' 2.0 
 - Init version on githup
-- Written in PureBasic 4.30 by Frank.Malota
+- Written in PureBasic 4.30 by Frank.Malota: https://www.findbestopensource.com/product/lost-labyrinth-portals
 
 
-### Lost Labyrinth 
+### Lost Labyrinth
 * Lost Labyrinth (PureBasic): http://www.lostlabyrinth.com 
 * Lost Labyrinth (Blitz Basic): http://laby.toybox.de
 

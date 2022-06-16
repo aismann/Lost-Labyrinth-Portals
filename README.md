@@ -1,6 +1,6 @@
-[![Version](https://img.shields.io/badge/3.0.alpha1-red.svg)](https://github.com/adxeproject/adxe/pulls)
+[![Version](https://img.shields.io/badge/3.0.alpha1-brightgreen.svg)](https://github.com/adxeproject/adxe/pulls)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](https://github.com/adxeproject/adxe/pulls)
-![GitHub code size in bytes](https://img.shields.io/github/size/aismann/Lost-Labyrinth-Portals?style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/aismann/Lost-Labyrinth-Portals?style=plastic) 
 
 # Lost-Labyrinth-Portals 3.0 (PureBasic 6.00)
 'Lost Labyrinth Portals' is a coffee-break roguelike game written in Purebasic.

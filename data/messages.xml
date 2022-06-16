@@ -216,4 +216,13 @@
     <text language="English">Unidentified item</text>
 	<text language="Deutsch">Nicht identifizierter Gegenstand</text>
   </message>
+  <message id="55">
+    <text language="English">New Game (German)</text>
+	  <text language="Deutsch">Neues Spiel (Deutsch)</text>
+  </message>
+    <message id="56">
+    <text language="English">New Game (English)</text>
+	  <text language="Deutsch">Neues Spiel (Englisch)</text>
+  </message>
+  
 </Lost_Labyrinth_Messages>

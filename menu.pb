@@ -7,6 +7,7 @@
 ; declarations
 Declare toggle_fullscreen(*tileset.tileset_struct, load_tileset.b=1)
 Declare delete_savegame()
+Declare initAll()
 
 
 ; reset menu entries
@@ -147,8 +148,11 @@ Procedure.s main_menu()
   If FileSize("savegame\character.xml") > 0
     add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_CONTINUE_GAME))
   EndIf
-  add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME))
+  ;add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME))
+  add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_DEUTSCH))
+  add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_ENGLISH))
   add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_EXIT))
+
   With menu
     \color = RGB(255, 100, 0)
     \padding = 6
@@ -264,24 +268,36 @@ Procedure.s main_menu()
   
   Select menu\menu_entry[menu\selected_entry]\name$
     
-    Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME):
-      delete_savegame()
-    
+;     Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME):
+;       delete_savegame()
+;     
     Case message_list$(#MESSAGE_MENU_SPLASH_CONTINUE_GAME):
     
     Case message_list$(#MESSAGE_MENU_SPLASH_EXIT):
       program_ends = 1
-    
-    
+      
+    Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_DEUTSCH):
+     delete_savegame()
+      preferences\language$ = "Deutsch"
+      save_preferences(@preferences)
+      initAll()
+
+      
+    Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_ENGLISH):
+      delete_savegame()
+      preferences\language$ = "English"
+      save_preferences(@preferences)
+      initAll()
+      
   EndSelect
   If background = 1
     FreeSprite(spr)
   EndIf
   ProcedureReturn menu\menu_entry[menu\selected_entry]\name$
 EndProcedure
-; IDE Options = PureBasic 4.30 (Windows - x86)
-; CursorPosition = 177
-; FirstLine = 162
-; Folding = --
+; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
+; CursorPosition = 289
+; FirstLine = 237
+; Folding = --------
 ; EnableXP
 ; CompileSourceDirectory

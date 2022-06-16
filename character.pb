@@ -2231,9 +2231,9 @@ Procedure.w random_armor_protection()
   EndIf
   ProcedureReturn rc
 EndProcedure
-; IDE Options = PureBasic 5.72 (Windows - x64)
-; CursorPosition = 1038
-; FirstLine = 1072
-; Folding = -------
+; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
+; CursorPosition = 755
+; FirstLine = 743
+; Folding = ---------------------------------------------------
 ; EnableXP
 ; CompileSourceDirectory

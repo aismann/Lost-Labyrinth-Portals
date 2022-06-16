@@ -12,7 +12,8 @@
     <attribute_bonus name="Dexterity" bonus="1" displayed="yes"></attribute_bonus>
 	<attribute_bonus name="Experience" bonus="1" displayed="no"></attribute_bonus>
 	<name language="Deutsch">Geschicklichkeit</name>
-	<display language="English" type="character info" color="$00ffff" message="Dexterity:" message2="[value]"/>
+	<description language="Deutsch">Geschicklichkeit sind Reflexe, Hand-Augen-Koordination und allgemeine Geschicklichkeit. Geschicklichkeit ist wichtig für mehrere andere Fähigkeiten, einschließlich Kampf.</description>
+  <display language="English" type="character info" color="$00ffff" message="Dexterity:" message2="[value]"/>
 	<display language="Deutsch" type="character info" color="$00ffff" message="Geschicklichkeit:" message2="[value]"/>
   </ability>
   <ability name="Intelligence" id="3" attribute="yes" description="Intelligence measures the mental capacities of the character. Intelligence is very important for all spellcasters." tile="2" attribute_start_value="3" color="$ff0000" xp="yes" minimum="1">
@@ -110,7 +111,6 @@
 	<display language="Deutsch" type="character info" color="$ff00ff" message="Zirkel:" message2="[value]" start_value="1" end_value="32000"/>
     <description language="English">Basic spells are the first thaught to each student of the magickal arts.</description>
 	<description language="Deutsch">Einfache Zauber sind die ersten Zauber, die jeder Zauberlehrling in seiner Ausbildung erlernen muss.</description>
-	<starting_equipment item_name="Staff of Magic Missiles"/>
   </ability>
   <ability name="Spell Power" id="14" attribute="yes" description="Spell Power measures the magical might of the character. With an increase to Spell Power, all spells get more powerful (the exact effect depends on the individual spell)." tile="12" color="$ff00ff" xp="yes" attribute_start_value="1" minimum="1">
     <attribute_bonus name="Spell Power" bonus="1" displayed="yes"></attribute_bonus>

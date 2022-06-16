@@ -30,10 +30,6 @@ EndProcedure
 ; plays sound
 Procedure play_sound(sound_filename$)
   Protected i.w
-  
-  If isSoundSupported = #False; InitSound was failed?
-    ProcedureReturn  
-  EndIf
   For i=1 To #MAX_NUMBER_OF_SOUNDS-1
     If sound(i)\filename$ = sound_filename$ And sound_filename$ <> ""
       PlaySound(sound(i)\sound)
@@ -41,6 +37,6 @@ Procedure play_sound(sound_filename$)
   Next
 EndProcedure
 ; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
-; CursorPosition = 33
-; Folding = --
-; EnableXP
+; CursorPosition = 32
+; Folding = -
+; DisableDebugger

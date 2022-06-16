@@ -1,5 +1,12 @@
-[![Version](https://img.shields.io/badge/3.0.alpha1-brightgreen.svg)](https://github.com/adxeproject/adxe/pulls)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](https://github.com/adxeproject/adxe/pulls)
+[![Version](https://img.shields.io/badge/3.0.alpha1-brightgreen.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
+
+[![Windows 32bit Build Status](https://img.shields.io/badge/Windows32-passed-green.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
+[![Windows 64bit Build Status](https://img.shields.io/badge/Windows64-passed-green.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
+[![Linux Build Status](https://img.shields.io/badge/Linux-untested-orange.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
+[![macOS Build Status](https://img.shields.io/badge/macOS-untested-orange.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
+[![Android Build Status](https://img.shields.io/badge/Android-unsupported-red.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
+[![iPhone Build Status](https://img.shields.io/badge/iPhone-unsupported-red.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
 
 # Lost-Labyrinth-Portals 3.0 (PureBasic 6.00)
 'Lost Labyrinth Portals' is a coffee-break roguelike game written in Purebasic.

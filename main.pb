@@ -8,8 +8,8 @@
 
 
 CompilerIf #PB_Compiler_Debugger
-  CompilerError "The debugger must be turned OFF for this example"
-CompilerEndIf
+ ; CompilerError "The debugger must be turned OFF for this example"
+
 
 Procedure ErrorHandler()
  
@@ -66,7 +66,7 @@ EndProcedure
 ;
 OnErrorCall(@ErrorHandler())
 
-
+CompilerEndIf
 
 
 
@@ -543,16 +543,12 @@ If FileSize("savegame\character.xml") > 0
   save_character(@current_character)
 EndIf
 
-
 End
 ; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
-; CursorPosition = 546
+; CursorPosition = 10
 ; Folding = -------------
 ; Optimizer
-; EnableXP
 ; EnableOnError
 ; Executable = portals_3.0_PB6.0.exe
-; SubSystem = DirectX9
 ; DisableDebugger
 ; CompileSourceDirectory
-; Compiler = PureBasic 6.00 Beta 10 (Windows - x86)

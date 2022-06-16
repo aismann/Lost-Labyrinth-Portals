@@ -52,7 +52,7 @@ The game will be available for Windows, Linux and Mac OS.
 
 ### Lost Labyrinth
 * Lost Labyrinth written by Frank Dobele (PureBasic): http://www.lostlabyrinth.com 
-* Lost Labyrinth written by Frank.Malota(Blitz Basic): http://laby.toybox.de  (link no longer works)
+* Lost Labyrinth written by Frank Malota(Blitz Basic): http://laby.toybox.de  (link no longer works)
 
 ### Lost Labyrinth DX 
 - Lost Labyrinth DX created by Johan Jansen (C++/SDL2): https://www.labydx.com/

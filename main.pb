@@ -57,30 +57,17 @@ UseOGGSoundDecoder()
 load_sound()
 
 
-; define variables used in main loop
-Define step_nr.w = 0
-Define direction.b = 0
-Define x.w = 0
-Define y.w = 0
-Global main_window_event.l = 0 ; id for event that occured in main window
-Global update_screen.b = 1     ; flag; if set, update screen
-Define character_moved.b = 0   ; flag: character has moved
-Global game_paused.b = 0       ; flag: 1=game is paused
-Define turn_ends.b = 0         ; flag; 1=current turn ends
+;Global update_screen.b = 1     ; flag; if set, update screen
+;Global game_paused.b = 0       ; flag: 1=game is paused
 Global goto_main_menu.b = 1    ; flag: 1=goto main screen
 Global character_died.b = 0
-Define save_game_at_exit.b = 1 ; flag: save game when exiting
-Define key_lock.b = 0          ; flag: 1=keyboard locked
-Define update_equipment_boni.b = 0 ; flag; if set, update boni provided by equipment
-Define blocked_by_monster.b = 0    ; flag; 1=character is blocked by a monster
-Define dx.b = 0                    ; xpos modification when moving character
-Define dy.b = 0                    ; ypos modification when moving character
-Define modify_value.w = 0          ; modifier for attributes
-Define i.w = 0                     ; default counter
 
 
 Procedure initAll()
-  game_paused = 0
+  
+ 
+  
+  ;game_paused = 0
   program_ends = 0
   character_died = 0
   ; set preferences
@@ -98,7 +85,7 @@ Procedure initAll()
 EndProcedure
 
 
-initAll()
+
 
 
 If preferences\fullscreen = 0
@@ -106,7 +93,7 @@ If preferences\fullscreen = 0
 Else
   open_fullscreen()
 EndIf
-
+initAll()
 
 ; load resources
 load_sprites()
@@ -124,7 +111,27 @@ EndIf
 ; main loop
 While program_ends = 0
   
-  ; check for keyboard input
+  
+  ; define variables used in main loop
+
+  Define step_nr.w = 0
+  Define direction.b = 0
+  Define x.w = 0
+  Define y.w = 0
+  Define main_window_event.l = 0 ; id for event that occured in main window
+  Define update_screen.b = 1     ; flag; if set, update screen
+  Define character_moved.b = 0   ; flag: character has moved
+  Define game_paused.b = 0       ; flag: 1=game is paused
+  Define turn_ends.b = 0         ; flag; 1=current turn ends
+  Define save_game_at_exit.b = 1 ; flag: save game when exiting
+  Define key_lock.b = 0          ; flag: 1=keyboard locked
+  Define update_equipment_boni.b = 0 ; flag; if set, update boni provided by equipment
+  Define blocked_by_monster.b = 0    ; flag; 1=character is blocked by a monster
+  Define dx.b = 0                    ; xpos modification when moving character
+  Define dy.b = 0                    ; ypos modification when moving character
+  Define modify_value.w = 0          ; modifier for attributes
+  Define i.w = 0                     ; default counter
+                                     ; check for keyboard input
   ExamineKeyboard()
   
   character_moved = 0
@@ -140,7 +147,7 @@ While program_ends = 0
     character_died = 0
     Select main_menu()
         
-      Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME), message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_DEUTSCH), message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_ENGLISH):
+      Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_DEUTSCH), message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_ENGLISH):
         If program_ends = 0
           delete_savegame()
           init_character(@current_character)
@@ -481,10 +488,10 @@ While program_ends = 0
   
 Wend
 
-; save current game
-If FileSize("savegame\character.xml") > 0
-  save_map(@current_map, "savegame\" + GetFilePart(current_map\filename$))
-  save_character(@current_character)
-EndIf
+; ; save current game
+; If FileSize("savegame\character.xml") > 0
+;   save_map(@current_map, "savegame\" + GetFilePart(current_map\filename$))
+;   save_character(@current_character)
+; EndIf
 
 End

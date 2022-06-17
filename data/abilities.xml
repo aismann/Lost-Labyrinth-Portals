@@ -1,383 +1,383 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Lost_Labyrinth_Abilities  Lost_Labyrinth_version="0.1.0">
-  <ability name="Strength" id="1" attribute="yes" description="Strength means raw muscles and increases the ability to cause damage in melee combat." tile="0" attribute_start_value="3" color="$00aaff" xp="yes" minimum="1">
-    <attribute_bonus name="Strength" bonus="1" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<name language="Deutsch">Stärke</name>
-	<description language="Deutsch">Stärke ist die Körperkraft des Charakters und hat direkten Einfluss auf den Schaden, den der Charakter im Nahkampf erzielt.</description>
-	<display language="Deutsch" type="character info" color="$00aaff" message="Stärke:" message2="[value]"/>^
-	<display language="English" type="character info" color="$00aaff" message="Strength:" message2="[value]"/>
-  </ability>
-  <ability name="Dexterity" id="2" attribute="yes" description="Dexterity are reflexes, hand-eye coordination and general prowess. Dexterity is important for several other abilities, including combat." tile="1" attribute_start_value="3" color="$00ffff" xp="yes" minimum="1">
-    <attribute_bonus name="Dexterity" bonus="1" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1" displayed="no"></attribute_bonus>
-	<name language="Deutsch">Geschicklichkeit</name>
-	<description language="Deutsch">Geschicklichkeit sind Reflexe, Hand-Augen-Koordination und allgemeine Geschicklichkeit. Geschicklichkeit ist wichtig für mehrere andere Fähigkeiten, einschließlich Kampf.</description>
-  <display language="English" type="character info" color="$00ffff" message="Dexterity:" message2="[value]"/>
-	<display language="Deutsch" type="character info" color="$00ffff" message="Geschicklichkeit:" message2="[value]"/>
-  </ability>
-  <ability name="Intelligence" id="3" attribute="yes" description="Intelligence measures the mental capacities of the character. Intelligence is very important for all spellcasters." tile="2" attribute_start_value="3" color="$ff0000" xp="yes" minimum="1">
-    <attribute_bonus name="Intelligence" bonus="1" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<name language="Deutsch">Intelligenz</name>
-	<display language="English" type="character info" color="$ff0000" message="Intelligence:" message2="[value]"/>
-	<display language="Deutsch" type="character info" color="$ff0000" message="Intelligenz:" message2="[value]"/>
-  </ability>
-  <ability name="Hitpoints" id="4" attribute="yes" description="Hitpoints determine the amount of damage the character can take before biting the dust; if the hitpoints ever reach 0, the character's dead and the game is over. Hitpoints can be regained by praying to the Old Gods at shrines and temples." tile="3" attribute_start_value="9" color="$00ff00" depletable="yes" main_screen="yes" xp="yes" modify_per_point_of_damage="-1" game_ends="lower" game_ends_val="1" game_ends_message="You have died.">
-    <display type="main screen status panel" language="English" message="Hitpoints" message2="[value]" color="$00ff00" expanded_value_display="yes"/>
-	<display type="main screen status panel" language="Deutsch" message="Lebenspunkte" message2="[value]" color="$00ff00" expanded_value_display="yes"/>
-    <attribute_bonus name="Hitpoints" bonus="3" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Strength" bonus="15" multiplier="5"></cap>
-	<name language="Deutsch">Lebenspunkte</name>
-	<game_ends_message language="Deutsch">Du bist gestorben.</game_ends_message>
-	<display language="English" type="character info" color="$00ff00" message="Hitpoints:" message2="[value]" expanded_value_display="yes"/>
-	<display language="Deutsch" type="character info" color="$00ff00" message="Lebenspunkte:" message2="[value]" expanded_value_display="yes"/>
-  </ability>
-  <ability name="Mana" id="5" attribute="yes" description="Whenever a spell gets cast, some mana is used up. If the character has 0 mana, he/she can no longer cast spells. Mana can be regained by visiting the Ley Nexus (a small pentagramm)." tile="4" attribute_start_value="9" color="$ff00ff" depletable="yes" main_screen="yes" xp="yes" minimum="0">
-    <display type="main screen status panel" language="English" message="Mana" message2="[value]" color="$00ffff" expanded_value_display="yes"/>
-    <display type="main screen status panel" language="Deutsch" message="Mana" message2="[value]" color="$00ffff"  expanded_value_display="yes"/>
-    <attribute_bonus name="Mana" bonus="3" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<cap name="Intelligence" bonus="15" multiplier="5"></cap>
-	<name language="Deutsch">Mana</name>
-	<display language="English" type="character info" color="$ff00ff" message="Mana:" message2="[value]" expanded_value_display="yes"/>
-	<display language="Deutsch" type="character info" color="$ff00ff" message="Mana:" message2="[value]" expanded_value_display="yes"/>
-  </ability>
-  <ability name="Attack" id="6" attribute="yes" description="Attack is the chance to hit an enemy in melee combat. Attack gets decreased by the Defense value of the enemy, but it can never be lower than 10% or higher than 90%." tile="5" color="$0000ff" percentage="yes" attribute_start_value="50" xp="yes" minimum="10" attack_melee="yes">
-    <attribute_bonus name="Attack" bonus="10" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Dexterity" bonus="50" multiplier="10"></cap>
-	<cap name="Strength" bonus="50" multiplier="10"></cap>
-	<name language="Deutsch">Angriff</name>
-	<display language="English" type="character info" color="$0000ff" message="Attack:" message2="[value]%"/>
-	<display language="Deutsch" type="character info" color="$0000ff" message="Angriff:" message2="[value]%"/>
-  </ability>
-  <ability name="Defense" id="7" attribute="yes" description="Defense is the ability to dodge and deflect incoming attacks in combat. The chance to get hit in melee combat is reduced by the Defense of the character." tile="6" color="$aaaaaa" percentage="yes" xp="yes" defense_melee="yes">
-    <attribute_bonus name="Defense" bonus="5" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Dexterity" multiplier="5"></cap>
-	<name language="Deutsch">Abwehr</name>
-	<display language="English" type="character info" color="$aaaaaa" message="Defense:" message2="[value]%"/>
-	<display language="Deutsch" type="character info" color="$aaaaaa" message="Abwehr:" message2="[value]%"/>
-  </ability>
-  <ability name="Speed" id="8" attribute="yes" description="Speed is the amount of spaces a character can move in one turn. At the end of each turn, all kinds of bad things happen: enemies attack, light burns low, the character gets hungrier etc." tile="7" attribute_start_value="7" color="$ffff00" depletable="yes" main_screen="yes" xp="yes" minimum="0" change_per_move="-1" turn_ends_if_lower="1" restore_at_end_of_turn="yes" movement="yes">
-    <display type="main screen status panel" language="English" message="Speed" message2="[value]" color="$ffff00" expanded_value_display="yes"/>
-    <display type="main screen status panel" language="Deutsch" message="Schnelligkeit" message2="[value]" color="$ffff00" expanded_value_display="yes"/>
-    <attribute_bonus name="Speed" bonus="1" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Dexterity" divisor="3" bonus="7"></cap>
-	<name language="Deutsch">Schnelligkeit</name>
-	<display language="English" type="character info" color="$ffff00" message="Speed:" message2="[value]" expanded_value_display="yes"/>
-	<display language="Deutsch" type="character info" color="$ffff00" message="Schnelligkeit:" message2="[value]" expanded_value_display="yes"/>
-  </ability>
-  <ability name="Damage" id="9" attribute="no" description="" tile="8" color="$0000aa" randomizer_ability_name="Strength" xp="no" minimum="0" damage_in_melee="yes">
-    <name language="Deutsch">Schaden</name>
-	<display language="English" type="character info" color="$0000aa" message="Damage in" message2="melee: [value]" expanded_value_display="yes"/>
-	<display language="Deutsch" type="character info" color="$0000aa" message="Schaden im Nah-" message2="kampf: [value]" expanded_value_display="yes"/>
-  </ability>
-  <ability name="Critical Hit" id="10" attribute="yes" description="A critical hit kills the enemy outright, regardless of its remaining hitpoints. To cause a critical hit, the attack has to be successful and has to penetrate the armor of the enemy (cause at least one point of damage)." tile="32" color="$0000ff" percentage="yes" attribute_start_value="1" xp="yes" minimum="1" critical_hit_melee="yes">
-    <attribute_bonus name="Critical Hit" bonus="1" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Dexterity"></cap>
-	<cap name="Strength"></cap>
-	<name language="Deutsch">Kritischer Treffer</name>
-	<display language="English" type="character info" color="$0000ff" message="Critical" message2="hit: [value]%"/>
-	<display language="Deutsch" type="character info" color="$0000ff" message="Kritischer" message2="Treffer: [value]%"/>
-  </ability>
-  <ability name="Sneaking" id="11" attribute="yes" description="When sneaking, the character tries to silently move past a monster undetected and without combat. If the attempt fails, the monster gets alerted and immediately attacks the character." tile="9" color="$555555" percentage="yes" xp="yes" attribute_start_value="25" minimum="0" sneaking="yes">
-    <attribute_bonus name="Sneaking" bonus="10" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1" displayed="no"/>
-	<cap name="Dexterity" multiplier="10" bonus="25"/>
-	<name language="Deutsch">Schleichen</name>
-	<display language="English" type="character info" color="$555555" message="Sneaking:" message2="[value]%"/>
-	<display language="Deutsch" type="character info" color="$555555" message="Schleichen:" message2="[value]%"/>
-  </ability>
-  <ability name="Lockpicking" id="12" attribute="yes" description="With this ability, the character can try to unlock locked doors and chests without the proper key (only one attempt per lock)." tile="10" color="$55555" percentage="yes" xp="yes" not_shown_if_zero="yes" minimum="0" attribute_start_value="0">
-    <attribute_bonus name="Lockpicking" bonus="10" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Dexterity" multiplier="10" bonus="50"></cap>
-	<cap name="Intelligence" multiplier="10" bonus="50"></cap>
-	<name language="Deutsch">Schlösser öffnen</name>
-	<display language="English" type="character info" color="$55555" message="Lockpicking:" message2="[value]%"/>
-	<display language="Deutsch" type="character info" color="$55555" message="Schlösser" message2="öffnen: [value]%"/>
-  </ability>
-  <ability name="Basic Spellcasting" id="13" attribute="yes" tile="11" color="$ff00ff" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Basic Spellcasting" bonus="1" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Intelligence"/>
-	<name language="Deutsch">Einfache Zauber</name>
-	<display language="English" type="character info" color="$ff00ff" message="Basic Spellcasting:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ff00ff" message="Zirkel:" message2="[value]" start_value="1" end_value="32000"/>
-    <description language="English">Basic spells are the first thaught to each student of the magickal arts.</description>
-	<description language="Deutsch">Einfache Zauber sind die ersten Zauber, die jeder Zauberlehrling in seiner Ausbildung erlernen muss.</description>
-  </ability>
-  <ability name="Spell Power" id="14" attribute="yes" description="Spell Power measures the magical might of the character. With an increase to Spell Power, all spells get more powerful (the exact effect depends on the individual spell)." tile="12" color="$ff00ff" xp="yes" attribute_start_value="1" minimum="1">
-    <attribute_bonus name="Spell Power" bonus="1" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Intelligence" divisor="3" bonus="1"></cap>
-	<name language="Deutsch">Zaubermacht</name>
-	<display language="English" type="character info" color="$ff00ff" message="Spell Power:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ff00ff" message="Zaubermacht:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Perception" id="15" attribute="yes" description="Perception allows the character to detect hidden traps and treasures." tile="13" color="$ff0000" percentage="yes" xp="yes" attribute_start_value="25" minimum="10" perception_tile_class="all">
-    <attribute_bonus name="Perception" bonus="5" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Intelligence" multiplier="10"></cap>
-	<name language="Deutsch">Wahrnehmung</name>
-	<display language="English" type="character info" color="$ff0000" message="Perception:" message2="[value]%" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ff0000" message="Wahrnehmung:" message2="[value]%" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Nightvision" id="16" attribute="yes" description="Nightvision allows the character to see in the dark; each level of this ability increases the light radius by one field." tile="25" color="$555555" displayed_as_bonus="yes" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Nightvision" bonus="1" displayed="yes"></attribute_bonus>
-	<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
-	<cap name="Perception" divisor="100"></cap>
-	<requirement name="Perception" value="100"></requirement>
-	<name language="Deutsch">Nachtsicht</name>
-	<display language="English" type="character info" color="$555555" message="Night vision:" message2="+ [value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$555555" message="Nachtsicht:" message2="+ [value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Pyromancy" id="20" attribute="yes" description="Pyromancy is the magic of fire and flame." tile="24" color="$0000ff" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Pyromancy" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-    <cap name="Intelligence" divisor="2"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Pyromantie</name>
-	<display language="English" type="character info" color="$0000ff" message="Pyromancy:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$0000ff" message="Pyromantie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Necromancy" id="21" attribute="yes" description="Necromancy is the black magic of death and destruction." tile="26" color="$aaaaaa" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Necromancy" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<cap name="Intelligence" divisor="2"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Nekromantie</name>
-	<display language="English" type="character info" color="$aaaaaa" message="Necromancy:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$aaaaaa" message="Nekromantie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Druid Magic" id="22" attribute="yes" description="Druid magic is the magic of nature. Druids are able to summon and affect animals and plants with their spells." tile="27" color="$00ff00" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Druid Magic" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<cap name="Intelligence" divisor="2"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Druidenmagie</name>
-	<display language="English" type="character info" color="$00ff00" message="Druid Magic:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$00ff00" message="Druidenmagie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Aquamancy" id="23" attribute="yes" description="Aquamancy is the magic of the ocean. Aquamancers are able to cast spells that protect from drowning and thirst, summon water animals and control vast quantities of water." tile="28" color="$ff0000" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Aquamancy" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<cap name="Intelligence" divisor="2"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Aquamantie</name>
-	<display language="English" type="character info" color="$ff0000" message="Aquamancy:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ff0000" message="Aquamantie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Geomancy" id="24" attribute="yes" description="Geomancy is the magic of earth and stone. Geomancers are able to cast spells that turn enemies into stone, create portals in stone walls and improve the quality of weapons and armor." tile="29" color="$00aaaa" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Geomancy" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-    <cap name="Intelligence" divisor="2"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Geomantie</name>
-	<display language="English" type="character info" color="$00aaaa" message="Geomancy:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$00aaaa" message="Geomantie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Aeromancy" id="25" attribute="yes" description="Aeromany is the magic of winds, storms and lightning. Aeromancers are able to cast spells that summon lightning, provide the ability to fly and turn themselves into mist." tile="30" color="$ffff00" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Aeromancy" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Aeromantie</name>
-	<display language="English" type="character info" color="$ffff00" message="Aeromancy:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ffff00" message="Aeromantie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Astromancy" id="26" attribute="yes" description="Astromancy is the magic of the sun, the moon and the stars. Astromancers are able to cast spells that create light, blind the enemy and conjure heavenly fire." tile="31" color="$ffff00" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="Astromancy" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-    <cap name="Intelligence" divisor="2"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Astromantie</name>
-	<display language="English" type="character info" color="$ffff00" message="Astromancy:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ffff00" message="Astromantie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Backstabbing" id="27" attribute="yes" tile="34" color="$888888" xp="yes" not_shown_if_zero="yes" minimum="0" displayed_as_bonus="yes" description="A hidden attack from the shadows deals a lot more damage than most blows in melee combat. This attribute counts towards the damage dealt when making a backstab attack." backstab="yes">
-    <attribute_bonus name="Backstabbing" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<cap name="Dexterity"/>
-	<name language="Deutsch">Heimlicher Angriff</name>
-	<display language="English" type="character info" color="$888888" message="Backstabbing:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$888888" message="Heimlicher" message2="Angriff: [value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="White Magic" id="28" attribute="yes" tile="42" color="$ffffff" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <attribute_bonus name="White Magic" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-    <cap name="Intelligence" divisor="2"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Weisse Magie</name>
-	<description language="English">White Magic is the magic of the Old Gods. Priests are using White Magic to banish the forces of darkness.</description>
-	<display language="English" type="character info" color="$ffffff" message="White Magic:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ffffff" message="Weisse Magie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Fighting in Armor" id="29" attribute="yes" tile="43" color="$bbbbbb" xp="yes" not_shown_if_zero="yes" minimum="0" description="Fighting in armor makes armor more efficient. Protection from armor is improved by 10% per point of this ability.">
-    <attribute_bonus name="Fighting in Armor" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<adjustment attribute_name="Armor" percentage_attribute_multiplier="10" percentage_bonus="100"/>
-    <cap name="Strength" bonus="1"/>
-	<name language="Deutsch">Kampf in Rüstung</name>
-	<display language="English" type="character info" color="$bbbbbb" message="Fighting in" message2="armor: [value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$bbbbbb" message="Kampf in" message2="Rüstung: [value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Witchcraft" id="30" attribute="yes" tile="44" color="$00aa00" xp="yes" not_shown_if_zero="yes" minimum="0" description="Witchcraft is the magic that grants the spellcaster control over its foes.">
-    <attribute_bonus name="Witchcraft" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-    <cap name="Intelligence" divisor="2"/>
-    <requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Hexerei</name>
-	<display language="English" type="character info" color="$00aa00" message="Witchcraft:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$00aa00" message="Hexerei:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Imagomancy" id="31" attribute="yes" tile="45" color="$ffff00" xp="yes" not_shown_if_zero="yes" minimum="0" description="Imagomancy is the magic of illusions and deceit.">
-    <attribute_bonus name="Imagomancy" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-    <cap name="Intelligence" divisor="2"/>
-    <requirement name="Basic Spellcasting" value="2"/>
-	<name language="Deutsch">Imagomantie</name>
-	<display language="English" type="character info" color="$ffff00" message="Imagomancy:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ffff00" message="Imagomantie:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="High Magic" id="32" attribute="yes" tile="46" color="$ff00ff" xp="yes" not_shown_if_zero="yes" minimum="0" description="High Magic spells are able to affect other spells, manipulating the magical forces themselves.">
-    <attribute_bonus name="High Magic" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-    <cap name="Intelligence" divisor="2"/>
-    <requirement name="Basic Spellcasting" value="4"/>
-	<name language="Deutsch">Hohe Magie</name>
-  </ability>
-  <ability name="Battle Rage" id="33" attribute="yes" tile="48" color="$0000ff" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <description language="English">The Battlerage provides a hero with the ability to sustain much more damage than the average fighter. The attribute value equals the number of temporary hitpoints the character receives for each successful hit in melee combat. The temporary hitpoints are slowly lost over time.</description>
-	<description language="Deutsch">Die Kampfeswut versieht einen Helden mit der Fähigkeit, wesentlich mehr Wunden und Verletzungen auszuhalten als der durchschnittliche Krieger. Für jeden erfolgreichen Treffer, den der Charakter im Nahkampf erzielt, erhält er den Wert dieser Eigenschaft als temporäre Lebenspunkte dazu. Die temporären Lebenspunkte schwinden im Lauf der Zeit von selbst, auch wenn der Charakter keinen Schaden erleidet.</description>
-	<attribute_bonus name="Battle Rage" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<name language="Deutsch">Kampfeswut</name>
-	<cap name="Strength" divisor="2"/>
-	<display language="English" type="character info" color="$0000ff" message="Battle Rage:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$0000ff" message="Kampfeswut:" message2="[value]" start_value="1" end_value="32000"/>
-  </ability>
-  <ability name="Warlock" id="34" attribute="yes" tile="49" color="$ff00ff" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <name language="Deutsch">Warlock</name>
-	<attribute_bonus name="Warlock" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<description language="English">The Warlock has mastered spells usable in melee combat.</description>
-	<description language="Deutsch">Der Warlock beherrscht Zauber, die im Nahkampf vonnutzen sind.</description>
-	<display language="English" type="character info" color="$ff00ff" message="Warlock:" message2="[value]" start_value="1" end_value="32000"/>
-	<display language="Deutsch" type="character info" color="$ff00ff" message="Warlock:" message2="[value]" start_value="1" end_value="32000"/>
-	<requirement name="Basic Spellcasting" value="2"/>
-  </ability>
-  <ability name="Healing Magic" id="35" tile="50" attribute="yes" color="$ffff00" xp="yes" not_shown_if_zero="yes" minimum="0">
-    <name language="Deutsch">Heilmagie</name>
-	<attribute_bonus name="Healing Magic" bonus="1" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<description language="English">Healers are capable of curing all kinds of wounds and inflictions.</description>
-	<description language="Deutsch">Heiler sind in der Lage, mit ihren magischen Fähigkeiten Wunden und Krankheiten zu heilen.</description>
-    <requirement name="Basic Spellcasting" value="2"/>
-  </ability>
-  <ability name="Trap Lore" id="36" tile="51" attribute="yes" color="$aaaaaa" xp="yes" not_shown_if_zero="yes" minimum="0" percentage="yes" perception_tile_class="trap">
-    <name language="Deutsch">Fallenkunde</name>
-	<attribute_bonus name="Trap Lore" bonus="10" displayed="yes"/>
-	<attribute_bonus name="Experience" bonus="1"/>
-	<description language="English">Trap Lore helps to detect and disarm hidden traps.</description>
-	<description language="Deutsch">Fallenkunde hilft, verborgene Fallen zu entdecken und zu entschärfen.</description>
-	<cap name="Dexterity" multiplier="10" bonus="20"/>
-	<cap name="Intelligence" multiplier="10" bonus="20"/>
-	<display language="English" type="character info" color="$aaaaaa" message="Trap Lore:" message2="[value]%"/>
-	<display language="Deutsch" type="character info" color="$aaaaaa" message="Fallenkunde:" message2="[value]%"/>
-  </ability>
-  <ability name="Coughing Cold" id="87" attribute="no" tile="41" color="$ffff00" xp="no" minimum="0" not_shown_if_zero="yes" change_per_turn="-1" change_per_turn_chance="50" attribute_start_value="0">
-    <adjustment attribute_name="Sneaking" percentage="50"/>
-	<adjustment attribute_name="Attack" percentage="90"/>
-	<adjustment attribute_name="Defense" percentage="90"/>
-	<adjustment attribute_name="Damage" percentage="90"/>
-	<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Coughing Cold" message2="Strength: [value]" color="$ffff00"/>
-    <display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Keuchhusten" message2="Stärke: [value]" color="$ffff00"/>
-  </ability>
-  <ability name="Mould Disease" id="88" attribute="no" tile="40" color="$008800" xp="no" minimum="0" not_shown_if_zero="yes" change_per_turn="-1" change_per_turn_chance="50" attribute_start_value="0" modify_attribute_name="Hitpoints" modify_multiplier="-1" modify_divisor="100" modify_animation="green cloud" modify_sound="hit">
-    <adjustment attribute_name="Perception" percentage="50"/>
-	<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Mould Disease" message2="Strength: [value]" color="$008800"/>
-    <display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Schimmelkrankheit" message2="Stärke: [value]" color="$008800"/>
-  </ability>
-  <ability name="Tomb Rot" id="89" attribute="no" tile="39" color="$000088" xp="no" minimum="0" not_shown_if_zero="yes" change_per_turn="-1" change_per_turn_chance="50" attribute_start_value="0" modify_attribute_name="Hitpoints" modify_multiplier="-1" modify_divisor="100" modify_animation="green cloud" modify_sound="hit">
-    <adjustment attribute_name="Speed" percentage="75"/>
-	<adjustment attribute_name="Damage" percentage="50"/>
-	<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Tomb Rot" message2="Strength: [value]" color="$000088"/>
-    <display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Grabesfäule" message2="Stärke: [value]" color="$000088"/>
-  </ability>
-  <ability name="Blind" id="90" attribute="no" tile="38" color="$888888" xp="no" minimum="0" not_shown_if_zero="yes" change_per_turn="-1" change_per_turn_chance="100" attribute_start_value="0">
-    <adjustment attribute_name="Light" percentage="0"/>
-	<adjustment attribute_name="Speed" percentage="75"/>
-	<adjustment attribute_name="Attack" percentage="50"/>
-    <adjustment attribute_name="Defense" percentage="50"/>
-	<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Blind" message2="Duration: [value] turns" color="$888888"/>
-    <display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Blind" message2="Dauer: [value] Runden" color="$888888"/>
-  </ability>
-  <ability name="Trapped" id="91" attribute="no" tile="37" color="$888888" xp="no" minimum="0" not_shown_if_zero="yes" attribute_start_value="0" change_per_turn="-1" change_per_turn_chance="20">
-    <name language="Deutsch">Festgesetzt</name>
-	<adjustment attribute_name="Speed" percentage="0"/>
-	<adjustment attribute_name="Attack" percentage="50"/>
-	<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Trapped" message2="Durarion: [value]" color="$888888"/>
-	<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Festgesetzt" message2="Dauer: [value]" color="$888888"/>
-  </ability>
-  <ability name="Poisoned" id="92" attribute="no" tile="35" color="$00ff00" xp="no" minimum="0" not_shown_if_zero="yes" modify_attribute_name="Hitpoints" modify_multiplier="-1" modify_divisor="10" modify_animation="green cloud" modify_sound="hit" attribute_start_value="0" change_per_turn="-1" change_per_turn_chance="50">
-    <name language="Deutsch">Vergiftet</name>
-	<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Poisoned; -1 HP per turn" message2="Strength: [value]" color="$00ff00"/>
-	<display type="main screen status panel" language="Deutsch" start_value="1" end_value="100" message="Vergiftet; -1 LP pro Runde" message2="Stärke: [value]" color="$00ff00"/>
-  </ability>
-  <ability name="Light" id="93" attribute="no" tile="19" color="$00ffff" xp="no" minimum="0" lightradius="yes">
-    <name language="Deutsch">Lichtradius</name>
-	<display language="English" type="character info" color="$00ffff" message="Light:" message2="[value]"/>
-	<display language="Deutsch" type="character info" color="$00ffff" message="Licht:" message2="[value]"/>
-  </ability>
-  <ability name="Armor" id="94" attribute="no" tile="22" color="$999999" xp="no" minimum="0" armor="yes">
-    <name language="Deutsch">Rüstungsschutz</name>
-	<display language="English" type="character info" color="$999999" message="Armor:" message2="[value]"/>
-	<display language="Deutsch" type="character info" color="$999999" message="Rüstung:" message2="[value]"/>
-  </ability>
-  <ability name="Hunger" id="95" attribute="no" tile="21" color="$00aaff" xp="no" minimum="0" change_per_turn="1" change_per_turn_chance="100" attribute_start_value="0" game_ends="higher" game_ends_val="200" game_ends_message="You have starved.">
-    <display type="main screen status panel" language="English" start_value="101" end_value="150" message="Hungry" color="$00aaff"/>
-	<display type="main screen status panel" language="English" start_value="151" end_value="999" message="Starving" color="$0000ff"/>
-    <display type="main screen status panel" language="Deutsch" start_value="101" end_value="150" message="Hungrig" color="$00aaff"/>
-	<display type="main screen status panel" language="Deutsch" start_value="151" end_value="32000" message="Am Verhungern" color="$0000ff"/>
-	<name language="Deutsch">Hunger</name>
-	<game_ends_message language="Deutsch">Du bist verhungert.</game_ends_message>
-  </ability>
-  <ability name="Thirst" id="96" attribute="no" tile="23" color="$ffaa00" xp="no" attribute_start_value="0" minimum="0" change_per_turn="1" change_per_turn_chance="100" game_ends="higher" game_ends_val="150" game_ends_message="You have died of thirst.">
-    <display type="main screen status panel" language="English" start_value="51" end_value="100" message="Thirsty" color="$ff0000"/>
-	<display type="main screen status panel" language="English" start_value="101" end_value="32000" message="Dying of thirst" color="$0000ff"/>
-	<name language="Deutsch">Durst</name>
-    <display language="Deutsch" start_value="51" end_value="100" message="Durstig" color="$ff0000"/>
-	<display language="Deutsch" start_value="101" end_value="999" message="Am Verdursten" color="$0000ff"/>
-	<game_ends_message language="Deutsch">Du bist verdurstet.</game_ends_message>
-  </ability>
-  <ability name="Monsters Killed" id="97" attribute="no" tile="20" color="$0000ff" xp="no" minimum="0" modify_with_each_kill="1">
-    <name language="Deutsch">Getötete Monster</name>
-	<display language="English" type="character info" color="$0000ff" message="Kills:" message2="[value]"/>
-	<display language="Deutsch" type="character info" color="$0000ff" message="Kills:" message2="[value]"/>
-  </ability>
-  <ability name="Experience" id="98" attribute="no" tile="15" color="$ffffff" xp="no" minimum="0">
-    <name language="Deutsch">Erfahrung</name>
-	<display language="English" type="character info" color="$ffffff" message="Experience:" message2="[value]"/>
-	<display language="Deutsch" type="character info" color="$ffffff" message="Erfahrung:" message2="[value]"/>
-  </ability>
-  <ability name="Gold" id="99" attribute="no" tile="16" color="$00ffff" xp="no" minimum="0">
-    <name language="Deutsch">Gold</name>
-	<display language="English" type="character info" color="$00ffff" message="Gold:" message2="[value]"/>
-	<display language="Deutsch" type="character info" color="$00ffff" message="Gold:" message2="[value]"/>
-  </ability>
-  <ability name="Magic Shield" id="100" attribute="no" tile="47" color="$ff00ff" xp="no" minimum="0" change_per_turn="-1" change_per_turn_chance="25" attribute_start_value="0" buffer_for_attribute_name="Hitpoints" buffer_animation="magic shield">
-    <name language="Deutsch">Magisches Schild</name>
-	<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Magic Shield" message2="Strength: [value]" color="$ff00ff"/>
-	<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Magisches Schutzschild" message2="Stärke: [value]" color="$ff00ff"/>
-  </ability>
-  <ability name="Battle Rage (current)" id="101" attribute="no" tile="48" color="$0000ff" xp="no" minimum="0" change_per_turn="-1" change_per_turn_chance="100" attribute_start_value="0" buffer_for_attribute_name="Hitpoints" hit_attribute_name="Battle Rage" buffer_animation="battle rage">
-    <name language="Deutsch">Kampfeswut</name>
-	<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Battle Rage" message2="Strength: [value]" color="$0000ff"/>
-	<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Kampfeswut" message2="Stärke: [value]" color="$0000ff"/>
-  </ability>
+	<ability name="Strength" id="1" attribute="yes" description="Strength means raw muscles and increases the ability to cause damage in melee combat." tile="0" attribute_start_value="3" color="$00aaff" xp="yes" minimum="1">
+		<attribute_bonus name="Strength" bonus="1" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<name language="Deutsch">Stärke</name>
+		<description language="Deutsch">Stärke ist die Körperkraft des Charakters und hat direkten Einfluss auf den Schaden, den der Charakter im Nahkampf erzielt.</description>
+		<display language="Deutsch" type="character info" color="$00aaff" message="Stärke:" message2="[value]"/>^
+		<display language="English" type="character info" color="$00aaff" message="Strength:" message2="[value]"/>
+	</ability>
+	<ability name="Dexterity" id="2" attribute="yes" description="Dexterity are reflexes, hand-eye coordination and general prowess. Dexterity is important for several other abilities, including combat." tile="1" attribute_start_value="3" color="$00ffff" xp="yes" minimum="1">
+		<attribute_bonus name="Dexterity" bonus="1" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1" displayed="no"></attribute_bonus>
+		<name language="Deutsch">Geschicklichkeit</name>
+		<description language="Deutsch">Geschicklichkeit sind Reflexe, Hand-Augen-Koordination und allgemeine Geschicklichkeit. Geschicklichkeit ist wichtig für mehrere andere Fähigkeiten, einschließlich Kampf.</description>
+		<display language="English" type="character info" color="$00ffff" message="Dexterity:" message2="[value]"/>
+		<display language="Deutsch" type="character info" color="$00ffff" message="Geschicklichkeit:" message2="[value]"/>
+	</ability>
+	<ability name="Intelligence" id="3" attribute="yes" description="Intelligence measures the mental capacities of the character. Intelligence is very important for all spellcasters." tile="2" attribute_start_value="3" color="$ff0000" xp="yes" minimum="1">
+		<attribute_bonus name="Intelligence" bonus="1" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<name language="Deutsch">Intelligenz</name>
+		<display language="English" type="character info" color="$ff0000" message="Intelligence:" message2="[value]"/>
+		<display language="Deutsch" type="character info" color="$ff0000" message="Intelligenz:" message2="[value]"/>
+	</ability>
+	<ability name="Hitpoints" id="4" attribute="yes" description="Hitpoints determine the amount of damage the character can take before biting the dust; if the hitpoints ever reach 0, the character's dead and the game is over. Hitpoints can be regained by praying to the Old Gods at shrines and temples." tile="3" attribute_start_value="9" color="$00ff00" depletable="yes" main_screen="yes" xp="yes" modify_per_point_of_damage="-1" game_ends="lower" game_ends_val="1" game_ends_message="You have died.">
+		<display type="main screen status panel" language="English" message="Hitpoints" message2="[value]" color="$00ff00" expanded_value_display="yes"/>
+		<display type="main screen status panel" language="Deutsch" message="Lebenspunkte" message2="[value]" color="$00ff00" expanded_value_display="yes"/>
+		<attribute_bonus name="Hitpoints" bonus="3" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Strength" bonus="15" multiplier="5"></cap>
+		<name language="Deutsch">Lebenspunkte</name>
+		<game_ends_message language="Deutsch">Du bist gestorben.</game_ends_message>
+		<display language="English" type="character info" color="$00ff00" message="Hitpoints:" message2="[value]" expanded_value_display="yes"/>
+		<display language="Deutsch" type="character info" color="$00ff00" message="Lebenspunkte:" message2="[value]" expanded_value_display="yes"/>
+	</ability>
+	<ability name="Mana" id="5" attribute="yes" description="Whenever a spell gets cast, some mana is used up. If the character has 0 mana, he/she can no longer cast spells. Mana can be regained by visiting the Ley Nexus (a small pentagramm)." tile="4" attribute_start_value="9" color="$ff00ff" depletable="yes" main_screen="yes" xp="yes" minimum="0">
+		<display type="main screen status panel" language="English" message="Mana" message2="[value]" color="$00ffff" expanded_value_display="yes"/>
+		<display type="main screen status panel" language="Deutsch" message="Mana" message2="[value]" color="$00ffff"  expanded_value_display="yes"/>
+		<attribute_bonus name="Mana" bonus="3" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" bonus="15" multiplier="5"></cap>
+		<name language="Deutsch">Mana</name>
+		<display language="English" type="character info" color="$ff00ff" message="Mana:" message2="[value]" expanded_value_display="yes"/>
+		<display language="Deutsch" type="character info" color="$ff00ff" message="Mana:" message2="[value]" expanded_value_display="yes"/>
+	</ability>
+	<ability name="Attack" id="6" attribute="yes" description="Attack is the chance to hit an enemy in melee combat. Attack gets decreased by the Defense value of the enemy, but it can never be lower than 10% or higher than 90%." tile="5" color="$0000ff" percentage="yes" attribute_start_value="50" xp="yes" minimum="10" attack_melee="yes">
+		<attribute_bonus name="Attack" bonus="10" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Dexterity" bonus="50" multiplier="10"></cap>
+		<cap name="Strength" bonus="50" multiplier="10"></cap>
+		<name language="Deutsch">Angriff</name>
+		<display language="English" type="character info" color="$0000ff" message="Attack:" message2="[value]%"/>
+		<display language="Deutsch" type="character info" color="$0000ff" message="Angriff:" message2="[value]%"/>
+	</ability>
+	<ability name="Defense" id="7" attribute="yes" description="Defense is the ability to dodge and deflect incoming attacks in combat. The chance to get hit in melee combat is reduced by the Defense of the character." tile="6" color="$aaaaaa" percentage="yes" xp="yes" defense_melee="yes">
+		<attribute_bonus name="Defense" bonus="5" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Dexterity" multiplier="5"></cap>
+		<name language="Deutsch">Abwehr</name>
+		<display language="English" type="character info" color="$aaaaaa" message="Defense:" message2="[value]%"/>
+		<display language="Deutsch" type="character info" color="$aaaaaa" message="Abwehr:" message2="[value]%"/>
+	</ability>
+	<ability name="Speed" id="8" attribute="yes" description="Speed is the amount of spaces a character can move in one turn. At the end of each turn, all kinds of bad things happen: enemies attack, light burns low, the character gets hungrier etc." tile="7" attribute_start_value="7" color="$ffff00" depletable="yes" main_screen="yes" xp="yes" minimum="0" change_per_move="-1" turn_ends_if_lower="1" restore_at_end_of_turn="yes" movement="yes">
+		<display type="main screen status panel" language="English" message="Speed" message2="[value]" color="$ffff00" expanded_value_display="yes"/>
+		<display type="main screen status panel" language="Deutsch" message="Schnelligkeit" message2="[value]" color="$ffff00" expanded_value_display="yes"/>
+		<attribute_bonus name="Speed" bonus="1" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Dexterity" divisor="3" bonus="7"></cap>
+		<name language="Deutsch">Schnelligkeit</name>
+		<display language="English" type="character info" color="$ffff00" message="Speed:" message2="[value]" expanded_value_display="yes"/>
+		<display language="Deutsch" type="character info" color="$ffff00" message="Schnelligkeit:" message2="[value]" expanded_value_display="yes"/>
+	</ability>
+	<ability name="Damage" id="9" attribute="no" description="" tile="8" color="$0000aa" randomizer_ability_name="Strength" xp="no" minimum="0" damage_in_melee="yes">
+		<name language="Deutsch">Schaden</name>
+		<display language="English" type="character info" color="$0000aa" message="Damage in" message2="melee: [value]" expanded_value_display="yes"/>
+		<display language="Deutsch" type="character info" color="$0000aa" message="Schaden im Nah-" message2="kampf: [value]" expanded_value_display="yes"/>
+	</ability>
+	<ability name="Critical Hit" id="10" attribute="yes" description="A critical hit kills the enemy outright, regardless of its remaining hitpoints. To cause a critical hit, the attack has to be successful and has to penetrate the armor of the enemy (cause at least one point of damage)." tile="32" color="$0000ff" percentage="yes" attribute_start_value="1" xp="yes" minimum="1" critical_hit_melee="yes">
+		<attribute_bonus name="Critical Hit" bonus="1" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Dexterity"></cap>
+		<cap name="Strength"></cap>
+		<name language="Deutsch">Kritischer Treffer</name>
+		<display language="English" type="character info" color="$0000ff" message="Critical" message2="hit: [value]%"/>
+		<display language="Deutsch" type="character info" color="$0000ff" message="Kritischer" message2="Treffer: [value]%"/>
+	</ability>
+	<ability name="Sneaking" id="11" attribute="yes" description="When sneaking, the character tries to silently move past a monster undetected and without combat. If the attempt fails, the monster gets alerted and immediately attacks the character." tile="9" color="$555555" percentage="yes" xp="yes" attribute_start_value="25" minimum="0" sneaking="yes">
+		<attribute_bonus name="Sneaking" bonus="10" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1" displayed="no"/>
+		<cap name="Dexterity" multiplier="10" bonus="25"/>
+		<name language="Deutsch">Schleichen</name>
+		<display language="English" type="character info" color="$555555" message="Sneaking:" message2="[value]%"/>
+		<display language="Deutsch" type="character info" color="$555555" message="Schleichen:" message2="[value]%"/>
+	</ability>
+	<ability name="Lockpicking" id="12" attribute="yes" description="With this ability, the character can try to unlock locked doors and chests without the proper key (only one attempt per lock)." tile="10" color="$55555" percentage="yes" xp="yes" not_shown_if_zero="yes" minimum="0" attribute_start_value="0">
+		<attribute_bonus name="Lockpicking" bonus="10" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Dexterity" multiplier="10" bonus="50"></cap>
+		<cap name="Intelligence" multiplier="10" bonus="50"></cap>
+		<name language="Deutsch">Schlösser öffnen</name>
+		<display language="English" type="character info" color="$55555" message="Lockpicking:" message2="[value]%"/>
+		<display language="Deutsch" type="character info" color="$55555" message="Schlösser" message2="öffnen: [value]%"/>
+	</ability>
+	<ability name="Basic Spellcasting" id="13" attribute="yes" tile="11" color="$ff00ff" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Basic Spellcasting" bonus="1" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Intelligence"/>
+		<name language="Deutsch">Einfache Zauber</name>
+		<display language="English" type="character info" color="$ff00ff" message="Basic Spellcasting:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ff00ff" message="Zirkel:" message2="[value]" start_value="1" end_value="32000"/>
+		<description language="English">Basic spells are the first thaught to each student of the magickal arts.</description>
+		<description language="Deutsch">Einfache Zauber sind die ersten Zauber, die jeder Zauberlehrling in seiner Ausbildung erlernen muss.</description>
+	</ability>
+	<ability name="Spell Power" id="14" attribute="yes" description="Spell Power measures the magical might of the character. With an increase to Spell Power, all spells get more powerful (the exact effect depends on the individual spell)." tile="12" color="$ff00ff" xp="yes" attribute_start_value="1" minimum="1">
+		<attribute_bonus name="Spell Power" bonus="1" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Intelligence" divisor="3" bonus="1"></cap>
+		<name language="Deutsch">Zaubermacht</name>
+		<display language="English" type="character info" color="$ff00ff" message="Spell Power:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ff00ff" message="Zaubermacht:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Perception" id="15" attribute="yes" description="Perception allows the character to detect hidden traps and treasures." tile="13" color="$ff0000" percentage="yes" xp="yes" attribute_start_value="25" minimum="10" perception_tile_class="all">
+		<attribute_bonus name="Perception" bonus="5" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Intelligence" multiplier="10"></cap>
+		<name language="Deutsch">Wahrnehmung</name>
+		<display language="English" type="character info" color="$ff0000" message="Perception:" message2="[value]%" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ff0000" message="Wahrnehmung:" message2="[value]%" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Nightvision" id="16" attribute="yes" description="Nightvision allows the character to see in the dark; each level of this ability increases the light radius by one field." tile="25" color="$555555" displayed_as_bonus="yes" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Nightvision" bonus="1" displayed="yes"></attribute_bonus>
+		<attribute_bonus name="Experience" bonus="1"></attribute_bonus>
+		<cap name="Perception" divisor="100"></cap>
+		<requirement name="Perception" value="100"></requirement>
+		<name language="Deutsch">Nachtsicht</name>
+		<display language="English" type="character info" color="$555555" message="Night vision:" message2="+ [value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$555555" message="Nachtsicht:" message2="+ [value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Pyromancy" id="20" attribute="yes" description="Pyromancy is the magic of fire and flame." tile="24" color="$0000ff" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Pyromancy" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Pyromantie</name>
+		<display language="English" type="character info" color="$0000ff" message="Pyromancy:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$0000ff" message="Pyromantie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Necromancy" id="21" attribute="yes" description="Necromancy is the black magic of death and destruction." tile="26" color="$aaaaaa" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Necromancy" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Nekromantie</name>
+		<display language="English" type="character info" color="$aaaaaa" message="Necromancy:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$aaaaaa" message="Nekromantie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Druid Magic" id="22" attribute="yes" description="Druid magic is the magic of nature. Druids are able to summon and affect animals and plants with their spells." tile="27" color="$00ff00" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Druid Magic" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Druidenmagie</name>
+		<display language="English" type="character info" color="$00ff00" message="Druid Magic:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$00ff00" message="Druidenmagie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Aquamancy" id="23" attribute="yes" description="Aquamancy is the magic of the ocean. Aquamancers are able to cast spells that protect from drowning and thirst, summon water animals and control vast quantities of water." tile="28" color="$ff0000" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Aquamancy" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Aquamantie</name>
+		<display language="English" type="character info" color="$ff0000" message="Aquamancy:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ff0000" message="Aquamantie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Geomancy" id="24" attribute="yes" description="Geomancy is the magic of earth and stone. Geomancers are able to cast spells that turn enemies into stone, create portals in stone walls and improve the quality of weapons and armor." tile="29" color="$00aaaa" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Geomancy" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Geomantie</name>
+		<display language="English" type="character info" color="$00aaaa" message="Geomancy:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$00aaaa" message="Geomantie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Aeromancy" id="25" attribute="yes" description="Aeromany is the magic of winds, storms and lightning. Aeromancers are able to cast spells that summon lightning, provide the ability to fly and turn themselves into mist." tile="30" color="$ffff00" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Aeromancy" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Aeromantie</name>
+		<display language="English" type="character info" color="$ffff00" message="Aeromancy:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ffff00" message="Aeromantie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Astromancy" id="26" attribute="yes" description="Astromancy is the magic of the sun, the moon and the stars. Astromancers are able to cast spells that create light, blind the enemy and conjure heavenly fire." tile="31" color="$ffff00" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="Astromancy" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Astromantie</name>
+		<display language="English" type="character info" color="$ffff00" message="Astromancy:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ffff00" message="Astromantie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Backstabbing" id="27" attribute="yes" tile="34" color="$888888" xp="yes" not_shown_if_zero="yes" minimum="0" displayed_as_bonus="yes" description="A hidden attack from the shadows deals a lot more damage than most blows in melee combat. This attribute counts towards the damage dealt when making a backstab attack." backstab="yes">
+		<attribute_bonus name="Backstabbing" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Dexterity"/>
+		<name language="Deutsch">Heimlicher Angriff</name>
+		<display language="English" type="character info" color="$888888" message="Backstabbing:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$888888" message="Heimlicher" message2="Angriff: [value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="White Magic" id="28" attribute="yes" tile="42" color="$ffffff" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<attribute_bonus name="White Magic" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Weisse Magie</name>
+		<description language="English">White Magic is the magic of the Old Gods. Priests are using White Magic to banish the forces of darkness.</description>
+		<display language="English" type="character info" color="$ffffff" message="White Magic:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ffffff" message="Weisse Magie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Fighting in Armor" id="29" attribute="yes" tile="43" color="$bbbbbb" xp="yes" not_shown_if_zero="yes" minimum="0" description="Fighting in armor makes armor more efficient. Protection from armor is improved by 10% per point of this ability.">
+		<attribute_bonus name="Fighting in Armor" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<adjustment attribute_name="Armor" percentage_attribute_multiplier="10" percentage_bonus="100"/>
+		<cap name="Strength" bonus="1"/>
+		<name language="Deutsch">Kampf in Rüstung</name>
+		<display language="English" type="character info" color="$bbbbbb" message="Fighting in" message2="armor: [value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$bbbbbb" message="Kampf in" message2="Rüstung: [value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Witchcraft" id="30" attribute="yes" tile="44" color="$00aa00" xp="yes" not_shown_if_zero="yes" minimum="0" description="Witchcraft is the magic that grants the spellcaster control over its foes.">
+		<attribute_bonus name="Witchcraft" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Hexerei</name>
+		<display language="English" type="character info" color="$00aa00" message="Witchcraft:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$00aa00" message="Hexerei:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Imagomancy" id="31" attribute="yes" tile="45" color="$ffff00" xp="yes" not_shown_if_zero="yes" minimum="0" description="Imagomancy is the magic of illusions and deceit.">
+		<attribute_bonus name="Imagomancy" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+		<name language="Deutsch">Imagomantie</name>
+		<display language="English" type="character info" color="$ffff00" message="Imagomancy:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ffff00" message="Imagomantie:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="High Magic" id="32" attribute="yes" tile="46" color="$ff00ff" xp="yes" not_shown_if_zero="yes" minimum="0" description="High Magic spells are able to affect other spells, manipulating the magical forces themselves.">
+		<attribute_bonus name="High Magic" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<cap name="Intelligence" divisor="2"/>
+		<requirement name="Basic Spellcasting" value="4"/>
+		<name language="Deutsch">Hohe Magie</name>
+	</ability>
+	<ability name="Battle Rage" id="33" attribute="yes" tile="48" color="$0000ff" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<description language="English">The Battlerage provides a hero with the ability to sustain much more damage than the average fighter. The attribute value equals the number of temporary hitpoints the character receives for each successful hit in melee combat. The temporary hitpoints are slowly lost over time.</description>
+		<description language="Deutsch">Die Kampfeswut versieht einen Helden mit der Fähigkeit, wesentlich mehr Wunden und Verletzungen auszuhalten als der durchschnittliche Krieger. Für jeden erfolgreichen Treffer, den der Charakter im Nahkampf erzielt, erhält er den Wert dieser Eigenschaft als temporäre Lebenspunkte dazu. Die temporären Lebenspunkte schwinden im Lauf der Zeit von selbst, auch wenn der Charakter keinen Schaden erleidet.</description>
+		<attribute_bonus name="Battle Rage" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<name language="Deutsch">Kampfeswut</name>
+		<cap name="Strength" divisor="2"/>
+		<display language="English" type="character info" color="$0000ff" message="Battle Rage:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$0000ff" message="Kampfeswut:" message2="[value]" start_value="1" end_value="32000"/>
+	</ability>
+	<ability name="Warlock" id="34" attribute="yes" tile="49" color="$ff00ff" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<name language="Deutsch">Warlock</name>
+		<attribute_bonus name="Warlock" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<description language="English">The Warlock has mastered spells usable in melee combat.</description>
+		<description language="Deutsch">Der Warlock beherrscht Zauber, die im Nahkampf vonnutzen sind.</description>
+		<display language="English" type="character info" color="$ff00ff" message="Warlock:" message2="[value]" start_value="1" end_value="32000"/>
+		<display language="Deutsch" type="character info" color="$ff00ff" message="Warlock:" message2="[value]" start_value="1" end_value="32000"/>
+		<requirement name="Basic Spellcasting" value="2"/>
+	</ability>
+	<ability name="Healing Magic" id="35" tile="50" attribute="yes" color="$ffff00" xp="yes" not_shown_if_zero="yes" minimum="0">
+		<name language="Deutsch">Heilmagie</name>
+		<attribute_bonus name="Healing Magic" bonus="1" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<description language="English">Healers are capable of curing all kinds of wounds and inflictions.</description>
+		<description language="Deutsch">Heiler sind in der Lage, mit ihren magischen Fähigkeiten Wunden und Krankheiten zu heilen.</description>
+		<requirement name="Basic Spellcasting" value="2"/>
+	</ability>
+	<ability name="Trap Lore" id="36" tile="51" attribute="yes" color="$aaaaaa" xp="yes" not_shown_if_zero="yes" minimum="0" percentage="yes" perception_tile_class="trap">
+		<name language="Deutsch">Fallenkunde</name>
+		<attribute_bonus name="Trap Lore" bonus="10" displayed="yes"/>
+		<attribute_bonus name="Experience" bonus="1"/>
+		<description language="English">Trap Lore helps to detect and disarm hidden traps.</description>
+		<description language="Deutsch">Fallenkunde hilft, verborgene Fallen zu entdecken und zu entschärfen.</description>
+		<cap name="Dexterity" multiplier="10" bonus="20"/>
+		<cap name="Intelligence" multiplier="10" bonus="20"/>
+		<display language="English" type="character info" color="$aaaaaa" message="Trap Lore:" message2="[value]%"/>
+		<display language="Deutsch" type="character info" color="$aaaaaa" message="Fallenkunde:" message2="[value]%"/>
+	</ability>
+	<ability name="Coughing Cold" id="87" attribute="no" tile="41" color="$ffff00" xp="no" minimum="0" not_shown_if_zero="yes" change_per_turn="-1" change_per_turn_chance="50" attribute_start_value="0">
+		<adjustment attribute_name="Sneaking" percentage="50"/>
+		<adjustment attribute_name="Attack" percentage="90"/>
+		<adjustment attribute_name="Defense" percentage="90"/>
+		<adjustment attribute_name="Damage" percentage="90"/>
+		<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Coughing Cold" message2="Strength: [value]" color="$ffff00"/>
+		<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Keuchhusten" message2="Stärke: [value]" color="$ffff00"/>
+	</ability>
+	<ability name="Mould Disease" id="88" attribute="no" tile="40" color="$008800" xp="no" minimum="0" not_shown_if_zero="yes" change_per_turn="-1" change_per_turn_chance="50" attribute_start_value="0" modify_attribute_name="Hitpoints" modify_multiplier="-1" modify_divisor="100" modify_animation="green cloud" modify_sound="hit">
+		<adjustment attribute_name="Perception" percentage="50"/>
+		<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Mould Disease" message2="Strength: [value]" color="$008800"/>
+		<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Schimmelkrankheit" message2="Stärke: [value]" color="$008800"/>
+	</ability>
+	<ability name="Tomb Rot" id="89" attribute="no" tile="39" color="$000088" xp="no" minimum="0" not_shown_if_zero="yes" change_per_turn="-1" change_per_turn_chance="50" attribute_start_value="0" modify_attribute_name="Hitpoints" modify_multiplier="-1" modify_divisor="100" modify_animation="green cloud" modify_sound="hit">
+		<adjustment attribute_name="Speed" percentage="75"/>
+		<adjustment attribute_name="Damage" percentage="50"/>
+		<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Tomb Rot" message2="Strength: [value]" color="$000088"/>
+		<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Grabesfäule" message2="Stärke: [value]" color="$000088"/>
+	</ability>
+	<ability name="Blind" id="90" attribute="no" tile="38" color="$888888" xp="no" minimum="0" not_shown_if_zero="yes" change_per_turn="-1" change_per_turn_chance="100" attribute_start_value="0">
+		<adjustment attribute_name="Light" percentage="0"/>
+		<adjustment attribute_name="Speed" percentage="75"/>
+		<adjustment attribute_name="Attack" percentage="50"/>
+		<adjustment attribute_name="Defense" percentage="50"/>
+		<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Blind" message2="Duration: [value] turns" color="$888888"/>
+		<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Blind" message2="Dauer: [value] Runden" color="$888888"/>
+	</ability>
+	<ability name="Trapped" id="91" attribute="no" tile="37" color="$888888" xp="no" minimum="0" not_shown_if_zero="yes" attribute_start_value="0" change_per_turn="-1" change_per_turn_chance="20">
+		<name language="Deutsch">Festgesetzt</name>
+		<adjustment attribute_name="Speed" percentage="0"/>
+		<adjustment attribute_name="Attack" percentage="50"/>
+		<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Trapped" message2="Durarion: [value]" color="$888888"/>
+		<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Festgesetzt" message2="Dauer: [value]" color="$888888"/>
+	</ability>
+	<ability name="Poisoned" id="92" attribute="no" tile="35" color="$00ff00" xp="no" minimum="0" not_shown_if_zero="yes" modify_attribute_name="Hitpoints" modify_multiplier="-1" modify_divisor="10" modify_animation="green cloud" modify_sound="hit" attribute_start_value="0" change_per_turn="-1" change_per_turn_chance="50">
+		<name language="Deutsch">Vergiftet</name>
+		<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Poisoned; -1 HP per turn" message2="Strength: [value]" color="$00ff00"/>
+		<display type="main screen status panel" language="Deutsch" start_value="1" end_value="100" message="Vergiftet; -1 LP pro Runde" message2="Stärke: [value]" color="$00ff00"/>
+	</ability>
+	<ability name="Light" id="93" attribute="no" tile="19" color="$00ffff" xp="no" minimum="0" lightradius="yes">
+		<name language="Deutsch">Lichtradius</name>
+		<display language="English" type="character info" color="$00ffff" message="Light:" message2="[value]"/>
+		<display language="Deutsch" type="character info" color="$00ffff" message="Licht:" message2="[value]"/>
+	</ability>
+	<ability name="Armor" id="94" attribute="no" tile="22" color="$999999" xp="no" minimum="0" armor="yes">
+		<name language="Deutsch">Rüstungsschutz</name>
+		<display language="English" type="character info" color="$999999" message="Armor:" message2="[value]"/>
+		<display language="Deutsch" type="character info" color="$999999" message="Rüstung:" message2="[value]"/>
+	</ability>
+	<ability name="Hunger" id="95" attribute="no" tile="21" color="$00aaff" xp="no" minimum="0" change_per_turn="1" change_per_turn_chance="100" attribute_start_value="0" game_ends="higher" game_ends_val="200" game_ends_message="You have starved.">
+		<display type="main screen status panel" language="English" start_value="101" end_value="150" message="Hungry" color="$00aaff"/>
+		<display type="main screen status panel" language="English" start_value="151" end_value="999" message="Starving" color="$0000ff"/>
+		<display type="main screen status panel" language="Deutsch" start_value="101" end_value="150" message="Hungrig" color="$00aaff"/>
+		<display type="main screen status panel" language="Deutsch" start_value="151" end_value="32000" message="Am Verhungern" color="$0000ff"/>
+		<name language="Deutsch">Hunger</name>
+		<game_ends_message language="Deutsch">Du bist verhungert.</game_ends_message>
+	</ability>
+	<ability name="Thirst" id="96" attribute="no" tile="23" color="$ffaa00" xp="no" attribute_start_value="0" minimum="0" change_per_turn="1" change_per_turn_chance="100" game_ends="higher" game_ends_val="150" game_ends_message="You have died of thirst.">
+		<display type="main screen status panel" language="English" start_value="51" end_value="100" message="Thirsty" color="$ff0000"/>
+		<display type="main screen status panel" language="English" start_value="101" end_value="32000" message="Dying of thirst" color="$0000ff"/>
+		<name language="Deutsch">Durst</name>
+		<display language="Deutsch" start_value="51" end_value="100" message="Durstig" color="$ff0000"/>
+		<display language="Deutsch" start_value="101" end_value="999" message="Am Verdursten" color="$0000ff"/>
+		<game_ends_message language="Deutsch">Du bist verdurstet.</game_ends_message>
+	</ability>
+	<ability name="Monsters Killed" id="97" attribute="no" tile="20" color="$0000ff" xp="no" minimum="0" modify_with_each_kill="1">
+		<name language="Deutsch">Getötete Monster</name>
+		<display language="English" type="character info" color="$0000ff" message="Kills:" message2="[value]"/>
+		<display language="Deutsch" type="character info" color="$0000ff" message="Kills:" message2="[value]"/>
+	</ability>
+	<ability name="Experience" id="98" attribute="no" tile="15" color="$ffffff" xp="no" minimum="0">
+		<name language="Deutsch">Erfahrung</name>
+		<display language="English" type="character info" color="$ffffff" message="Experience:" message2="[value]"/>
+		<display language="Deutsch" type="character info" color="$ffffff" message="Erfahrung:" message2="[value]"/>
+	</ability>
+	<ability name="Gold" id="99" attribute="no" tile="16" color="$00ffff" xp="no" minimum="0">
+		<name language="Deutsch">Gold</name>
+		<display language="English" type="character info" color="$00ffff" message="Gold:" message2="[value]"/>
+		<display language="Deutsch" type="character info" color="$00ffff" message="Gold:" message2="[value]"/>
+	</ability>
+	<ability name="Magic Shield" id="100" attribute="no" tile="47" color="$ff00ff" xp="no" minimum="0" change_per_turn="-1" change_per_turn_chance="25" attribute_start_value="0" buffer_for_attribute_name="Hitpoints" buffer_animation="magic shield">
+		<name language="Deutsch">Magisches Schild</name>
+		<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Magic Shield" message2="Strength: [value]" color="$ff00ff"/>
+		<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Magisches Schutzschild" message2="Stärke: [value]" color="$ff00ff"/>
+	</ability>
+	<ability name="Battle Rage (current)" id="101" attribute="no" tile="48" color="$0000ff" xp="no" minimum="0" change_per_turn="-1" change_per_turn_chance="100" attribute_start_value="0" buffer_for_attribute_name="Hitpoints" hit_attribute_name="Battle Rage" buffer_animation="battle rage">
+		<name language="Deutsch">Kampfeswut</name>
+		<display type="main screen status panel" language="English" start_value="1" end_value="32000" message="Battle Rage" message2="Strength: [value]" color="$0000ff"/>
+		<display type="main screen status panel" language="Deutsch" start_value="1" end_value="32000" message="Kampfeswut" message2="Stärke: [value]" color="$0000ff"/>
+	</ability>
 </Lost_Labyrinth_Abilities>

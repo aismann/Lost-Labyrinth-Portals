@@ -49,6 +49,9 @@ Game features:
 The game is currently in an Alpha stage. 
 The game will be available for Windows, Linux and Mac OS.
 
+### Compiling
+To compile/run, just use the PureBasic IDE, that's very fast and also simple for programs like this ;)
+
 
 ### History:
 'Lost Labyrinth Portals' 3.0

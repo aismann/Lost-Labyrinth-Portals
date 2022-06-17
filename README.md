@@ -8,8 +8,8 @@
 [![Android Build Status](https://img.shields.io/badge/Android-unsupported-red.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
 [![iPhone Build Status](https://img.shields.io/badge/iPhone-unsupported-red.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
 
-# Lost-Labyrinth-Portals 3.0 (PureBasic 6.00)
-'Lost Labyrinth Portals' is a coffee-break roguelike game written in Purebasic.
+# Lost-Labyrinth: Portals 3.0 (PureBasic 6.00)
+'Lost Labyrinth: Portals' is a coffee-break roguelike game written in Purebasic.
 
 ### Screenshots
 ![image](https://user-images.githubusercontent.com/8652787/174069366-f422d91e-79da-4907-be45-367661f17268.png)
@@ -54,10 +54,11 @@ To compile/run, just use the PureBasic IDE, that's very fast and also simple for
 
 
 ### History:
-'Lost Labyrinth Portals' 3.0
+'Lost Labyrinth: Portals' 3.0
 - Adapt 2.0 to PureBasic 6.0
+- copy sources to [githup](https://github.com/)
 
-'Lost Labyrinth Portals' 2.0 
+'Lost Labyrinth: Portals' 2.0 
 - Written by Frank.Malota (PureBasic 4.30) : https://www.findbestopensource.com/product/lost-labyrinth-portals
 
 ### Lost Labyrinth

@@ -1,219 +1,219 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Lost_Labyrinth_Monster  Lost_Labyrinth_version="0.1.0">
-  <monster id="1" name="Giant Rat" tile="0" attack="30" defense="0" strength="0" hitpoints="3" armor="0" level="1" speed="3" class="vermin|animal">
-    <name language="Deutsch">Riesenratte</name>
-  </monster>
-  <monster id="2" name="Giant Bat" tile="3" attack="30" defense="30" strength="0" hitpoints="1" armor="0" level="1" speed="5" class="vermin|animal|flying">
-    <name language="Deutsch">Riesenfledermaus</name>
-  </monster>
-  <monster id="3" name="Giant Snake" tile="5" attack="60" defense="10" strength="3" hitpoints="5" armor="0" level="2" speed="3" class="snake|reptile|animal">
-    <name language="Deutsch">Riesenschlange</name>
-	<affliction class="poison" chance="50" value="5" randomized="yes" attribute_name="Poisoned"/>
-  </monster>
-  <monster id="4" name="Giant Spider" tile="2" attack="50" defense="10" strength="4" hitpoints="8" armor="0" level="2" speed="4" class="spider|animal">
-    <name language="Deutsch">Riesenspinne</name>
-	<affliction class="poison" chance="25" value="3" randomized="yes" attribute_name="Poisoned"/>
-  </monster>
-  <monster id="5" name="Gelatineous Cube" tile="1" attack="100" defense="0" strength="5" hitpoints="25" armor="0" level="3" speed="1" regeneration="3" class="abomination" resistance="fire" vulnerable="cold">
-    <name language="Deutsch">Gelatinekubus</name>
-  </monster>
-  <monster id="6" name="Beholder" tile="4" attack="150" defense="25" strength="10" hitpoints="250" armor="5" level="15" class="abomination|flying" resistance="magic|illusion|mind">
-    <name language="Deutsch">Betrachter</name>
-  </monster>
-  <monster id="7" name="Horned Rat" tile="6" attack="60" defense="10" strength="3" hitpoints="12" armor="1" level="3" speed="3" class="vermin|animal">
-    <name language="Deutsch">Gehörnte Ratte</name>
-  </monster>
-  <monster id="8" name="Gryphon" tile="7" attack="250" defense="100" strength="12" hitpoints="300" armor="3" level="13" class="animal|flying" flying="yes">
-    <name language="Deutsch">Greif</name>
-  </monster>
-  <monster id="9" name="Grappling Vines" tile="8" attack="50" defense="0" strength="2" hitpoints="15" armor="0" level="2" speed="0" class="plant" immune="illusion|mind" vulnerable="fire">
-    <name language="Deutsch">Schlingpflanzen</name>
-  </monster>
-  <monster id="10" name="Purple Worm" tile="9" attack="120" defense="0" strength="10" hitpoints="90" armor="5" level="10" speed="3" class="animal">
-    <name language="Deutsch">Purpurwurm</name>
-  </monster>
-  <monster id="11" name="Spider Queen" tile="10" attack="200" defense="100" strength="15" hitpoints="300" armor="4" level="20" speed="8" class="spider" resistance="illusion|mind|magic">
-    <name language="Deutsch">Spinnenkönigin</name>
-  </monster>
-  <monster id="12" name="Goblin King" tile="11" attack="100" defense="50" strength="5" hitpoints="55" armor="2" level="12" speed="6" class="goblin|humanoid">
-    <name language="Deutsch">Goblinkönig</name>
-  </monster>
-  <monster id="13" name="Hydra" tile="12" attack="100" defense="30" strength="5" hitpoints="25" armor="1" level="8" speed="5" class="dragon" resistance="poison">
-    <name language="Deutsch">Hydra</name>
-  </monster>
-  <monster id="14" name="Hydra" tile="13" attack="130" defense="40" strength="7" hitpoints="50" armor="2" level="10" speed="5" class="dragon" resistance="poison">
-    <name language="Deutsch">Hydra</name>
-  </monster>
-  <monster id="15" name="Hydra" tile="14" attack="150" defense="50" strength="9" hitpoints="75" armor="3" level="12" speed="5" class="dragon" resistance="poison">
-    <name language="Deutsch">Hydra</name>
-  </monster>
-  <monster id="16" name="Hydra" tile="15" attack="170" defense="60" strength="11" hitpoints="100" armor="4" level="14" speed="5" class="dragon" resistance="poison">
-    <name language="Deutsch">Hydra</name>
-  </monster>
-  <monster id="17" name="Hydra" tile="16" attack="190" defense="70" strength="13" hitpoints="150" armor="5" level="16" speed="5" class="dragon" resistance="poison">
-    <name language="Deutsch">Hydra</name>
-  </monster>
-  <monster id="18" name="Hydra" tile="17" attack="210" defense="80" strength="15" hitpoints="200" armor="5" level="18" speed="5" class="dragon" resistance="poison">
-    <name language="Deutsch">Hydra</name>
-  </monster>
-  <monster id="19" name="Gargoyle" tile="18" attack="80" defense="0" strength="5" hitpoints="1" armor="7" level="3" speed="3" flying="yes" class="statue|flying" immune="earth">
-    <name language="Deutsch">Gargyle</name>
-  </monster>
-  <monster id="20" name="Snow Queen" tile="19" attack="25" defense="50" strength="1" hitpoints="250" armor="1" level="20" speed="5" class="humanoid|spellcaster" immune="cold" resistance="magic">
-    <name language="Deutsch">Schneekönigin</name>
-  </monster>
-  <monster id="21" name="Giant Centipede" tile="20" attack="50" defense="0" strength="4" hitpoints="8" armor="2" level="3" speed="3" class="insect|animal">
-    <name language="Deutsch">Riesentausendfüssler</name>
-    <affliction class="poison" chance="25" value="3" randomized="yes" attribute_name="Poisoned"/>
-  </monster>
-  <monster id="22" name="Giant Mosquito" tile="21" attack="70" defense="40" strength="1" hitpoints="3" armor="0" level="3" speed="8" flying="yes" class="insect|animal|flying">
-    <name language="Deutsch">Riesenmoskito</name>
-  </monster>
-  <monster id="23" name="Giant Turtle" tile="22" attack="30" defense="0" strength="3" hitpoints="15" armor="4" level="3" speed="1" class="animal|reptile">
-    <name language="Deutsch">Riesenschildkröte</name>
-  </monster>
-  <monster id="24" name="Black Scorpion" tile="23" attack="120" defense="15" strength="2" hitpoints="5" armor="1" level="7" speed="3" class="insect|vermin">
-    <name language="Deutsch">Schwarzer Skorpion</name>
-	<affliction class="poison" chance="90" value="25" randomized="yes" attribute_name="Poisoned"/>
-  </monster>
-  <monster id="25" name="Water Dragon" tile="24" attack="200" defense="50" strength="12" hitpoints="250" armor="6" level="12" speed="4" class="dragon">
-    <name language="Deutsch">Wasserdrache</name>
-  </monster>
-  <monster id="26" name="Ice Demon" tile="25" attack="100" defense="20" strength="8" hitpoints="50" armor="5" level="9" speed="1" class="demon" immune="cold" vulnerable="fire">
-    <name language="Deutsch">Eisdämon</name>
-  </monster>
-  <monster id="27" name="Vampire Frog" tile="26" attack="120" defense="25" strength="9" hitpoints="70" armor="1" level="9" speed="3" class="animal|demon">
-    <name language="Deutsch">Vampirfrosch</name>
-  </monster>
-  <monster id="28" name="Purple Slime" tile="27" attack="60" defense="0" strength="5" hitpoints="25" armor="1" level="5" speed="1" class="slime|abomination" regeneration="4">
-    <name language="Deutsch">Violettes Schleimmonster</name>
-  </monster>
-  <monster id="29" name="Giant Lizard" tile="28" attack="80" defense="30" strength="4" hitpoints="15" armor="1" level="4" speed="6" class="animal|reptile">
-    <name language="Deutsch">Giant Lizard</name>
-  </monster>
-  <monster id="30" name="Fire Lizard" tile="29" attack="90" defense="20" strength="5" hitpoints="25" armor="2" level="7" speed="6" class="animal|reptile" resistance="fire">
-    <name language="Deutsch">Feuerechse</name>
-  </monster>
-  <monster id="31" name="Skeleton King" tile="30" attack="120" defense="50" strength="12" hitpoints="155" armor="4" level="16" speed="4" class="undead|humanoid|spellcaster" immune="illusion|mind">
-    <name language="Deutsch">Skelettkönig</name>
-	<affliction class="death" chance="100" value="25" randomized="yes" attribute_name="Tomb Rot"/>
-  </monster>
-  <monster id="32" name="Tarantula" tile="31" attack="90" defense="25" strength="5" hitpoints="20" armor="1" level="4" speed="8" class="spider|animal">
-    <name language="Deutsch">Tarantel</name>
-  </monster>
-  <monster id="33" name="Black Widow" tile="32" attack="110" defense="40" strength="4" hitpoints="10" armor="0" level="7" speed="8" class="spider|animal">
-    <name language="Deutsch">Schwarze Witwe</name>
-	<affliction class="poison" chance="90" value="30" randomized="yes" attribute_name="Poisoned"/>
-  </monster>
-  <monster id="34" name="Djinn" tile="33" attack="250" defense="100" strength="30" hitpoints="999" armor="20" level="99" speed="5" flying="yes" class="demon" resistance="illusion|mind|magic|flying">
-    <name language="Deutsch">Djinn</name>
-  </monster>
-  <monster id="35" name="Jackal" tile="34" attack="40" defense="15" strength="1" hitpoints="4" armor="0" level="2" speed="5" class="animal">
-    <name language="Deutsch">Schakal</name>
-  </monster>
-  <monster id="36" name="Giant Slug" tile="35" attack="20" defense="0" strength="3" hitpoints="35" armor="2" level="3" speed="1" class="animal">
-    <name language="Deutsch">Riesenschnecke</name>
-  </monster>
-  <monster id="37" name="Giant Horsefly" tile="36" attack="75" defense="25" strength="3" hitpoints="8" armor="1" level="5" speed="6" class="animal|insect|flying">
-    <name language="Deutsch">Riesenbremse</name>
-  </monster>
-  <monster id="38" name="Giant Gecko" tile="37" attack="60" defense="25" strength="4" hitpoints="15" armor="2" level="6" speed="4" class="animal|reptile">
-    <name language="Deutsch">Riesengecko</name>
-  </monster>
-  <monster id="39" name="Mushroom Man" tile="38" attack="25" defense="0" strength="2" hitpoints="9" armor="0" level="1" speed="2" class="humanoid|abomniation" vulnerable="fire">
-    <name language="Deutsch">Pilzwesen</name>
-  </monster>
-  <monster id="40" name="Elder Mushroom" tile="39" attack="100" defense="20" strength="9" hitpoints="80" armor="2" level="9" speed="1" class="humanoid|abomination" resistance="poison|mind|illusion|magic" vulnerable="fire">
-    <name language="Deutsch">Uraltes Pilzmonster</name>
-	<affliction class="mould" chance="90" value="25" randomized="yes" attribute_name="Mould Disease"/>
-  </monster>
-  <monster id="41" name="Giant Bug" tile="40" attack="25" defense="0" strength="3" hitpoints="5" armor="3" level="2" speed="3" class="animal|insect">
-    <name language="Deutsch">Riesenkäfer</name>
-  </monster>
-  <monster id="42" name="Skeleton Warrior" tile="41" attack="50" defense="0" strength="3" hitpoints="1" armor="1" level="1" speed="3" class="undead|humanoid" immune="mind|illusion|death">
-    <name language="Deutsch">Skelettkrieger</name>
-  </monster>
-  <monster id="43" name="Skeleton Guardian" tile="42" attack="100" defense="30" strength="5" hitpoints="12" armor="2" level="7" speed="3" class="undead|humanoid" immune="mind|illusion|death">
-    <name language="Deutsch">Skelettwächter</name>
-  </monster>
-  <monster id="44" name="Skeleton Mage" tile="43" attack="25" defense="25" strength="3" hitpoints="25" armor="3" level="12" speed="3" class="undead|humanoid|spellcaster" immune="mind|illusion|death">
-    <name language="Deutsch">Skelettmagier</name>
-  </monster>
-  <monster id="45" name="Vampire" tile="44" attack="120" defense="40" strength="7" hitpoints="60" armor="1" level="7" speed="6" class="undead|humanoid|vampire" immune="mind|illusion|death">
-    <name language="Deutsch">Vampir</name>
-	<affliction class="drain life" chance="100" value="-10" randomized="yes" attribute_name="Hitpoints"/>
-  </monster>
-  <monster id="46" name="Wraith" tile="45" attack="100" defense="70" strength="9" hitpoints="5" armor="0" level="8" speed="4" class="undead|apparition|insubstantial" immune="mind|illusion|death">
-    <name language="Deutsch">Gespenst</name>
-	<affliction class="death" chance="50" value="10" randomized="yes" attribute_name="Tomb Rot"/>
-  </monster>
-  <monster id="47" name="Ghost" tile="46" attack="50" defense="30" strength="4" hitpoints="1" armor="1" level="5" speed="4" class="undead|apparition|insubstantial" immune="mind|illusion|death">
-    <name language="Deutsch">Geist</name>
-	<affliction class="death" chance="10" value="5" randomized="yes" attribute_name="Tomb Rot"/>
-  </monster>
-  <monster id="48" name="Golem" tile="47" attack="50" defense="0" strength="8" hitpoints="1" armor="8" level="7" speed="2" class="humanoid|statue" immune="mind|illusion|death">
-    <name language="Deutsch">Golem</name>
-  </monster>
-  <monster id="49" name="Fire Demon" tile="48" attack="150" defense="40" strength="9" hitpoints="40" armor="0" level="10" speed="6" class="humanoid|demon" immune="fire" vulnerable="cold|water">
-    <name language="Deutsch">Feuerdämon</name>
-  </monster>
-  <monster id="50" name="Medusa" tile="49" attack="30" defense="20" strength="5" hitpoints="25" armor="0" level="12" speed="3" class="humanoid|abomination">
-    <name language="Deutsch">Medusa</name>
-  </monster>
-  <monster id="51" name="Horned Bug" tile="50" attack="80" defense="0" strength="7" hitpoints="15" armor="3" level="5" speed="3" class="animal|insect">
-    <name language="Deutsch">Riesenhirschkäfer</name>
-  </monster>
-  <monster id="52" name="Mercenary" tile="51" attack="60" defense="25" strength="5" hitpoints="20" armor="1" level="6" speed="5" class="humanoid|human">
-    <name language="Deutsch">Söldner</name>
-  </monster>
-  <monster id="53" name="Orange Slime" tile="52" attack="40" defense="0" strength="5" hitpoints="10" armor="0" level="4" speed="1" class="slime|abomination">
-    <name language="Deutsch">Orangefarbenes Schleimmonster</name>
-  </monster>
-  <monster id="54" name="Rust Monster" tile="53" attack="50" defense="0" strength="7" hitpoints="20" armor="1" level="6" speed="1" class="slime|abomination">
-    <name language="Deutsch">Rostmonster</name>
-  </monster>
-  <monster id="55" name="Blood Slime" tile="54" attack="120" defense="10" strength="8" hitpoints="25" armor="0" level="8" speed="1" class="slime|abomination">
-    <name language="Deutsch">Blutschleimmonster</name>
-  </monster>
-  <monster id="56" name="Dungeon Jelly" tile="55" attack="60" defense="5" strength="5" hitpoints="15" armor="0" level="7" speed="1" class="slime|abomination">
-    <name language="Deutsch">Verliesschleimmonster</name>
-  </monster>
-  <monster id="57" name="Acid Jelly" tile="56" attack="80" defense="10" strength="6" hitpoints="28" armor="1" level="9" speed="1" class="slime|abomination" immune="acid">
-    <name language="Deutsch">Säureschleimmonster</name>
-  </monster>
-  <monster id="58" name="Mold Jelly" tile="57" attack="90" defense="20" strength="7" hitpoints="35" armor="2" level="10" speed="1" class="slime|abomination">
-    <affliction class="mould" chance="50" value="5" randomized="yes" attribute_name="Mould Disease"/>
-    <name language="Deutsch">Schimmelschleimmonster</name>
-  </monster>
-  <monster id="59" name="Gnome" tile="58" attack="15" defense="50" strength="0" hitpoints="3" armor="0" level="1" speed="8" class="humanoid" resistance="illusion">
-  </monster>
-  <monster id="61" name="Giant Tick" tile="60" attack="90" defense="30" strength="5" hitpoints="10" armor="1" level="6" speed="5" class="animal|insect">
-    <name language="Deutsch">Riesenzecke</name>
-  </monster>
-  <monster id="62" name="Elder Frost Dragon" tile="61" attack="400" defense="120" strength="50" hitpoints="2500" armor="25" level="70" speed="5" flying="yes" class="dragon|flying" immune="cold" vulnerable="fire">
-    <name language="Deutsch">Uralter Platinumdrache</name>
-  </monster>
-  <monster id="63" name="Silver Dragon" tile="62" attack="350" defense="130" strength="50" hitpoints="1500" armor="20" level="65" speed="6" flying="yes" class="dragon|flying">
-    <name language="Deutsch">Silberdrache</name>
-  </monster>
-  <monster id="64" name="Chaos Dragon" tile="63" attack="250" defense="210" strength="100" hitpoints="2000" armor="18" level="75" speed="6" flying="yes" class="dragon" regeneration="100">
-    <name language="Deutsch">Chaosdrache</name>
-  </monster>
-  <monster id="65" name="Dracolich" tile="64" attack="150" defense="40" strength="25" hitpoints="200" armor="7" level="25" speed="4" class="undead|dragon|flying" immune="mind|illusion|death">
-    <name language="Deutsch">Skelettdrache</name>
-	<affliction class="death" chance="90" value="30" randomized="yes" attribute_name="Tomb Rot"/>
-  </monster>
-  <monster id="66" name="Ninja" tile="65" attack="90" defense="20" strength="8" hitpoints="9" armor="0" level="6" speed="5" class="human|humanoid">
-    <name language="Deutsch">Ninja</name>
-  </monster>
-  <monster id="67" name="Chaos Rat" tile="66" attack="50" defense="0" strength="2" hitpoints="4" armor="0" level="3" speed="4" class="animal|vermin">
-    <name language="Deutsch">Chaosratte</name>
-	<affliction class="death" chance="10" value="3" randomized="yes" attribute_name="Tomb Rot"/>
-  </monster>
-  <monster id="68" name="Giant Ant" tile="67" attack="50" defense="0" strength="3" hitpoints="3" armor="2" level="3" speed="4" class="animal|vermin|insect">
-    <name language="Deutsch">Riesenameise</name>
-  </monster>
-  <monster id="69" name="Phantom" tile="68" attack="80" defense="70" strength="5" hitpoints="1" armor="1" level="4" speed="4" class="undead">
-    <name language="Deutsch">Phantom</name>
-  </monster>
+	<monster id="1" name="Giant Rat" tile="0" attack="30" defense="0" strength="0" hitpoints="3" armor="0" level="1" speed="3" class="vermin|animal">
+		<name language="Deutsch">Riesenratte</name>
+	</monster>
+	<monster id="2" name="Giant Bat" tile="3" attack="30" defense="30" strength="0" hitpoints="1" armor="0" level="1" speed="5" class="vermin|animal|flying">
+		<name language="Deutsch">Riesenfledermaus</name>
+	</monster>
+	<monster id="3" name="Giant Snake" tile="5" attack="60" defense="10" strength="3" hitpoints="5" armor="0" level="2" speed="3" class="snake|reptile|animal">
+		<name language="Deutsch">Riesenschlange</name>
+		<affliction class="poison" chance="50" value="5" randomized="yes" attribute_name="Poisoned"/>
+	</monster>
+	<monster id="4" name="Giant Spider" tile="2" attack="50" defense="10" strength="4" hitpoints="8" armor="0" level="2" speed="4" class="spider|animal">
+		<name language="Deutsch">Riesenspinne</name>
+		<affliction class="poison" chance="25" value="3" randomized="yes" attribute_name="Poisoned"/>
+	</monster>
+	<monster id="5" name="Gelatineous Cube" tile="1" attack="100" defense="0" strength="5" hitpoints="25" armor="0" level="3" speed="1" regeneration="3" class="abomination" resistance="fire" vulnerable="cold">
+		<name language="Deutsch">Gelatinekubus</name>
+	</monster>
+	<monster id="6" name="Beholder" tile="4" attack="150" defense="25" strength="10" hitpoints="250" armor="5" level="15" class="abomination|flying" resistance="magic|illusion|mind">
+		<name language="Deutsch">Betrachter</name>
+	</monster>
+	<monster id="7" name="Horned Rat" tile="6" attack="60" defense="10" strength="3" hitpoints="12" armor="1" level="3" speed="3" class="vermin|animal">
+		<name language="Deutsch">Gehörnte Ratte</name>
+	</monster>
+	<monster id="8" name="Gryphon" tile="7" attack="250" defense="100" strength="12" hitpoints="300" armor="3" level="13" class="animal|flying" flying="yes">
+		<name language="Deutsch">Greif</name>
+	</monster>
+	<monster id="9" name="Grappling Vines" tile="8" attack="50" defense="0" strength="2" hitpoints="15" armor="0" level="2" speed="0" class="plant" immune="illusion|mind" vulnerable="fire">
+		<name language="Deutsch">Schlingpflanzen</name>
+	</monster>
+	<monster id="10" name="Purple Worm" tile="9" attack="120" defense="0" strength="10" hitpoints="90" armor="5" level="10" speed="3" class="animal">
+		<name language="Deutsch">Purpurwurm</name>
+	</monster>
+	<monster id="11" name="Spider Queen" tile="10" attack="200" defense="100" strength="15" hitpoints="300" armor="4" level="20" speed="8" class="spider" resistance="illusion|mind|magic">
+		<name language="Deutsch">Spinnenkönigin</name>
+	</monster>
+	<monster id="12" name="Goblin King" tile="11" attack="100" defense="50" strength="5" hitpoints="55" armor="2" level="12" speed="6" class="goblin|humanoid">
+		<name language="Deutsch">Goblinkönig</name>
+	</monster>
+	<monster id="13" name="Hydra" tile="12" attack="100" defense="30" strength="5" hitpoints="25" armor="1" level="8" speed="5" class="dragon" resistance="poison">
+		<name language="Deutsch">Hydra</name>
+	</monster>
+	<monster id="14" name="Hydra" tile="13" attack="130" defense="40" strength="7" hitpoints="50" armor="2" level="10" speed="5" class="dragon" resistance="poison">
+		<name language="Deutsch">Hydra</name>
+	</monster>
+	<monster id="15" name="Hydra" tile="14" attack="150" defense="50" strength="9" hitpoints="75" armor="3" level="12" speed="5" class="dragon" resistance="poison">
+		<name language="Deutsch">Hydra</name>
+	</monster>
+	<monster id="16" name="Hydra" tile="15" attack="170" defense="60" strength="11" hitpoints="100" armor="4" level="14" speed="5" class="dragon" resistance="poison">
+		<name language="Deutsch">Hydra</name>
+	</monster>
+	<monster id="17" name="Hydra" tile="16" attack="190" defense="70" strength="13" hitpoints="150" armor="5" level="16" speed="5" class="dragon" resistance="poison">
+		<name language="Deutsch">Hydra</name>
+	</monster>
+	<monster id="18" name="Hydra" tile="17" attack="210" defense="80" strength="15" hitpoints="200" armor="5" level="18" speed="5" class="dragon" resistance="poison">
+		<name language="Deutsch">Hydra</name>
+	</monster>
+	<monster id="19" name="Gargoyle" tile="18" attack="80" defense="0" strength="5" hitpoints="1" armor="7" level="3" speed="3" flying="yes" class="statue|flying" immune="earth">
+		<name language="Deutsch">Gargyle</name>
+	</monster>
+	<monster id="20" name="Snow Queen" tile="19" attack="25" defense="50" strength="1" hitpoints="250" armor="1" level="20" speed="5" class="humanoid|spellcaster" immune="cold" resistance="magic">
+		<name language="Deutsch">Schneekönigin</name>
+	</monster>
+	<monster id="21" name="Giant Centipede" tile="20" attack="50" defense="0" strength="4" hitpoints="8" armor="2" level="3" speed="3" class="insect|animal">
+		<name language="Deutsch">Riesentausendfüssler</name>
+		<affliction class="poison" chance="25" value="3" randomized="yes" attribute_name="Poisoned"/>
+	</monster>
+	<monster id="22" name="Giant Mosquito" tile="21" attack="70" defense="40" strength="1" hitpoints="3" armor="0" level="3" speed="8" flying="yes" class="insect|animal|flying">
+		<name language="Deutsch">Riesenmoskito</name>
+	</monster>
+	<monster id="23" name="Giant Turtle" tile="22" attack="30" defense="0" strength="3" hitpoints="15" armor="4" level="3" speed="1" class="animal|reptile">
+		<name language="Deutsch">Riesenschildkröte</name>
+	</monster>
+	<monster id="24" name="Black Scorpion" tile="23" attack="120" defense="15" strength="2" hitpoints="5" armor="1" level="7" speed="3" class="insect|vermin">
+		<name language="Deutsch">Schwarzer Skorpion</name>
+		<affliction class="poison" chance="90" value="25" randomized="yes" attribute_name="Poisoned"/>
+	</monster>
+	<monster id="25" name="Water Dragon" tile="24" attack="200" defense="50" strength="12" hitpoints="250" armor="6" level="12" speed="4" class="dragon">
+		<name language="Deutsch">Wasserdrache</name>
+	</monster>
+	<monster id="26" name="Ice Demon" tile="25" attack="100" defense="20" strength="8" hitpoints="50" armor="5" level="9" speed="1" class="demon" immune="cold" vulnerable="fire">
+		<name language="Deutsch">Eisdämon</name>
+	</monster>
+	<monster id="27" name="Vampire Frog" tile="26" attack="120" defense="25" strength="9" hitpoints="70" armor="1" level="9" speed="3" class="animal|demon">
+		<name language="Deutsch">Vampirfrosch</name>
+	</monster>
+	<monster id="28" name="Purple Slime" tile="27" attack="60" defense="0" strength="5" hitpoints="25" armor="1" level="5" speed="1" class="slime|abomination" regeneration="4">
+		<name language="Deutsch">Violettes Schleimmonster</name>
+	</monster>
+	<monster id="29" name="Giant Lizard" tile="28" attack="80" defense="30" strength="4" hitpoints="15" armor="1" level="4" speed="6" class="animal|reptile">
+		<name language="Deutsch">Giant Lizard</name>
+	</monster>
+	<monster id="30" name="Fire Lizard" tile="29" attack="90" defense="20" strength="5" hitpoints="25" armor="2" level="7" speed="6" class="animal|reptile" resistance="fire">
+		<name language="Deutsch">Feuerechse</name>
+	</monster>
+	<monster id="31" name="Skeleton King" tile="30" attack="120" defense="50" strength="12" hitpoints="155" armor="4" level="16" speed="4" class="undead|humanoid|spellcaster" immune="illusion|mind">
+		<name language="Deutsch">Skelettkönig</name>
+		<affliction class="death" chance="100" value="25" randomized="yes" attribute_name="Tomb Rot"/>
+	</monster>
+	<monster id="32" name="Tarantula" tile="31" attack="90" defense="25" strength="5" hitpoints="20" armor="1" level="4" speed="8" class="spider|animal">
+		<name language="Deutsch">Tarantel</name>
+	</monster>
+	<monster id="33" name="Black Widow" tile="32" attack="110" defense="40" strength="4" hitpoints="10" armor="0" level="7" speed="8" class="spider|animal">
+		<name language="Deutsch">Schwarze Witwe</name>
+		<affliction class="poison" chance="90" value="30" randomized="yes" attribute_name="Poisoned"/>
+	</monster>
+	<monster id="34" name="Djinn" tile="33" attack="250" defense="100" strength="30" hitpoints="999" armor="20" level="99" speed="5" flying="yes" class="demon" resistance="illusion|mind|magic|flying">
+		<name language="Deutsch">Djinn</name>
+	</monster>
+	<monster id="35" name="Jackal" tile="34" attack="40" defense="15" strength="1" hitpoints="4" armor="0" level="2" speed="5" class="animal">
+		<name language="Deutsch">Schakal</name>
+	</monster>
+	<monster id="36" name="Giant Slug" tile="35" attack="20" defense="0" strength="3" hitpoints="35" armor="2" level="3" speed="1" class="animal">
+		<name language="Deutsch">Riesenschnecke</name>
+	</monster>
+	<monster id="37" name="Giant Horsefly" tile="36" attack="75" defense="25" strength="3" hitpoints="8" armor="1" level="5" speed="6" class="animal|insect|flying">
+		<name language="Deutsch">Riesenbremse</name>
+	</monster>
+	<monster id="38" name="Giant Gecko" tile="37" attack="60" defense="25" strength="4" hitpoints="15" armor="2" level="6" speed="4" class="animal|reptile">
+		<name language="Deutsch">Riesengecko</name>
+	</monster>
+	<monster id="39" name="Mushroom Man" tile="38" attack="25" defense="0" strength="2" hitpoints="9" armor="0" level="1" speed="2" class="humanoid|abomniation" vulnerable="fire">
+		<name language="Deutsch">Pilzwesen</name>
+	</monster>
+	<monster id="40" name="Elder Mushroom" tile="39" attack="100" defense="20" strength="9" hitpoints="80" armor="2" level="9" speed="1" class="humanoid|abomination" resistance="poison|mind|illusion|magic" vulnerable="fire">
+		<name language="Deutsch">Uraltes Pilzmonster</name>
+		<affliction class="mould" chance="90" value="25" randomized="yes" attribute_name="Mould Disease"/>
+	</monster>
+	<monster id="41" name="Giant Bug" tile="40" attack="25" defense="0" strength="3" hitpoints="5" armor="3" level="2" speed="3" class="animal|insect">
+		<name language="Deutsch">Riesenkäfer</name>
+	</monster>
+	<monster id="42" name="Skeleton Warrior" tile="41" attack="50" defense="0" strength="3" hitpoints="1" armor="1" level="1" speed="3" class="undead|humanoid" immune="mind|illusion|death">
+		<name language="Deutsch">Skelettkrieger</name>
+	</monster>
+	<monster id="43" name="Skeleton Guardian" tile="42" attack="100" defense="30" strength="5" hitpoints="12" armor="2" level="7" speed="3" class="undead|humanoid" immune="mind|illusion|death">
+		<name language="Deutsch">Skelettwächter</name>
+	</monster>
+	<monster id="44" name="Skeleton Mage" tile="43" attack="25" defense="25" strength="3" hitpoints="25" armor="3" level="12" speed="3" class="undead|humanoid|spellcaster" immune="mind|illusion|death">
+		<name language="Deutsch">Skelettmagier</name>
+	</monster>
+	<monster id="45" name="Vampire" tile="44" attack="120" defense="40" strength="7" hitpoints="60" armor="1" level="7" speed="6" class="undead|humanoid|vampire" immune="mind|illusion|death">
+		<name language="Deutsch">Vampir</name>
+		<affliction class="drain life" chance="100" value="-10" randomized="yes" attribute_name="Hitpoints"/>
+	</monster>
+	<monster id="46" name="Wraith" tile="45" attack="100" defense="70" strength="9" hitpoints="5" armor="0" level="8" speed="4" class="undead|apparition|insubstantial" immune="mind|illusion|death">
+		<name language="Deutsch">Gespenst</name>
+		<affliction class="death" chance="50" value="10" randomized="yes" attribute_name="Tomb Rot"/>
+	</monster>
+	<monster id="47" name="Ghost" tile="46" attack="50" defense="30" strength="4" hitpoints="1" armor="1" level="5" speed="4" class="undead|apparition|insubstantial" immune="mind|illusion|death">
+		<name language="Deutsch">Geist</name>
+		<affliction class="death" chance="10" value="5" randomized="yes" attribute_name="Tomb Rot"/>
+	</monster>
+	<monster id="48" name="Golem" tile="47" attack="50" defense="0" strength="8" hitpoints="1" armor="8" level="7" speed="2" class="humanoid|statue" immune="mind|illusion|death">
+		<name language="Deutsch">Golem</name>
+	</monster>
+	<monster id="49" name="Fire Demon" tile="48" attack="150" defense="40" strength="9" hitpoints="40" armor="0" level="10" speed="6" class="humanoid|demon" immune="fire" vulnerable="cold|water">
+		<name language="Deutsch">Feuerdämon</name>
+	</monster>
+	<monster id="50" name="Medusa" tile="49" attack="30" defense="20" strength="5" hitpoints="25" armor="0" level="12" speed="3" class="humanoid|abomination">
+		<name language="Deutsch">Medusa</name>
+	</monster>
+	<monster id="51" name="Horned Bug" tile="50" attack="80" defense="0" strength="7" hitpoints="15" armor="3" level="5" speed="3" class="animal|insect">
+		<name language="Deutsch">Riesenhirschkäfer</name>
+	</monster>
+	<monster id="52" name="Mercenary" tile="51" attack="60" defense="25" strength="5" hitpoints="20" armor="1" level="6" speed="5" class="humanoid|human">
+		<name language="Deutsch">Söldner</name>
+	</monster>
+	<monster id="53" name="Orange Slime" tile="52" attack="40" defense="0" strength="5" hitpoints="10" armor="0" level="4" speed="1" class="slime|abomination">
+		<name language="Deutsch">Orangefarbenes Schleimmonster</name>
+	</monster>
+	<monster id="54" name="Rust Monster" tile="53" attack="50" defense="0" strength="7" hitpoints="20" armor="1" level="6" speed="1" class="slime|abomination">
+		<name language="Deutsch">Rostmonster</name>
+	</monster>
+	<monster id="55" name="Blood Slime" tile="54" attack="120" defense="10" strength="8" hitpoints="25" armor="0" level="8" speed="1" class="slime|abomination">
+		<name language="Deutsch">Blutschleimmonster</name>
+	</monster>
+	<monster id="56" name="Dungeon Jelly" tile="55" attack="60" defense="5" strength="5" hitpoints="15" armor="0" level="7" speed="1" class="slime|abomination">
+		<name language="Deutsch">Verliesschleimmonster</name>
+	</monster>
+	<monster id="57" name="Acid Jelly" tile="56" attack="80" defense="10" strength="6" hitpoints="28" armor="1" level="9" speed="1" class="slime|abomination" immune="acid">
+		<name language="Deutsch">Säureschleimmonster</name>
+	</monster>
+	<monster id="58" name="Mold Jelly" tile="57" attack="90" defense="20" strength="7" hitpoints="35" armor="2" level="10" speed="1" class="slime|abomination">
+		<affliction class="mould" chance="50" value="5" randomized="yes" attribute_name="Mould Disease"/>
+		<name language="Deutsch">Schimmelschleimmonster</name>
+	</monster>
+	<monster id="59" name="Gnome" tile="58" attack="15" defense="50" strength="0" hitpoints="3" armor="0" level="1" speed="8" class="humanoid" resistance="illusion">
+	</monster>
+	<monster id="61" name="Giant Tick" tile="60" attack="90" defense="30" strength="5" hitpoints="10" armor="1" level="6" speed="5" class="animal|insect">
+		<name language="Deutsch">Riesenzecke</name>
+	</monster>
+	<monster id="62" name="Elder Frost Dragon" tile="61" attack="400" defense="120" strength="50" hitpoints="2500" armor="25" level="70" speed="5" flying="yes" class="dragon|flying" immune="cold" vulnerable="fire">
+		<name language="Deutsch">Uralter Platinumdrache</name>
+	</monster>
+	<monster id="63" name="Silver Dragon" tile="62" attack="350" defense="130" strength="50" hitpoints="1500" armor="20" level="65" speed="6" flying="yes" class="dragon|flying">
+		<name language="Deutsch">Silberdrache</name>
+	</monster>
+	<monster id="64" name="Chaos Dragon" tile="63" attack="250" defense="210" strength="100" hitpoints="2000" armor="18" level="75" speed="6" flying="yes" class="dragon" regeneration="100">
+		<name language="Deutsch">Chaosdrache</name>
+	</monster>
+	<monster id="65" name="Dracolich" tile="64" attack="150" defense="40" strength="25" hitpoints="200" armor="7" level="25" speed="4" class="undead|dragon|flying" immune="mind|illusion|death">
+		<name language="Deutsch">Skelettdrache</name>
+		<affliction class="death" chance="90" value="30" randomized="yes" attribute_name="Tomb Rot"/>
+	</monster>
+	<monster id="66" name="Ninja" tile="65" attack="90" defense="20" strength="8" hitpoints="9" armor="0" level="6" speed="5" class="human|humanoid">
+		<name language="Deutsch">Ninja</name>
+	</monster>
+	<monster id="67" name="Chaos Rat" tile="66" attack="50" defense="0" strength="2" hitpoints="4" armor="0" level="3" speed="4" class="animal|vermin">
+		<name language="Deutsch">Chaosratte</name>
+		<affliction class="death" chance="10" value="3" randomized="yes" attribute_name="Tomb Rot"/>
+	</monster>
+	<monster id="68" name="Giant Ant" tile="67" attack="50" defense="0" strength="3" hitpoints="3" armor="2" level="3" speed="4" class="animal|vermin|insect">
+		<name language="Deutsch">Riesenameise</name>
+	</monster>
+	<monster id="69" name="Phantom" tile="68" attack="80" defense="70" strength="5" hitpoints="1" armor="1" level="4" speed="4" class="undead">
+		<name language="Deutsch">Phantom</name>
+	</monster>
 </Lost_Labyrinth_Monster>

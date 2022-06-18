@@ -35,7 +35,7 @@ Each character has its own tactics. Unlike other Nethack successors, a game in L
 - RETURN: Remove game paused status
 - F1: Mouse and keyboard released
 
-Game features: 
+Game features
 * Nice graphics; smooth scrolling 
 * randomly generated dungeons 
 * a large skill tree (including spells and special powers) 
@@ -49,11 +49,17 @@ Game features:
 The game is currently in an Alpha stage. 
 The game will be available for Windows, Linux and Mac OS.
 
+### Wiki
+- [Info_Item](https://github.com/aismann/Lost-Labyrinth-Portals/blob/main/wiki/Info_Item.html)
+- [Info_Monster](https://github.com/aismann/Lost-Labyrinth-Portals/blob/main/wiki/Info_Monster.html)
+- [Info_Power](https://github.com/aismann/Lost-Labyrinth-Portals/blob/main/wiki/Info_Power.html)
+
+
 ### Compiling
 To compile/run, just use the PureBasic IDE, that's very fast and also simple for programs like this ;)
 
 
-### History:
+### History
 'Lost Labyrinth: Portals' 3.0
 - Adapt 2.0 to PureBasic 6.0
 - copy sources to [githup](https://github.com/)

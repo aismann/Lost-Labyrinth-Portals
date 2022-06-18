@@ -174,9 +174,9 @@ Procedure save_map_editor_preferences()
   If CreateXML(0) = 0
     error_message("save_map_editor_preferences: could not create xml structure in memory!")
   EndIf
-  *mainnode = CreateXMLNode(RootXMLNode(0))
+  *mainnode = CreateXMLNode(RootXMLNode(0), "")
   SetXMLNodeName(*mainnode, "Lost_Labyrinth_Map_Editor_Preferences")
-  *node = CreateXMLNode(*mainnode)
+  *node = CreateXMLNode(*mainnode, "")
   SetXMLNodeName(*node, "last_map_file")
   SetXMLNodeText(*node, map_filename$)
   If SaveXML(0, map_editor_preferences_file$) = 0

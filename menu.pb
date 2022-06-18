@@ -7,7 +7,6 @@
 ; declarations
 Declare toggle_fullscreen(*tileset.tileset_struct, load_tileset.b=1)
 Declare delete_savegame()
-Declare initAll()
 
 
 ; reset menu entries
@@ -148,11 +147,8 @@ Procedure.s main_menu()
   If FileSize("savegame\character.xml") > 0
     add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_CONTINUE_GAME))
   EndIf
-  ;add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME))
-  add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_DEUTSCH))
-  add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_ENGLISH))
+  add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME))
   add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_EXIT))
-  
   With menu
     \color = RGB(255, 100, 0)
     \padding = 6
@@ -243,55 +239,49 @@ Procedure.s main_menu()
     If KeyboardReleased(#PB_Key_All)
       key_lock = 0
     EndIf
-    
+      
     ; draw screen
     ;If update_screen = 1
-    ClearScreen(0)
-    If background = 1
-      DisplaySprite(spr, 0, 0)
-    EndIf
-    DisplayTransparentSprite(#SPRITE_SPLASH, 320-SpriteWidth(#SPRITE_SPLASH)/2, 0)
-    display_menu(@menu)
-    If preferences\fullscreen = 1
-      DisplayTransparentSprite(#SPRITE_MOUSEPOINTER, menu\mouse_x, menu\mouse_y)
-    EndIf
-    If current_character\game_end_message$ <> ""
-      StartDrawing(ScreenOutput())
-      DrawingMode(#PB_2DDrawing_Transparent)
-      DrawText(320 - TextWidth(current_character\game_end_message$) / 2, 170, current_character\game_end_message$, RGB(255,0,0), 0)
-      StopDrawing()
-    EndIf
-    FlipBuffers()
+      ClearScreen(0)
+      If background = 1
+        DisplaySprite(spr, 0, 0)
+      EndIf
+      DisplayTransparentSprite(#SPRITE_SPLASH, 320-SpriteWidth(#SPRITE_SPLASH)/2, 0)
+      display_menu(@menu)
+      If preferences\fullscreen = 1
+        DisplayTransparentSprite(#SPRITE_MOUSEPOINTER, menu\mouse_x, menu\mouse_y)
+      EndIf
+      If current_character\game_end_message$ <> ""
+        StartDrawing(ScreenOutput())
+        DrawingMode(#PB_2DDrawing_Transparent)
+        DrawText(320 - TextWidth(current_character\game_end_message$) / 2, 170, current_character\game_end_message$, RGB(255,0,0), 0)
+        StopDrawing()
+      EndIf
+      FlipBuffers()
     ;EndIf
-    
+  
   Wend
   
   Select menu\menu_entry[menu\selected_entry]\name$
-      
-      ;     Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME):
-      ;       delete_savegame()
-      ;     
+    
+    Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME):
+      delete_savegame()
+    
     Case message_list$(#MESSAGE_MENU_SPLASH_CONTINUE_GAME):
-      
+    
     Case message_list$(#MESSAGE_MENU_SPLASH_EXIT):
       program_ends = 1
-      
-    Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_DEUTSCH):
-      delete_savegame()
-      preferences\language$ = "Deutsch"
-      save_preferences(@preferences)
-      initAll()
-      
-      
-    Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME_ENGLISH):
-      delete_savegame()
-      preferences\language$ = "English"
-      save_preferences(@preferences)
-      initAll()
-      
+    
+    
   EndSelect
   If background = 1
     FreeSprite(spr)
   EndIf
   ProcedureReturn menu\menu_entry[menu\selected_entry]\name$
 EndProcedure
+; IDE Options = PureBasic 4.30 (Windows - x86)
+; CursorPosition = 177
+; FirstLine = 162
+; Folding = --
+; EnableXP
+; CompileSourceDirectory

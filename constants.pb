@@ -270,7 +270,7 @@ Structure tileset_struct
   image_filename$ ; filename of tileset
   image.l ; pointer to tileset image
   image_loaded.b ; flag: 1=tileset image already loaded
-  sprite.l ; pointer to tileset sprite
+  sprite.i ; pointer to tileset sprite
   sprite_loaded.b ; flag: 1=tileset sprite already loaded
   rows.w ; number of tile rows in tileset
   columns.w ; number of tile columns in tileset
@@ -581,7 +581,7 @@ EndStructure
 ;- sound structure
 Structure sound_struct
   filename$ ; filename of sound file
-  sound.l ; pointer to sound effect
+  sound.i ; pointer to sound effect
 EndStructure
 
 
@@ -881,8 +881,3 @@ Global NewList item_on_map.item_on_map_struct() ; items on current map
 Global NewList dungeon_on_map.dungeon_struct() ; dungeons on current map
 Global Dim message_list$(#MAX_NUMBER_OF_MESSAGES); list of messages (for foreign languages)
 Global isSoundSupported.b = #True; InitSound() works/fails
-
-; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
-; CursorPosition = 882
-; FirstLine = 835
-; CompileSourceDirectory

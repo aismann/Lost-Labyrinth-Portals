@@ -142,7 +142,7 @@ EndProcedure
 Procedure.s main_menu()
   Protected update_screen.b = 0, leave_splashscreen.b = 0, option.b = 0, key_lock.b = 0
   Protected mouse_x.w, mouse_y.w, mouse_button.b, main_window_event.l, gadget.l
-  Protected background.b = 0, spr.l, event_type.w
+  Protected background.b = 0, spr.i, event_type.w
   reset_menu(@menu)
   If FileSize("savegame\character.xml") > 0
     add_menu_entry(@menu, message_list$(#MESSAGE_MENU_SPLASH_CONTINUE_GAME))

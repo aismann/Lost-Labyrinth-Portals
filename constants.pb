@@ -268,7 +268,7 @@ EndStructure
 Structure tileset_struct
   name$ ; name of tileset
   image_filename$ ; filename of tileset
-  image.l ; pointer to tileset image
+  image.i ; pointer to tileset image
   image_loaded.b ; flag: 1=tileset image already loaded
   sprite.i ; pointer to tileset sprite
   sprite_loaded.b ; flag: 1=tileset sprite already loaded

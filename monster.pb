@@ -639,8 +639,8 @@ Procedure.b spawn_random_monster(*map.map_struct)
           type = Random(m)
         Until monster_type_db(type)\level = *map\spawn_monster_level
         Repeat
-          x = Random(#MAP_DIMENSION_X-1)
-          y = Random(#MAP_DIMENSION_Y-1)
+          x = #MAP_DIMENSION_X; Random(#MAP_DIMENSION_X-1)
+          y = #MAP_DIMENSION_Y; Random(#MAP_DIMENSION_Y-1)
         Until field_is_blocked(*map, x, y) = 0 And field_contains_monster(x, y) = 0
         new_monster\type = type
         new_monster\xpos = x
@@ -866,7 +866,8 @@ Procedure.w monster_adjust_damage(monster_type.w, damage.w, damage_class$, affec
   EndIf  
   ProcedureReturn rc
 EndProcedure
-; IDE Options = PureBasic 4.30 (Windows - x86)
-; CursorPosition = 4
+; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
+; CursorPosition = 642
+; FirstLine = 625
 ; Folding = ----
 ; CompileSourceDirectory

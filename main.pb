@@ -232,7 +232,7 @@ While program_ends = 0
   If (dx <> 0 Or dy <> 0) And game_paused = 0
     update_screen = 1
     blocked_by_monster = 0
-    If current_character\xpos + dx >= 0 And current_character\xpos + dx < #MAP_DIMENSION_X - 1 And current_character\ypos + dy >= 0 And current_character\ypos + dy < #MAP_DIMENSION_Y - 1
+    If current_character\xpos + dx >= 0 And current_character\xpos + dx < #MAP_DIMENSION_X  And current_character\ypos + dy >= 0 And current_character\ypos + dy < #MAP_DIMENSION_Y 
       If field_contains_monster(current_character\xpos + dx, current_character\ypos + dy)
         blocked_by_monster = 1
         If sneaking_val(1) > 0 And backstabbing_val(1) = 0; character tries to sneak
@@ -482,11 +482,8 @@ If FileSize("savegame\character.xml") > 0
 EndIf
 
 End
-; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
-; CursorPosition = 52
-; FirstLine = 47
-; Folding = ------------
+; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
+; CursorPosition = 234
+; FirstLine = 207
 ; Executable = Portals_3.0_32bit.exe
-; DisableDebugger
 ; CompileSourceDirectory
-; Compiler = PureBasic 6.00 Beta 10 (Windows - x86)

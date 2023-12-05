@@ -1081,13 +1081,13 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
           *char\name$ = val$
           
         Case "xpos":
-          If Val(val$) < 0 Or Val(val$) > #MAP_DIMENSION_X-1
+          If Val(val$) < 0 Or Val(val$) >= #MAP_DIMENSION_X
             error_message("load_character(): wrong xpos attribute " + Chr(34) + val$ + Chr(34) + " in character file " + Chr(34) + filename$ + Chr(34))
           EndIf
           *char\xpos = Val(val$)
           
         Case "ypos":
-          If Val(val$) < 0 Or Val(val$) > #MAP_DIMENSION_Y-1
+          If Val(val$) < 0 Or Val(val$) >= #MAP_DIMENSION_Y
             error_message("load_character(): wrong ypos attribute " + Chr(34) + val$ + Chr(34) + " in character file " + Chr(34) + filename$ + Chr(34))
           EndIf        
           *char\ypos = Val(val$)
@@ -2231,9 +2231,9 @@ Procedure.w random_armor_protection()
   EndIf
   ProcedureReturn rc
 EndProcedure
-; IDE Options = PureBasic 6.00 Beta 10 (Windows - x86)
-; CursorPosition = 755
-; FirstLine = 743
-; Folding = ---------------------------------------------------
+; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
+; CursorPosition = 1083
+; FirstLine = 1079
+; Folding = -------
 ; EnableXP
 ; CompileSourceDirectory

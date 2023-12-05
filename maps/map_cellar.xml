@@ -1,1 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><map name="Cellars" filename="map_cellar.xml" tileset_definition_filename="tiles_standard.xml" tileset_image_filename="tiles_standard.png" tile_outside_map="1" default_tile="1" background_tile="4" spawn_monster_level="0" spawn_monster_chance="0" lighting="0"><field x="0" y="0" portal_mapfile="map_start.xml" portal_x="9" portal_y="6">3</field><field x="1" y="0">4</field><field x="2" y="0">4</field><field x="3" y="0">100</field><field x="4" y="0">4</field><field x="5" y="0">4</field><field x="6" y="0">40</field><field x="0" y="1">4</field><field x="3" y="1">4</field><field x="6" y="1">4</field><field x="0" y="2">4</field><field x="3" y="2">4</field><field x="6" y="2">4</field><field x="0" y="3">4</field><field x="1" y="3">4</field><field x="2" y="3">4</field><field x="3" y="3">4</field><field x="4" y="3">4</field><field x="5" y="3">4</field><field x="6" y="3">4</field><field x="0" y="4">4</field><field x="3" y="4">4</field><field x="6" y="4">4</field><field x="0" y="5">4</field><field x="3" y="5">4</field><field x="6" y="5">4</field><field x="0" y="6">4</field><field x="1" y="6">4</field><field x="2" y="6">4</field><field x="3" y="6">4</field><field x="4" y="6">4</field><field x="5" y="6">4</field><field x="6" y="6">4</field><field x="7" y="6">4</field><field x="8" y="6">4</field><field x="9" y="6">4</field><field x="3" y="7">4</field><field x="6" y="7">4</field><field x="9" y="7">4</field><field x="3" y="8">4</field><field x="6" y="8">4</field><field x="9" y="8">4</field><field x="3" y="9">4</field><field x="4" y="9">4</field><field x="5" y="9">4</field><field x="6" y="9">4</field><field x="7" y="9">4</field><field x="8" y="9">4</field><field x="9" y="9">4</field><field x="6" y="10">4</field><field x="9" y="10">4</field><field x="6" y="11">4</field><field x="9" y="11">4</field><field x="6" y="12">4</field><field x="7" y="12">4</field><field x="8" y="12">4</field><field x="9" y="12" event="gold found" event_xp="1">9</field><monster type="1" xpos="6" ypos="6" hitpoints="3"/><monster type="1" xpos="3" ypos="6" hitpoints="3"/><monster type="1" xpos="6" ypos="9" hitpoints="3"/><monster type="299" xpos="9" ypos="9" hitpoints="0"/><monster type="1" xpos="6" ypos="12" hitpoints="3"/><monster type="2" xpos="3" ypos="9" hitpoints="1"/><monster type="2" xpos="9" ypos="6" hitpoints="1"/><monster type="2" xpos="6" ypos="8" hitpoints="1"/></map>
+<?xml version="1.0" encoding="UTF-8"?>
+<map name="Cellars" filename="map_cellar.xml" tileset_definition_filename="tiles_standard.xml" tileset_image_filename="tiles_standard.png" tile_outside_map="1" default_tile="1" background_tile="4" spawn_monster_level="0" spawn_monster_chance="0" lighting="0">
+	<field x="0" y="0" portal_mapfile="map_start.xml" portal_x="9" portal_y="6">3</field>
+	<field x="1" y="0">4</field>
+	<field x="2" y="0">4</field>
+	<field x="3" y="0">100</field>
+	<field x="4" y="0">4</field>
+	<field x="5" y="0">4</field>
+	<field x="6" y="0">40</field>
+	<field x="0" y="1">4</field>
+	<field x="3" y="1">4</field>
+	<field x="6" y="1">4</field>
+	<field x="0" y="2">4</field>
+	<field x="3" y="2">4</field>
+	<field x="6" y="2">4</field>
+	<field x="0" y="3">4</field>
+	<field x="1" y="3">4</field>
+	<field x="2" y="3">4</field>
+	<field x="3" y="3">4</field>
+	<field x="4" y="3">4</field>
+	<field x="5" y="3">4</field>
+	<field x="6" y="3">4</field>
+	<field x="0" y="4">4</field>
+	<field x="3" y="4">4</field>
+	<field x="6" y="4">4</field>
+	<field x="0" y="5">4</field>
+	<field x="3" y="5">4</field>
+	<field x="6" y="5">4</field>
+	<field x="0" y="6">4</field>
+	<field x="1" y="6">4</field>
+	<field x="2" y="6">4</field>
+	<field x="3" y="6">4</field>
+	<field x="4" y="6">4</field>
+	<field x="5" y="6">4</field>
+	<field x="6" y="6">4</field>
+	<field x="7" y="6">4</field>
+	<field x="8" y="6">4</field>
+	<field x="9" y="6">4</field>
+	<field x="3" y="7">4</field>
+	<field x="6" y="7">4</field>
+	<field x="9" y="7">4</field>
+	<field x="3" y="8">4</field>
+	<field x="6" y="8">4</field>
+	<field x="9" y="8">4</field>
+	<field x="3" y="9">4</field>
+	<field x="4" y="9">4</field>
+	<field x="5" y="9">4</field>
+	<field x="6" y="9">4</field>
+	<field x="7" y="9">4</field>
+	<field x="8" y="9">4</field>
+	<field x="9" y="9">4</field>
+	<field x="6" y="10">4</field>
+	<field x="9" y="10">4</field>
+	<field x="6" y="11">4</field>
+	<field x="9" y="11">4</field>
+	<field x="6" y="12">4</field>
+	<field x="7" y="12">4</field>
+	<field x="8" y="12">4</field>
+	<field x="9" y="12" event="gold found" event_xp="1">9</field>
+	<monster type="1" xpos="6" ypos="6" hitpoints="3"/>
+	<monster type="1" xpos="3" ypos="6" hitpoints="3"/>
+	<monster type="1" xpos="6" ypos="9" hitpoints="3"/>
+	<monster type="299" xpos="9" ypos="9" hitpoints="0"/>
+	<monster type="1" xpos="6" ypos="12" hitpoints="3"/>
+	<monster type="2" xpos="3" ypos="9" hitpoints="1"/>
+	<monster type="2" xpos="9" ypos="6" hitpoints="1"/>
+	<monster type="2" xpos="6" ypos="8" hitpoints="1"/>
+</map>

@@ -993,8 +993,8 @@ Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
       
   EndSelect
 EndProcedure
-; IDE Options = PureBasic 5.72 (Windows - x64)
-; CursorPosition = 249
-; FirstLine = 245
+; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
+; CursorPosition = 213
+; FirstLine = 209
 ; Folding = -------
 ; CompileSourceDirectory

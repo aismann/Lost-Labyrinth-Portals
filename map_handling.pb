@@ -2060,8 +2060,10 @@ Procedure.b los(x1.b, y1.b, x2.b, y2.b)
   Protected rc.b = 0
   ProcedureReturn rc
 EndProcedure
-; IDE Options = PureBasic 5.72 (Windows - x64)
-; CursorPosition = 17
-; FirstLine = 13
+; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
+; CursorPosition = 801
+; FirstLine = 746
 ; Folding = ----------
+; Executable = Portals_3.0_64bit.exe
+; DisableDebugger
 ; CompileSourceDirectory

@@ -3,7 +3,7 @@
 ; written in PureBasic 4.20 (http://www.purebasic.com)
 ; created:  08.10.2008 Frank Malota <malota@web.de>
 ; modified: 19.02.2009 Frank Malota <malota@web.de>
-
+; modified: 13.02.2024 Peter Eismann
 
 ;- sprite constants
 Enumeration
@@ -847,7 +847,7 @@ EndStructure
 
 
 ;- global variables 
-Global version_number$="0.3.0"
+Global version_number$="0.3.1"
 Global program_title$ = "Lost Labyrinth: Portals " + version_number$
 Global resources_pak_file$ = "resources.pak" ; name of the pack file that countains all resources (images & sounds)
 Global current_character.char_struct ; data for current character
@@ -880,4 +880,11 @@ Global Dim item_db.item_db_struct(#MAX_NUMBER_OF_ITEMS) ; item database
 Global NewList item_on_map.item_on_map_struct() ; items on current map
 Global NewList dungeon_on_map.dungeon_struct() ; dungeons on current map
 Global Dim message_list$(#MAX_NUMBER_OF_MESSAGES); list of messages (for foreign languages)
-Global isSoundSupported.b = #True; InitSound() works/fails
+Global isSoundSupported.b = #True                ; InitSound() works/fails
+
+Global startLastPoint = true ; false = delete saved game
+
+; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
+; CursorPosition = 5
+; EnableXP
+; DPIAware

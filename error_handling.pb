@@ -10,9 +10,13 @@ XIncludeFile "constants.pb"
 
 
 Procedure error_message(msg$ = "Undefined error!")
-  MessageRequester("Error", msg$, 0)
+  MessageRequester("Error", msg$, #PB_MessageRequester_Ok | #PB_MessageRequester_Error)
   End
 EndProcedure
-; IDE Options = PureBasic 4.20 (Windows - x86)
-; CursorPosition = 4
+
+Procedure info_message(msg$ = "Info...")
+  MessageRequester("Info", msg$, #PB_MessageRequester_Ok | #PB_MessageRequester_Info)
+EndProcedure
+; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
+; CursorPosition = 16
 ; Folding = -

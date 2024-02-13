@@ -3,7 +3,7 @@
 ; written in PureBasic 4.20 (http://www.purebasic.com)
 ; created:  14.11.2008 Frank Malota <malota@web.de>
 ; modified: 08.01.2009 Frank Malota <malota@web.de>
-
+; modified: 13.02.2024 Peter Eismann
 
 ; declarations
 Declare.w character_loses_items(amount_lost.w = 1, all.b = 0)
@@ -1283,13 +1283,13 @@ Procedure pickup_item_screen(*cursor.cursor_struct, xpos.w, ypos.w)
             text$ = text$ + "%"
           EndIf
           DrawText(434, y, shorten_text(text$, 170), RGB(0, 255, 0), 0)
-          y = y + 12
+          y = y + 16
         EndIf       
       Next
       If item_db(item_type)\fuel > 0 And item_db(item_type)\fuel_name$ <> ""
         text$ = ReplaceString(item_db(item_type)\fuel_name$, "[fuel]", Str(item_on_map()\fuel))
         DrawText(434, y, shorten_text(text$, 170), RGB(255, 0, 0), 0)
-        y = y + 12
+        y = y + 16
       EndIf             
       DrawText(434, y, shorten_text(message_list$(#MESSAGE_WEIGHT) + ": " + Str(item_db(item_type)\weight) + " " + message_list$(#MESSAGE_POUND), 170), RGB(255,0,0), 0)
       y = y + 16
@@ -1369,8 +1369,8 @@ Procedure.b pickup_items(xpos.w, ypos.w)
   
   ; set cursor
   reset_cursor(cursor)
-  cursor\x = current_character\inventory_cursor_x
-  cursor\y = current_character\inventory_cursor_y
+  cursor\x = 0
+  cursor\y = 0
 
   ; release keyboard
   Repeat
@@ -1433,6 +1433,20 @@ Procedure.b pickup_items(xpos.w, ypos.w)
           EndIf
         key_lock = 1
         EndIf
+      Next
+    EndIf
+    
+        ; A: select all item for pickup
+    If KeyboardPushed(#PB_Key_A) And key_lock = 0 
+      ForEach item_on_map()
+     ;   If item_on_map()\selected = 1
+          If item_on_map()\selected_for_pickup = 1
+            item_on_map()\selected_for_pickup = 0
+          Else
+            item_on_map()\selected_for_pickup = 1
+          EndIf
+        key_lock = 1
+  ;      EndIf
       Next
     EndIf
     
@@ -1582,9 +1596,9 @@ Procedure add_random_item(x.w, y.w, rarity.w = 5, class$ = "")
     item_on_map()\magic_bonus = magic_bonus()
   EndIf
 EndProcedure
-; IDE Options = PureBasic 4.30 (Windows - x86)
-; CursorPosition = 1080
-; FirstLine = 1055
+; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
+; CursorPosition = 1448
+; FirstLine = 1425
 ; Folding = ----
 ; EnableXP
 ; CompileSourceDirectory

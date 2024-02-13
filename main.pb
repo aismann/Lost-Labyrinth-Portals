@@ -482,8 +482,7 @@ If FileSize("savegame\character.xml") > 0
 EndIf
 
 End
-; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
-; CursorPosition = 234
-; FirstLine = 207
-; Executable = Portals_3.0_32bit.exe
+; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
+; CursorPosition = 24
+; Executable = Portals_3.0_64bit.exe
 ; CompileSourceDirectory

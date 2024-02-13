@@ -3,10 +3,10 @@
 ; written in PureBasic 4.20 (http://www.purebasic.com)
 ; created:  29.10.2008 Frank Malota <malota@web.de>
 ; modified: 27.12.2008 Frank Malota <malota@web.de>
-
+; modified: 13.02.2024 Peter Eismann
 
 ; declarations
-Declare play_sound(sound_filename$)
+;+Declare play_sound(sound_filename$)
 
 
 ; reset single monster type
@@ -549,7 +549,6 @@ Procedure monster_attacks_character(x.w, y.w)
       DisplayTransparentSprite(#SPRITE_FX, 6*32, 6*32)
       StartDrawing(ScreenOutput())
       DrawingFont(#PB_Default)
-      text$ = Str(damage)
       DrawingMode(#PB_2DDrawing_Transparent)
       DrawText(6*32 + 16 - TextWidth(text$)/2, 6*32 + 16 - TextHeight(text$)/2, text$, $ffffff)
       StopDrawing()  
@@ -866,8 +865,8 @@ Procedure.w monster_adjust_damage(monster_type.w, damage.w, damage_class$, affec
   EndIf  
   ProcedureReturn rc
 EndProcedure
-; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
-; CursorPosition = 330
-; FirstLine = 330
+; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
+; CursorPosition = 8
 ; Folding = ----
+; Executable = Portals_3.0_64bit.exe
 ; CompileSourceDirectory

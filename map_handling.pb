@@ -1561,7 +1561,7 @@ Procedure save_map(*map.map_struct, map_filename$)
   If SaveXML(0, map_filename$) = 0
     error_message("Could not save map data to file " + Chr(34) + map_filename$ + Chr(34))
   EndIf
-  info_message("Save map data to file " + Chr(34) + map_filename$ + Chr(34))
+ ; info_message("Save map data to file " + Chr(34) + map_filename$ + Chr(34))
   FreeXML(0)
 EndProcedure
 
@@ -2062,8 +2062,8 @@ Procedure.b los(x1.b, y1.b, x2.b, y2.b)
   ProcedureReturn rc
 EndProcedure
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 1563
-; FirstLine = 1542
+; CursorPosition = 1555
+; FirstLine = 1539
 ; Folding = ----------
 ; Executable = Portals_3.0_64bit.exe
 ; DisableDebugger

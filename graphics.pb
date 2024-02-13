@@ -3,7 +3,7 @@
 ; written in PureBasic 4.20 (http://www.purebasic.com)
 ; created:  08.10.2008 Frank Malota <malota@web.de>
 ; modified: 18.01.2009 Frank Malota <malota@web.de>
-
+; modified: 13.02.2024 Peter Eismann
 
 ; declarations
 Declare.w wrap_text(x.w, y.w, text$, width.w, height.w=16, color.l=$ffffff)
@@ -607,7 +607,7 @@ Procedure screenshot(filename$)
   If GrabSprite(#SPRITE_SCREENSHOT, 0, 0, 640, 480) = 0
     error_message("screenshot(): could not grab screenshot!")
   EndIf
-  If SaveSprite(#SPRITE_SCREENSHOT, filename$, #PB_ImagePlugin_JPEG) = 0
+  If SaveSprite(#SPRITE_SCREENSHOT, filename$, #PB_ImagePlugin_PNG) = 0
     error_message("screenshot(): could not save screenshot to file " + Chr(34) + filename$ + Chr(34))
   EndIf
 EndProcedure
@@ -993,8 +993,7 @@ Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
       
   EndSelect
 EndProcedure
-; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
-; CursorPosition = 213
-; FirstLine = 209
+; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
+; CursorPosition = 5
 ; Folding = -------
 ; CompileSourceDirectory

@@ -755,6 +755,10 @@ Procedure inventory_screen(*cursor.cursor_struct, *item_menu.menu_struct, row_of
       If item_db(item_type)\artefact = 1
         text$ = text$ + " + " + Str(inventory()\magic_bonus)
       EndIf
+      Debug "inventory"
+      Debug item_db(item_type)\identified
+      Debug current_character\item_identification[item_type]\identified
+      
       If item_db(item_type)\identified = 0 And current_character\item_identification[item_type]\identified = 0
         text$ = message_list$(#MESSAGE_UNIDENTIFIED_ITEM)
       EndIf
@@ -1597,8 +1601,8 @@ Procedure add_random_item(x.w, y.w, rarity.w = 5, class$ = "")
   EndIf
 EndProcedure
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 1448
-; FirstLine = 1425
+; CursorPosition = 757
+; FirstLine = 748
 ; Folding = ----
 ; EnableXP
 ; CompileSourceDirectory

@@ -30,6 +30,7 @@ Enumeration
   #SPRITE_LIGHT7
   #SPRITE_ITEMS
   #SPRITE_FX
+  #SPRITE_SILHOUETTE
 EndEnumeration
 
 #SPRITE_FX_GREY_BOX = 0
@@ -882,13 +883,14 @@ Global NewList dungeon_on_map.dungeon_struct() ; dungeons on current map
 Global Dim message_list$(#MAX_NUMBER_OF_MESSAGES); list of messages (for foreign languages)
 Global isSoundSupported.b = #True                ; InitSound() works/fails
 
-
+; >=3.01
+Global silhouette.b = #False ; #True = male, #False = female
 ;- easier game play
 Global startLastPoint.b = #True ; false = delete saved game
 Global item_identification_global.b = #True ; false = default = .b = #True ; false = delete saved game.b = #True ; false = delete saved game
 
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 849
-; FirstLine = 830
+; CursorPosition = 886
+; FirstLine = 831
 ; EnableXP
 ; DPIAware

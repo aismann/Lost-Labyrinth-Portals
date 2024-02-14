@@ -314,7 +314,7 @@ Procedure load_abilities_db()
     *node = ChildXMLNode(*mainnode)
     While *node <> 0
       Select GetXMLNodeName(*node)
-        
+          
         Case "ability":
           id = -1
           reset_ability(@new_ability)
@@ -328,7 +328,7 @@ Procedure load_abilities_db()
             While NextXMLAttribute(*node)
               val$ = XMLAttributeValue(*node)
               Select XMLAttributeName(*node)
-                
+                  
                 Case "id":
                   id = Val(val$)
                   
@@ -379,7 +379,7 @@ Procedure load_abilities_db()
                   If val$ = "yes"
                     new_ability\xp = 1
                   EndIf
-                
+                  
                 Case "not_shown_if_zero":
                   If val$ = "yes"
                     new_ability\not_shown_if_zero = 1
@@ -412,7 +412,7 @@ Procedure load_abilities_db()
                   If val$="higher"
                     new_ability\game_ends = 2
                   EndIf
-
+                  
                 Case "game_ends_val":
                   new_ability\game_ends_val = Val(val$)
                   
@@ -471,7 +471,7 @@ Procedure load_abilities_db()
                   
                 Case "modify_attribute_name":
                   new_ability\modify_attribute_name$ = val$
-                
+                  
                 Case "modify_multiplier":
                   new_ability\modify_multiplier = Val(val$)
                   
@@ -499,7 +499,7 @@ Procedure load_abilities_db()
                   
                 Case "buffer_for_attribute_name":
                   new_ability\buffer_for_attribute_name$ = val$
-                
+                  
                 Case "buffer_animation":
                   new_ability\buffer_animation$ = val$
                   
@@ -511,7 +511,7 @@ Procedure load_abilities_db()
                   
                 Case "hit_attribute_name":
                   new_ability\hit_attribute_name$ = val$
-                
+                  
                 Default:
                   error_message("load_abilities_db(): wrong attribute " + Chr(34) + XMLAttributeName(*node) + Chr(34) + " in ability tag in file " + Chr(34) + filename$ + Chr(34))
                   
@@ -580,7 +580,7 @@ Procedure load_abilities_db()
           *childnode = ChildXMLNode(*node)
           While *childnode <> 0
             Select GetXMLNodeName(*childnode)
-              
+                
               Case "attribute_bonus":
                 If attribute_bonus_idx >= #MAX_NUMBER_OF_ATTRIBUTE_BONI
                   error_message("load_abilities_db(): too many attribute boni in attribute db file " + Chr(34) + filename$ + Chr(34))
@@ -593,7 +593,7 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                      
+                        
                       Case "attribute":
                         attribute_idx = Val(val2$)
                         If attribute_idx < 1 Or attribute_idx >= #MAX_NUMBER_OF_ABILITIES
@@ -602,7 +602,7 @@ Procedure load_abilities_db()
                         
                       Case "bonus":
                         bonus = Val(val2$)
-                      
+                        
                       Case "displayed":
                         If val2$ = "yes"
                           displayed = 1
@@ -638,7 +638,7 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                    
+                        
                       Case "ability":
                         ability_idx = Val(val2$)
                         If ability_idx < 1 Or ability_idx >= #MAX_NUMBER_OF_ABILITIES
@@ -659,7 +659,7 @@ Procedure load_abilities_db()
                         
                       Default:
                         error_message("load_abilities_db(): wrong attribute " + Chr(34) + XMLAttributeName(*childnode) + Chr(34) + " in cap tag in file " + Chr(34) + filename$ + Chr(34))
-             
+                        
                     EndSelect
                   Wend
                 EndIf
@@ -683,7 +683,7 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                    
+                        
                       Case "attribute":
                         attribute_idx = Val(val2$)
                         If attribute_idx < 1 Or attribute_idx >= #MAX_NUMBER_OF_ABILITIES
@@ -698,7 +698,7 @@ Procedure load_abilities_db()
                         
                       Default:
                         error_message("load_abilities_db(): wrong attribute " + Chr(34) + XMLAttributeName(*childnode) + Chr(34) + " in requirement tag in file " + Chr(34) + filename$ + Chr(34))
-                         
+                        
                     EndSelect
                   Wend  
                 EndIf
@@ -723,13 +723,13 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                    
+                        
                       Case "type":
                         Select val2$
-
+                            
                           Case "main screen status panel":
                             new_ability_display\type = 1                        
-                          
+                            
                           Case "character info":
                             new_ability_display\type = 2
                             
@@ -737,7 +737,7 @@ Procedure load_abilities_db()
                             error_message("load_abilities_db(): unknown display type " + Chr(34) + val2$ + Chr(34) + " in ability display tag in ability xml file " + Chr(34) + filename$ + Chr(34))
                             
                         EndSelect
-                    
+                        
                       Case "start_value"
                         new_ability_display\start_value = Val(val2$)
                         
@@ -788,12 +788,12 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                    
+                        
                       Case "language":
                         If val2$ = preferences\language$
                           ability_db(id)\name_display$ = GetXMLNodeText(*childnode)
                         EndIf
-                      
+                        
                       Default:
                         error_message("load_abilities_db(): unknown attribute " + Chr(34) + XMLAttributeName(*childnode) + Chr(34) + " in name tag in ability xml file " + Chr(34) + filename$ + Chr(34))
                         
@@ -806,12 +806,12 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                    
+                        
                       Case "language":
                         If val2$ = preferences\language$
                           ability_db(id)\description$ = GetXMLNodeText(*childnode)
                         EndIf
-                      
+                        
                       Default:
                         error_message("load_abilities_db(): unknown attribute " + Chr(34) + XMLAttributeName(*childnode) + Chr(34) + " in description tag in ability xml file " + Chr(34) + filename$ + Chr(34))
                         
@@ -824,12 +824,12 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                    
+                        
                       Case "language":
                         If val2$ = preferences\language$
                           ability_db(id)\game_ends_message$ = GetXMLNodeText(*childnode)
                         EndIf
-                      
+                        
                       Default:
                         error_message("load_abilities_db(): unknown attribute " + Chr(34) + XMLAttributeName(*childnode) + Chr(34) + " in game_ends_message tag in ability xml file " + Chr(34) + filename$ + Chr(34))
                         
@@ -849,7 +849,7 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                    
+                        
                       Case "attribute":
                         new_adjustment\attribute = Val(val2$)
                         
@@ -864,10 +864,10 @@ Procedure load_abilities_db()
                         
                       Case "percentage_attribute_multiplier":
                         new_adjustment\percentage_attribute_multiplier = Val(val2$)
-                      
+                        
                       Case "percentage_bonus":
                         new_adjustment\percentage_bonus = Val(val2$)
-                      
+                        
                       Default:
                         error_message("load_abilities_db(): unknown attribute " + Chr(34) + XMLAttributeName(*childnode) + Chr(34) + " in adjustment tag in ability xml file " + Chr(34) + filename$ + Chr(34))
                         
@@ -886,7 +886,7 @@ Procedure load_abilities_db()
                   EndWith
                   adjustment_idx = adjustment_idx + 1
                 EndIf
-
+                
               Case "starting_equipment":
                 starting_equipment_item_id = 0
                 starting_equipment_item_name$ = ""
@@ -895,7 +895,7 @@ Procedure load_abilities_db()
                   While NextXMLAttribute(*childnode)
                     val2$ = XMLAttributeValue(*childnode)
                     Select XMLAttributeName(*childnode)
-                    
+                        
                       Case "item":
                         starting_equipment_item_id = Val(val2$)
                         
@@ -904,7 +904,7 @@ Procedure load_abilities_db()
                         
                       Case "amount":
                         starting_equipment_item_amount = Val(val2$)
-                      
+                        
                       Default:
                         error_message("load_abilities_db(): unknown attribute " + Chr(34) + XMLAttributeName(*childnode) + Chr(34) + " in starting_equipment tag in ability xml file " + Chr(34) + filename$ + Chr(34))
                         
@@ -922,10 +922,10 @@ Procedure load_abilities_db()
                     starting_equipment_idx = starting_equipment_idx + 1
                   EndIf
                 EndIf
-              
+                
               Default:
                 error_message("load_abilities_db(): wrong tag " + Chr(34) + GetXMLNodeName(*childnode) + Chr(34) + " in file " + Chr(34) + filename$ + Chr(34))
-
+                
             EndSelect
             *childnode = NextXMLNode(*childnode)
           Wend
@@ -1074,9 +1074,9 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
     While NextXMLAttribute(*mainnode)
       val$ = XMLAttributeValue(*mainnode)
       Select XMLAttributeName(*mainnode)
-      
+          
         Case "Lost_Labyrinth_version":
-      
+          
         Case "name":
           *char\name$ = val$
           
@@ -1115,7 +1115,7 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
           
         Default:
           error_message("load_character(): unknown attribute " + Chr(34) + XMLAttributeName(*mainnode) + Chr(34) + " in root node in file " + Chr(34) + filename$ + Chr(34))
-      
+          
       EndSelect
     Wend
   EndIf
@@ -1124,7 +1124,7 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
     While *node <> 0
       
       Select GetXMLNodeName(*node)
-      
+          
         Case "ability":
           id = 0
           With ability
@@ -1145,7 +1145,7 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
             While NextXMLAttribute(*node)
               val$ = XMLAttributeValue(*node)
               Select XMLAttributeName(*node)
-              
+                  
                 Case "id":
                   id = Val(val$)
                   If id < 1 Or id > #MAX_NUMBER_OF_ABILITIES-1
@@ -1189,10 +1189,10 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
                   
                 Case "adjustment_percentage":
                   ability\adjustment_percentage = Val(val$)
-                
+                  
                 Default:
                   error_message("load_character(): unknown attribute " + Chr(34) + XMLAttributeName(*node) + Chr(34) + " in ability tag in file " + Chr(34) + filename$ + Chr(34))
-                   
+                  
               EndSelect
             Wend
             If id > 0
@@ -1242,13 +1242,13 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
             While NextXMLAttribute(*node)
               val$ = XMLAttributeValue(*node)
               Select XMLAttributeName(*node)
-              
+                  
                 Case "type":
                   item_type = Val(val$)
-                
+                  
                 Case "amount":
                   item_amount = Val(val$)
-                
+                  
                 Case "equipped":
                   If val$ = "yes"
                     item_equipped = 1
@@ -1267,7 +1267,7 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
                   
                 Default:
                   error_message("load_character(): unknown attribute " + Chr(34) + XMLAttributeName(*node) + Chr(34) + " in item tag in character xml file " + Chr(34) + filename$ + Chr(34))
-              
+                  
               EndSelect
             Wend
             If item_type > 0
@@ -1290,7 +1290,7 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
             While NextXMLAttribute(*node)
               val$ = XMLAttributeValue(*node)
               Select XMLAttributeName(*node)
-                
+                  
                 Case "id":
                   item_identification_id = Val(val$)
                   
@@ -1298,7 +1298,7 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
                   If val$ = "yes"
                     item_identification_identified = 1
                   EndIf
-                
+                  
                 Default:
                   error_message("load_character(): unknown attribute " + Chr(34) + XMLAttributeName(*node) + Chr(34) + " in item identification tag in character xml file " + Chr(34) + filename$ + Chr(34))
                   
@@ -1308,7 +1308,7 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
               *char\item_identification[item_identification_id]\identified = item_identification_identified
             EndIf
           EndIf
-
+          
         Case "item_tile":
           item_tile_id = 0
           item_tile_tile = 0
@@ -1316,13 +1316,13 @@ Procedure load_character(*char.char_struct, filename$ = "savegame\character.xml"
             While NextXMLAttribute(*node)
               val$ = XMLAttributeValue(*node)
               Select XMLAttributeName(*node)
-                
+                  
                 Case "id":
                   item_tile_id = Val(val$)
                   
                 Case "tile":
                   item_tile_tile = Val(val$)
-                
+                  
                 Default:
                   error_message("load_character(): unknown attribute " + Chr(34) + XMLAttributeName(*node) + Chr(34) + " in item tile tag in character xml file " + Chr(34) + filename$ + Chr(34))
                   
@@ -1534,7 +1534,7 @@ Procedure.b ability_available(id.w)
 EndProcedure
 
 
-; character info screen
+;- character info screen
 Procedure character_info_screen()
   Protected i.w = 1, j.w, x.b, y.b, row.b, column.b, text$, text2$, column_width.w=160, attribute_current_val.w
   Protected NewList tile_list.tile_list_struct(), display.b = 0
@@ -1584,7 +1584,17 @@ Procedure character_info_screen()
     clip_ability_tile_sprite(tile_list()\tile)
     DisplaySprite(#SPRITE_ABILITIES, tile_list()\x, tile_list()\y)  
   Next
-  ClearList(tile_list())  
+  ClearList(tile_list()) 
+  
+  If silhouette = #False  ; female
+    ClipSprite(#SPRITE_Silhouette, 0,0, SpriteWidth(#SPRITE_Silhouette)/2, SpriteHeight(#SPRITE_Silhouette))
+  Else
+    ClipSprite(#SPRITE_Silhouette, SpriteWidth(#SPRITE_Silhouette)/2, 0, SpriteWidth(#SPRITE_Silhouette)/2, SpriteHeight(#SPRITE_Silhouette))
+  EndIf
+  
+  ZoomSprite(#SPRITE_Silhouette, SpriteWidth(#SPRITE_Silhouette)/4, SpriteHeight(#SPRITE_Silhouette)/4)
+  DisplaySprite(#SPRITE_Silhouette, 390,80)  
+  
 EndProcedure
 
 
@@ -1793,7 +1803,7 @@ Procedure experience(experience_points.w = 1, game_start.b = 0)
     selected_ability_id = experience_screen(selected_entry, number_of_entries, offset, title$)
     FlipBuffers()
     While finished = 0 And esc = 0
-  
+      
       ; examine keyboard & mouse input; check for windows events
       ExamineKeyboard()
       mouse_left_button = 0
@@ -1823,13 +1833,13 @@ Procedure experience(experience_points.w = 1, game_start.b = 0)
       EndIf      
       mouse_x = mouse_x_new
       mouse_y = mouse_y_new      
-    
+      
       ; escape key: end program
       If KeyboardReleased(#PB_Key_Escape)
         finished = 1
         esc = 1
       EndIf
-    
+      
       ; key down: next entry
       If KeyboardPushed(#PB_Key_Down) And key_lock = 0 And selected_entry < number_of_entries - 1
         selected_entry = selected_entry + 1
@@ -1839,7 +1849,7 @@ Procedure experience(experience_points.w = 1, game_start.b = 0)
         update_screen = 1
         key_lock = 1
       EndIf
-    
+      
       ; key up: previous entry
       If KeyboardPushed(#PB_Key_Up) And key_lock = 0 And selected_entry > 0
         selected_entry = selected_entry - 1
@@ -1897,7 +1907,7 @@ Procedure experience(experience_points.w = 1, game_start.b = 0)
       If selected_entry < offset
         selected_entry = offset
       EndIf
-    
+      
       ; return key: leave screen
       If (KeyboardPushed(#PB_Key_Return) And key_lock = 0) Or (mouse_left_button = 1 And mouse_over_entry = 1)
         If selected_ability_id > 0 And selected_ability_id < #MAX_NUMBER_OF_ABILITIES - 1
@@ -1920,12 +1930,12 @@ Procedure experience(experience_points.w = 1, game_start.b = 0)
         key_lock = 1
         update_screen = 1
       EndIf
-    
-     ; keyboard released: remove key lock
+      
+      ; keyboard released: remove key lock
       If KeyboardReleased(#PB_Key_All)
         key_lock = 0
       EndIf
-    
+      
       ; update screen
       If update_screen = 1 Or preferences\fullscreen = 1
         selected_ability_id = experience_screen(selected_entry, number_of_entries, offset, title$)
@@ -1935,9 +1945,9 @@ Procedure experience(experience_points.w = 1, game_start.b = 0)
         FlipBuffers()
         update_screen = 0
       EndIf
-    
+      
     Wend
-  remaining_xp = remaining_xp - 1
+    remaining_xp = remaining_xp - 1
   Wend
 EndProcedure
 
@@ -2186,7 +2196,7 @@ Procedure update_abilities_adjustment_other()
           EndIf
           If percentage <> 100
             current_character\ability[attribute]\adjustment_percentage = Int((current_character\ability[attribute]\adjustment_percentage * percentage) / 100)
-          ;Debug ability_db(attribute)\name$ + ":" + Str(current_character\ability[attribute]\adjustment_percentage) + "%"
+            ;Debug ability_db(attribute)\name$ + ":" + Str(current_character\ability[attribute]\adjustment_percentage) + "%"
           EndIf
           If ability_db(i)\adjustment[j]\percentage_attribute_multiplier > 0
             current_character\ability[attribute]\adjustment_percentage = Int((current_character\ability[attribute]\adjustment_percentage * ((percentage_attribute_multiplier * attribute_current_val) + percentage_bonus)) / 100)
@@ -2232,8 +2242,8 @@ Procedure.w random_armor_protection()
   ProcedureReturn rc
 EndProcedure
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 48
-; FirstLine = 19
+; CursorPosition = 1537
+; FirstLine = 1552
 ; Folding = -------
 ; EnableXP
 ; CompileSourceDirectory

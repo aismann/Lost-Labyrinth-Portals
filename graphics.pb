@@ -13,9 +13,9 @@ Declare.s ability_expanded_value_display(id.w)
 
 ; returns movement of mouse wheel
 Procedure.w MouseWheelDelta()
- Protected x.w
- x.w = ((EventwParam()>>16)&$FFFF) 
- ProcedureReturn -(x / 120) 
+  Protected x.w
+  x.w = ((EventwParam()>>16)&$FFFF) 
+  ProcedureReturn -(x / 120) 
 EndProcedure
 
 
@@ -66,6 +66,11 @@ Procedure load_sprites()
   If LoadSprite(#SPRITE_FX, "graphics\fx.png") = 0
     error_message("load_sprites(): cannot load fx sprites!")
   EndIf
+  
+  If LoadSprite(#SPRITE_SILHOUETTE, "graphics\Silhouette.jpg") = 0
+    error_message("load_sprites(): cannot load Silhouette sprites!")
+  EndIf
+  
   ability_tiles_columns = Int(SpriteWidth(#SPRITE_ABILITIES) / 32)
   ability_tiles_rows = Int(SpriteHeight(#SPRITE_ABILITIES) / 32)
   monster_tiles_columns = Int(SpriteWidth(#SPRITE_MONSTER) / 32)
@@ -205,7 +210,7 @@ Procedure draw_map_screen(*map.map_struct, x_offset.b=0, y_offset.b=0, fade.w=0)
   y = 0
   tile_type = 0
   If fade > 0
- ;   StartSpecialFX()
+    ;   StartSpecialFX()
   EndIf
   For y = -1 To 12
     For x = -1 To 12
@@ -218,7 +223,7 @@ Procedure draw_map_screen(*map.map_struct, x_offset.b=0, y_offset.b=0, fade.w=0)
         DisplaySprite(*map\tileset\sprite, x*32 + x_offset, y*32 + y_offset)
         clip_tile_sprite(*map, tile_type)
         DisplayTransparentSprite(*map\tileset\sprite, x*32 + x_offset, y*32 + y_offset)
-        Else
+      Else
         clip_tile_sprite(*map, tile_type)
         DisplaySprite(*map\tileset\sprite, x*32 + x_offset, y*32 + y_offset)
       EndIf
@@ -248,7 +253,7 @@ Procedure draw_map_screen(*map.map_struct, x_offset.b=0, y_offset.b=0, fade.w=0)
   If fade > 0
     If preferences\fade_effect = 1
       DisplayTransparentSprite(#SPRITE_FADEOUT, 0, 0, fade)
-   ;;   StopSpecialFX()
+      ;;   StopSpecialFX()
     EndIf
   EndIf
   StartDrawing(ScreenOutput())
@@ -279,7 +284,7 @@ Procedure draw_map_screen(*map.map_struct, x_offset.b=0, y_offset.b=0, fade.w=0)
   If display_message = 1
     If message\tile >= 0
       Select message\tile_type
-      
+          
         Case 0:
           clip_tile_sprite(*map, message\tile)
           DisplaySprite(*map\tileset\sprite, 0, 440)
@@ -540,10 +545,10 @@ Procedure draw_standard_frame(title$, subtitle$ = "")
       frame = 0
     EndIf
     StartDrawing(ScreenOutput())
-      DrawText(320-(TextWidth(title$)/2), 16, title$, RGB(255,255,255),0)
-      If subtitle$ <> ""
-        DrawText(320-(TextWidth(subtitle$)/2), 448, subtitle$, RGB(255,255,255), 0)
-      EndIf
+    DrawText(320-(TextWidth(title$)/2), 16, title$, RGB(255,255,255),0)
+    If subtitle$ <> ""
+      DrawText(320-(TextWidth(subtitle$)/2), 448, subtitle$, RGB(255,255,255), 0)
+    EndIf
     StopDrawing()
   Next
 EndProcedure
@@ -555,7 +560,7 @@ Procedure.s shorten_text(text$, width.w, append$="...")
     While TextWidth(text$ + append$) > width
       text$ = Left(text$, Len(text$)-1)
     Wend
-  text$ = text$ + append$
+    text$ = text$ + append$
   EndIf
   ProcedureReturn text$
 EndProcedure
@@ -643,10 +648,10 @@ EndProcedure
 Procedure cursor_select_field(*cursor.cursor_struct, range.b = 2)
   Protected x.w, y.w, leave_cursor_select_field.b = 0, key_lock.b = 1, main_window_event.l
   While leave_cursor_select_field = 0
-  
+    
     ; check for keyboard input
     ExamineKeyboard()  
-
+    
     ; check for windows events
     If preferences\fullscreen = 0
       main_window_event = WindowEvent()
@@ -840,11 +845,11 @@ EndProcedure
 Procedure display_tile_animation(tile.w, type.b = 0, x.b = 6, y.b = 6, display_number.b = 0, number.w = 0)
   Protected text$
   Select type
-  
+      
     Case 1:
       clip_tile_sprite(@current_map, tile)
       DisplayTransparentSprite(current_map\tileset\sprite, x*32, y*32)
-  
+      
     Default:
       clip_fx_tile_sprite(tile)
       DisplayTransparentSprite(#SPRITE_FX, x*32, y*32)
@@ -895,9 +900,9 @@ EndProcedure
 ; displays animation
 Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
   Select name$
-  
+      
     Case "": ; empty string = no animation
-    
+      
     Case "blue stars":
       star_sprite_animation(0, x, y, 25)
       
@@ -909,7 +914,7 @@ Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
       
     Case "green stars":
       star_sprite_animation(3, x, y, 25)
-            
+      
     Case "yellow stars":
       star_sprite_animation(4, x, y, 25)
       
@@ -994,7 +999,7 @@ Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
   EndSelect
 EndProcedure
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 422
-; FirstLine = 422
+; CursorPosition = 69
+; FirstLine = 65
 ; Folding = -------
 ; CompileSourceDirectory

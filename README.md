@@ -62,7 +62,9 @@ The game will be available for Windows, Linux and Mac OS.
 To compile/run, just use the PureBasic IDE, that's very fast and also simple for programs like this ;)
 
 
-### History
+## History of all known "Lost Labyrinth" versions
+
+### Lost Labyrinth: Portals 
 'Lost Labyrinth: Portals' 3.0
 - Adapt 2.0 to PureBasic 6.0
 - copy sources to GitHub

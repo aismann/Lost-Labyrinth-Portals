@@ -65,14 +65,14 @@ To compile/run, just use the PureBasic IDE, that's very fast and also simple for
 ### History
 'Lost Labyrinth: Portals' 3.0
 - Adapt 2.0 to PureBasic 6.0
-- copy sources to [githup](https://github.com/)
+- copy sources to GitHub
 
 'Lost Labyrinth: Portals' 2.0 
 - Written by Frank.Malota (PureBasic 4.30) : https://www.findbestopensource.com/product/lost-labyrinth-portals
 
-### Lost Labyrinth
+### Lost Labyrinth (no active links found)
 * Lost Labyrinth written by Markus Dobele (PureBasic)
-* Lost Labyrinth written by Frank Malota (Blitz Basic): https://web.archive.org/web/20060829041102/http://laby.toybox.de/
+* Lost Labyrinth written by Frank Malota (Blitz Basic)
 
 ### Lost Labyrinth DX 
 - Lost Labyrinth DX created by Johan Jansen (C++/SDL2): https://www.labydx.com/
@@ -82,7 +82,7 @@ The game was first programmed in 1991 on the Atari ST with STOS BASIC by Frank M
 
 Later the whole game was rewritten from scratch with Blitz Basic. This version already had clean pixel-by-pixel scrolling, and the graphics were 32×32 pixels with 256 colors.
 
-The PureBasic version was written by Frank Dobele mainly to make the game run on Linux. It now also runs cleanly under Windows and has surpassed the original in most respects.
+The PureBasic version was written by Markus Dobele mainly to make the game run on Linux. It now also runs cleanly under Windows and has surpassed the original in most respects.
 
 ### License for sound and graphic sets
 I'm not sure which license the sound and graphic files having.

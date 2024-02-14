@@ -70,7 +70,7 @@ To compile/run, just use the PureBasic IDE, that's very fast and also simple for
 - copy sources to GitHub
 
 'Lost Labyrinth: Portals' 2.0 
-- Written by Frank.Malota (PureBasic 4.30) : https://www.findbestopensource.com/product/lost-labyrinth-portals
+- Written by Frank.Malota (PureBasic 4.30)
 
 ### Lost Labyrinth (no active links found)
 * Lost Labyrinth written by Markus Dobele (PureBasic)

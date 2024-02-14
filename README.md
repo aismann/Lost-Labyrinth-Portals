@@ -8,7 +8,7 @@
 [![Android Build Status](https://img.shields.io/badge/Android-unsupported-red.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
 [![iPhone Build Status](https://img.shields.io/badge/iPhone-unsupported-red.svg)](https://github.com/aismann/Lost-Labyrinth-Portals/pulls)
 
-# Lost Labyrinth: Portals 3.0 (PureBasic 6.00)
+# Lost Labyrinth: Portals 3.0 (PureBasic 6.x)
 'Lost Labyrinth: Portals' is a coffee-break roguelike game written in Purebasic.
 
 ### Screenshots

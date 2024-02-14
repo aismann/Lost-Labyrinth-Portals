@@ -87,3 +87,6 @@ I'm not sure which license the sound and graphic files having.
 So for the moment they are only placeholders.
 Any information about the license will be help to use/change this files.
 Thanks!
+
+Some 'free copyright' pictures from:
+https://teknoini.com/apps/

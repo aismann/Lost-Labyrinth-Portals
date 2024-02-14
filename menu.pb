@@ -160,9 +160,9 @@ Procedure.s main_menu()
     \entry_highlight_color2 = RGB(125, 75, 0)
   EndWith
   ClearScreen(0)
-  If FileSize("savegame\screenshot.jpg") > 0
+  If FileSize("graphics\maxresdefault.jpg") > 0
     background = 1
-    spr = LoadSprite(#PB_Any, "savegame\screenshot.jpg")
+    spr = LoadSprite(#PB_Any, "graphics\maxresdefault.jpg")
     DisplaySprite(spr, 0, 0)
   EndIf  
   DisplayTransparentSprite(#SPRITE_SPLASH, 320-SpriteWidth(#SPRITE_SPLASH)/2, 0)
@@ -195,9 +195,9 @@ Procedure.s main_menu()
     ; toggle between fullscreen and windowed screen
     If KeyboardPushed(#PB_Key_LeftAlt) And KeyboardPushed(#PB_Key_Return) And key_lock = 0
       toggle_fullscreen(@current_map\tileset, 0)
-      If FileSize("savegame\screenshot.jpg") > 0
+      If FileSize("graphics\maxresdefault.jpg") > 0
         background = 1
-        spr = LoadSprite(#PB_Any, "savegame\screenshot.jpg")
+        spr = LoadSprite(#PB_Any, "graphics\maxresdefault.jpg")
         DisplaySprite(spr, 0, 0)
       EndIf        
       update_screen = 1
@@ -239,49 +239,49 @@ Procedure.s main_menu()
     If KeyboardReleased(#PB_Key_All)
       key_lock = 0
     EndIf
-      
+    
     ; draw screen
     ;If update_screen = 1
-      ClearScreen(0)
-      If background = 1
-        DisplaySprite(spr, 0, 0)
-      EndIf
-      DisplayTransparentSprite(#SPRITE_SPLASH, 320-SpriteWidth(#SPRITE_SPLASH)/2, 0)
-      display_menu(@menu)
-      If preferences\fullscreen = 1
-        DisplayTransparentSprite(#SPRITE_MOUSEPOINTER, menu\mouse_x, menu\mouse_y)
-      EndIf
-      If current_character\game_end_message$ <> ""
-        StartDrawing(ScreenOutput())
-        DrawingMode(#PB_2DDrawing_Transparent)
-        DrawText(320 - TextWidth(current_character\game_end_message$) / 2, 170, current_character\game_end_message$, RGB(255,0,0), 0)
-        StopDrawing()
-      EndIf
-      FlipBuffers()
+    ClearScreen(0)
+    If background = 1
+      DisplaySprite(spr, 0, 0)
+    EndIf
+    DisplayTransparentSprite(#SPRITE_SPLASH, 320-SpriteWidth(#SPRITE_SPLASH)/2, 0)
+    display_menu(@menu)
+    If preferences\fullscreen = 1
+      DisplayTransparentSprite(#SPRITE_MOUSEPOINTER, menu\mouse_x, menu\mouse_y)
+    EndIf
+    If current_character\game_end_message$ <> ""
+      StartDrawing(ScreenOutput())
+      DrawingMode(#PB_2DDrawing_Transparent)
+      DrawText(320 - TextWidth(current_character\game_end_message$) / 2, 170, current_character\game_end_message$, RGB(255,0,0), 0)
+      StopDrawing()
+    EndIf
+    FlipBuffers()
     ;EndIf
-  
+    
   Wend
   
   Select menu\menu_entry[menu\selected_entry]\name$
-    
+      
     Case message_list$(#MESSAGE_MENU_SPLASH_NEW_GAME):
       delete_savegame()
-    
+      
     Case message_list$(#MESSAGE_MENU_SPLASH_CONTINUE_GAME):
-    
+      
     Case message_list$(#MESSAGE_MENU_SPLASH_EXIT):
       program_ends = 1
-    
-    
+      
+      
   EndSelect
   If background = 1
     FreeSprite(spr)
   EndIf
   ProcedureReturn menu\menu_entry[menu\selected_entry]\name$
 EndProcedure
-; IDE Options = PureBasic 4.30 (Windows - x86)
-; CursorPosition = 177
-; FirstLine = 162
+; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
+; CursorPosition = 280
+; FirstLine = 222
 ; Folding = --
 ; EnableXP
 ; CompileSourceDirectory

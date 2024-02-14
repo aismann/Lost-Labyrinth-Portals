@@ -1782,6 +1782,8 @@ Procedure create_dungeon_level(*map.map_struct, *dungeon.dungeon_struct)
               Default:
                 
             EndSelect
+            ;- >>>>>>>>>>>>>>>>>>>>>>>>>>> set gold
+            set_map_tile_type(*map, tunnel\end_xpos, tunnel\end_ypos, 9)
           EndIf
         Wend
       EndIf
@@ -2062,9 +2064,8 @@ Procedure.b los(x1.b, y1.b, x2.b, y2.b)
   ProcedureReturn rc
 EndProcedure
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 1555
-; FirstLine = 1539
+; CursorPosition = 1773
+; FirstLine = 1586
 ; Folding = ----------
 ; Executable = Portals_3.0_64bit.exe
-; DisableDebugger
 ; CompileSourceDirectory

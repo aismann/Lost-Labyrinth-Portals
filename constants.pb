@@ -882,10 +882,13 @@ Global NewList dungeon_on_map.dungeon_struct() ; dungeons on current map
 Global Dim message_list$(#MAX_NUMBER_OF_MESSAGES); list of messages (for foreign languages)
 Global isSoundSupported.b = #True                ; InitSound() works/fails
 
+
+;- easier game play
 Global startLastPoint.b = #True ; false = delete saved game
+Global item_identification_global.b = #True ; false = default = .b = #True ; false = delete saved game.b = #True ; false = delete saved game
 
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 881
-; FirstLine = 851
+; CursorPosition = 885
+; FirstLine = 830
 ; EnableXP
 ; DPIAware

@@ -46,7 +46,7 @@ Procedure init_character(*char.char_struct)
     *char\power[i]\cooldown = 0
   Next
   For i = 0 To #MAX_NUMBER_OF_ITEMS - 1
-    *char\item_identification[i]\identified = 0
+    *char\item_identification[i]\identified = item_identification_global
   Next
   *char\game_end_message$ = ""
   ClearList(inventory())
@@ -2231,9 +2231,9 @@ Procedure.w random_armor_protection()
   EndIf
   ProcedureReturn rc
 EndProcedure
-; IDE Options = PureBasic 6.04 beta 1 LTS (Windows - x64)
-; CursorPosition = 1083
-; FirstLine = 1079
+; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
+; CursorPosition = 48
+; FirstLine = 19
 ; Folding = -------
 ; EnableXP
 ; CompileSourceDirectory

@@ -29,6 +29,7 @@ Each character has its own tactics. Unlike other Nethack successors, a game in L
 - U: Use power
 - P: Pickup items 
 - SPACE: Select items (Pickup)
+- A: Select all items (Pickup)
 - I: open Inventory
 - E: End turn
 - T: Trigger test

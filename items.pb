@@ -747,6 +747,7 @@ Procedure inventory_screen(*cursor.cursor_struct, *item_menu.menu_struct, row_of
   EndIf
   DrawingFont(#PB_Default)
   DrawText(416 + 16 + 2, 0, message_list$(#MESSAGE_INVENTORY) + " (" + Str(items_in_inventory) + " " + message_list$(#MESSAGE_ITEMS) + ")", $ffffff, 0)
+  ResetList(inventory())  
   ForEach inventory()
     If inventory()\selected = 1
       item_type = inventory()\type
@@ -755,10 +756,7 @@ Procedure inventory_screen(*cursor.cursor_struct, *item_menu.menu_struct, row_of
       If item_db(item_type)\artefact = 1
         text$ = text$ + " + " + Str(inventory()\magic_bonus)
       EndIf
-      Debug "inventory"
-      Debug item_db(item_type)\identified
-      Debug current_character\item_identification[item_type]\identified
-      
+
       If item_db(item_type)\identified = 0 And current_character\item_identification[item_type]\identified = 0
         text$ = message_list$(#MESSAGE_UNIDENTIFIED_ITEM)
       EndIf
@@ -1124,32 +1122,36 @@ Procedure open_inventory()
 EndProcedure
 
 
-; character gets an item
+;- character gets an item
 Procedure character_gets_item(type.w, amount.w = 1, fuel.w = -1, magic_bonus.b = -1)
-  Protected *last_item.item_in_inventory_struct, item_found.b = 0, new_item.item_in_inventory_struct
+  Protected item_found.b = 0, new_item.item_in_inventory_struct
+ Protected *last_item.item_in_inventory_struct
   If ListIndex(inventory()) >= 0
     *last_item = @inventory()
   EndIf
-  With new_item
-    \type = type
-    \amount = amount
-    \fuel = fuel
-    \magic_bonus = magic_bonus
-  EndWith
+  
   If fuel = -1
     If item_db(type)\fuel_randomized = 1
-      new_item\fuel = Random(max(1, item_db(type)\fuel) - 1) + 1
+      fuel = Random(max(1, item_db(type)\fuel) - 1) + 1
     Else
-      new_item\fuel = item_db(type)\fuel
+      fuel = item_db(type)\fuel
     EndIf
   EndIf
   If magic_bonus = -1
     If item_db(type)\artefact = 1
-      new_item\magic_bonus = magic_bonus()
+      magic_bonus = magic_bonus()
     Else
-      new_item\magic_bonus = 0
+      magic_bonus = 0
     EndIf
   EndIf
+  
+  new_item\type = type
+  new_item\amount = amount
+  new_item\fuel = fuel
+  new_item\magic_bonus = magic_bonus
+
+  
+  ; Is the same item on the inventory (only amount+1)?
   ResetList(inventory())
   While NextElement(inventory()) And item_found = 0
     If inventory()\type = new_item\type And inventory()\fuel = new_item\fuel And inventory()\magic_bonus = new_item\magic_bonus
@@ -1158,15 +1160,20 @@ Procedure character_gets_item(type.w, amount.w = 1, fuel.w = -1, magic_bonus.b =
     EndIf
   Wend
   If item_found = 0
-    AddElement(inventory())
-    With inventory()
-      \type = new_item\type
-      \amount = new_item\amount
-      \equipped = 0
-      \selected = 0
-      \fuel = new_item\fuel
-      \magic_bonus = new_item\magic_bonus
-    EndWith
+    Protected *Element.item_in_inventory_struct = AddElement(inventory())
+    If *Element <> 0  
+      With *Element
+        \type = new_item\type
+        \amount = new_item\amount +1
+        \equipped = 0
+        \selected = 0
+        \fuel = new_item\fuel
+        \magic_bonus = new_item\magic_bonus
+      EndWith
+    Else
+      error_message("No memory for inventory element")
+    EndIf
+  
   EndIf
   If *last_item
     ChangeCurrentElement(inventory(), *last_item)
@@ -1350,14 +1357,14 @@ Procedure pickup_item_screen(*cursor.cursor_struct, xpos.w, ypos.w)
 EndProcedure
 
 
-; pickup multiple items; returns 1 if at least one item is picked up, else 0 
+;- pickup multiple items; returns 1 if at least one item is picked up, else 0 
 Procedure.b pickup_items(xpos.w, ypos.w)
   Protected rc.b = 0, number_of_items.w = 0, item_tile.w, tile_type.w
   Protected key_lock.b = 1, leave_pickup_screen.b = 0, main_window_event.l, esc.b
   Protected cursor.cursor_struct, item_found.b, class$, item_type.w
   Protected message_line1$ = "", message_line2$ = "", items_left.w = 0
   
-  ; check for items on map on position xpos / ypos
+  ;- check for items on map on position xpos / ypos
   ForEach item_on_map()
     item_on_map()\selected = 0
     item_on_map()\selected_for_pickup = 0
@@ -1387,7 +1394,7 @@ Procedure.b pickup_items(xpos.w, ypos.w)
   
     ExamineKeyboard()
     
-    ; check for windows events
+    ;- check for windows events
     If preferences\fullscreen = 0
       main_window_event = WindowEvent()
       If main_window_event = #PB_Event_CloseWindow
@@ -1396,37 +1403,37 @@ Procedure.b pickup_items(xpos.w, ypos.w)
       EndIf
     EndIf
     
-    ; ESC: leave inventory screen
+    ;- ESC: leave inventory screen
     If KeyboardReleased(#PB_Key_Escape)
       leave_pickup_screen = 1
       esc = 1
     EndIf
     
-    ; move cursor left
+    ;- move cursor left
     If KeyboardPushed(#PB_Key_Left) And key_lock = 0 And cursor\x > 0
       cursor\x = cursor\x - 1
       key_lock = 1
     EndIf
     
-    ; move cursor right
+    ;- move cursor right
     If KeyboardPushed(#PB_Key_Right) And key_lock = 0 And cursor\x < 5
       cursor\x = cursor\x + 1
       key_lock = 1
     EndIf
     
-    ; move cursor up
+    ;- move cursor up
     If KeyboardPushed(#PB_Key_Up) And key_lock = 0 And cursor\y > 0
       cursor\y = cursor\y - 1
       key_lock = 1
     EndIf  
     
-    ; move cursor down
+    ;- move cursor down
     If KeyboardPushed(#PB_Key_Down) And key_lock = 0 And cursor\y < 5
       cursor\y = cursor\y + 1
       key_lock = 1
     EndIf   
     
-    ; Space: select item for pickup
+    ;- Space: select item for pickup
     If KeyboardPushed(#PB_Key_Space) And key_lock = 0 
       ForEach item_on_map()
         If item_on_map()\selected = 1
@@ -1440,7 +1447,7 @@ Procedure.b pickup_items(xpos.w, ypos.w)
       Next
     EndIf
     
-        ; A: select all item for pickup
+    ;- A: select all item for pickup
     If KeyboardPushed(#PB_Key_A) And key_lock = 0 
       ForEach item_on_map()
      ;   If item_on_map()\selected = 1
@@ -1454,7 +1461,7 @@ Procedure.b pickup_items(xpos.w, ypos.w)
       Next
     EndIf
     
-    ; Return: leave pickup screen
+    ;- Return: leave pickup screen
     If KeyboardPushed(#PB_Key_Return) And key_lock = 0
       leave_pickup_screen = 1
       key_lock = 1
@@ -1482,11 +1489,6 @@ Procedure.b pickup_items(xpos.w, ypos.w)
           message_line2$ = message_line2$ + ", "
         EndIf
         message_line2$ = message_line2$ + item_db(item_on_map()\type)\name$
-;         AddElement(inventory())
-;         inventory()\type = item_on_map()\type
-;         inventory()\amount = item_on_map()\amount
-;         inventory()\fuel = item_on_map()\fuel
-;         inventory()\magic_bonus = item_on_map()\magic_bonus
         character_gets_item(item_on_map()\type, item_on_map()\amount, item_on_map()\fuel, item_on_map()\magic_bonus)
         DeleteElement(item_on_map())        
       EndIf
@@ -1601,8 +1603,8 @@ Procedure add_random_item(x.w, y.w, rarity.w = 5, class$ = "")
   EndIf
 EndProcedure
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 757
-; FirstLine = 748
+; CursorPosition = 1175
+; FirstLine = 1133
 ; Folding = ----
 ; EnableXP
 ; CompileSourceDirectory

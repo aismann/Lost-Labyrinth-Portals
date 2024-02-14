@@ -455,7 +455,7 @@ While program_ends = 0
       DisplayTransparentSprite(#SPRITE_FADEOUT_TOTAL, 0, 0, 150)
     EndIf
     FlipBuffers()    
-    screenshot("savegame\screenshot.png")
+    screenshot("savegame\screenshot.jpg")
     If startLastPoint = #False
       delete_savegame()
     EndIf
@@ -488,7 +488,7 @@ EndIf
 
 End
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 166
-; FirstLine = 144
+; CursorPosition = 457
+; FirstLine = 430
 ; Executable = Portals_3.0_64bit.exe
 ; CompileSourceDirectory

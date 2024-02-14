@@ -607,7 +607,7 @@ Procedure screenshot(filename$)
   If GrabSprite(#SPRITE_SCREENSHOT, 0, 0, 640, 480) = 0
     error_message("screenshot(): could not grab screenshot!")
   EndIf
-  If SaveSprite(#SPRITE_SCREENSHOT, filename$, #PB_ImagePlugin_PNG) = 0
+  If SaveSprite(#SPRITE_SCREENSHOT, filename$, #PB_ImagePlugin_JPEG) = 0
     error_message("screenshot(): could not save screenshot to file " + Chr(34) + filename$ + Chr(34))
   EndIf
 EndProcedure
@@ -994,6 +994,7 @@ Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
   EndSelect
 EndProcedure
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 5
+; CursorPosition = 422
+; FirstLine = 422
 ; Folding = -------
 ; CompileSourceDirectory

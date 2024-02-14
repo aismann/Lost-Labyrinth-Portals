@@ -847,7 +847,7 @@ EndStructure
 
 
 ;- global variables 
-Global version_number$="0.3.1"
+Global version_number$="3.0.1"
 Global program_title$ = "Lost Labyrinth: Portals " + version_number$
 Global resources_pak_file$ = "resources.pak" ; name of the pack file that countains all resources (images & sounds)
 Global current_character.char_struct ; data for current character
@@ -888,7 +888,7 @@ Global startLastPoint.b = #True ; false = delete saved game
 Global item_identification_global.b = #True ; false = default = .b = #True ; false = delete saved game.b = #True ; false = delete saved game
 
 ; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 885
+; CursorPosition = 849
 ; FirstLine = 830
 ; EnableXP
 ; DPIAware

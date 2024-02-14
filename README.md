@@ -12,10 +12,14 @@
 'Lost Labyrinth: Portals' is a coffee-break roguelike game written in Purebasic.
 
 ### Screenshots
-![image](https://user-images.githubusercontent.com/8652787/174069366-f422d91e-79da-4907-be45-367661f17268.png)
-![image](https://user-images.githubusercontent.com/8652787/174069583-ebfd8f9c-9ac0-4e3f-9da0-9d098f50e493.png)
-![image](https://user-images.githubusercontent.com/8652787/174097155-1c83e3fb-9d99-4abd-ae87-8034249c22cf.png)
-![image](https://user-images.githubusercontent.com/8652787/174097396-746682ad-19a6-4094-803f-92b303217772.png)
+![image](https://github.com/aismann/Lost-Labyrinth-Portals/assets/8652787/0cc28ab5-96e3-466e-95fb-4eb1d5575e04)
+![image](https://github.com/aismann/Lost-Labyrinth-Portals/assets/8652787/d52d97dc-5f08-4757-92a4-0dd781aac4fe)
+![image](https://github.com/aismann/Lost-Labyrinth-Portals/assets/8652787/1814c743-164e-4055-b28e-6a0278842e2a)
+![image](https://github.com/aismann/Lost-Labyrinth-Portals/assets/8652787/5d18bb32-2154-4a1b-9fa0-51db4bf750f9)
+![image](https://github.com/aismann/Lost-Labyrinth-Portals/assets/8652787/f7c8b776-f562-437b-840a-7e23a51428e3)
+![image](https://github.com/aismann/Lost-Labyrinth-Portals/assets/8652787/37c1606d-a778-4fc9-b108-db642aac6e18)
+
+
 
 ### Game mechanics
 The game can be controlled with keyboard. The focus is not on defeating monsters, but on reaching new levels. 

@@ -8,6 +8,9 @@
 ; Switch to PureBasic 6.0 and Github
 ; modified: 202206 Peter Eismann
 ; total number of hours of programming: 10
+;-
+;- Gold = e.g.:	<field x="16" y="11">9</field>
+;-
 
 ; include files
 EnableExplicit
@@ -487,8 +490,8 @@ If FileSize("savegame\character.xml") > 0
 EndIf
 
 End
-; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 457
-; FirstLine = 430
+; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
+; CursorPosition = 12
 ; Executable = Portals_3.0_64bit.exe
+; DisableDebugger
 ; CompileSourceDirectory

@@ -1561,8 +1561,12 @@ Procedure character_info_screen()
           text$ = ReplaceString(ability_db(i)\display[j]\message2$, "[value]", Str(attribute_current_val))
           If ability_db(i)\display[j]\expanded_value_display = 1
             text$ = ReplaceString(ability_db(i)\display[j]\message2$, "[value]", ability_expanded_value_display(i))
-          EndIf          
-          DrawText(56 + column*column_width, 68 + row*32, text$, ability_db(i)\display[j]\color, 0)
+          EndIf        
+          
+          ;-
+          ;- PeterEismann
+          DrawText(56 + column*column_width, 68 + row*32, "Peter " + text$ + " I:" + Str(i) + " J:" + Str(j), ability_db(i)\display[j]\color, 0)
+          ;-
         EndIf
         AddElement(tile_list())
         With tile_list()
@@ -2241,9 +2245,9 @@ Procedure.w random_armor_protection()
   EndIf
   ProcedureReturn rc
 EndProcedure
-; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 1537
-; FirstLine = 1552
+; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
+; CursorPosition = 1567
+; FirstLine = 1528
 ; Folding = -------
 ; EnableXP
 ; CompileSourceDirectory

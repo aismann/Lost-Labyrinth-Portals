@@ -114,9 +114,10 @@ Procedure open_main_window()
   MenuTitle("Help")
   MenuItem(#MENUITEM_ABOUT, "About")
   CreateToolBar(#WINDOW_MAIN, WindowID(0))
-  ToolBarStandardButton(#MENUITEM_NEW, #PB_ToolBarIcon_New)
-  ToolBarStandardButton(#MENUITEM_OPEN, #PB_ToolBarIcon_Open)
-  ToolBarStandardButton(#MENUITEM_SAVE, #PB_ToolBarIcon_Save)
+  ToolBarImageButton(#MENUITEM_NEW, LoadImage(0, #PB_Compiler_Home + "examples/sources/Data/ToolBar/New.png"))
+  ToolBarImageButton(#MENUITEM_OPEN, LoadImage(0, #PB_Compiler_Home + "examples/sources/Data/ToolBar/Open.png"))
+  ToolBarImageButton(#MENUITEM_SAVE, LoadImage(0, #PB_Compiler_Home + "examples/sources/Data/ToolBar/Save.png"))
+  
   ;CreateGadgetList(WindowID(#WINDOW_MAIN))
   OptionGadget(#GADGET_OPTION_MODUS_PAINT, 432, 32, 64, 16, "Paint")
   OptionGadget(#GADGET_OPTION_MODUS_EDIT, 496, 32, 64, 16, "Edit")
@@ -157,10 +158,10 @@ Procedure load_map_editor_preferences()
     *node = ChildXMLNode(*mainnode)
     While *node <> 0
       Select GetXMLNodeName(*node)
-      
+          
         Case "last_map_file":
           map_filename$ = GetXMLNodeText(*node)
-        
+          
       EndSelect
       *node = NextXMLNode(*node)
     Wend
@@ -1036,8 +1037,8 @@ Procedure editor_view_powers_data()
     RunProgram(filename$)
   EndIf
 EndProcedure
-; IDE Options = PureBasic 4.30 (Windows - x86)
-; CursorPosition = 534
-; FirstLine = 503
+; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
+; CursorPosition = 1038
+; FirstLine = 982
 ; Folding = --------
 ; CompileSourceDirectory

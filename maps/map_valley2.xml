@@ -14,7 +14,7 @@
 	<field x="5" y="4">20</field>
 	<field x="6" y="4">21</field>
 	<field x="5" y="5">30</field>
-	<field x="6" y="5" portal_mapfile="map_start.xml" portal_x="2" portal_y="7" message_line1="You enter the house of your mentor..." message_line2="" message_tile="0">31</field>
+	<field x="6" y="5" portal_mapfile="map_start.xml" portal_x="2" portal_y="7" message_line1="You enter the house of your mentor..." message_line2="" message_tile="144">31</field>
 	<field x="13" y="5">3</field>
 	<field x="10" y="6">4</field>
 	<field x="7" y="7" message_line1="The well is deep and dark..." message_line2="" message_tile="0">12</field>
@@ -34,7 +34,7 @@
 	<field x="15" y="14">3</field>
 	<field x="16" y="14">3</field>
 	<field x="13" y="15">3</field>
-	<field x="14" y="15" message_line1="This hole expands into a large underground lair..." message_line2="" message_tile="5">2</field>
+	<field x="15" y="15" message_line1="This hole expands into a large underground lair..." message_line2="" message_tile="5">2</field>
 	<field x="15" y="15">5</field>
 	<field x="16" y="15">3</field>
 	<field x="4" y="16">4</field>
@@ -56,5 +56,5 @@
 	<monster type="3" xpos="10" ypos="2" hitpoints="5"/>
 	<monster type="4" xpos="4" ypos="1" hitpoints="8"/>
 	<monster type="5" xpos="15" ypos="3" hitpoints="25"/>
-	<dungeon xpos="14" ypos="15" name="Great Underground Lair" map_filename="map_great_underground_lair" number_of_levels="100" dimension_x="31" dimension_y="31" entrance_to_level="1" difficulty_level="1" lighting="0" default_tile="1" background_tile="4" tile_outside_map="1" main_treasure="0" bottom_portal="map_valley2.xml" bottom_portal_target_x="14" bottom_portal_target_y="15" bottom_portal_tile="144" traps_per_level="3"/>
+	<dungeon xpos="15" ypos="15" name="Great Underground Lair" map_filename="map_great_underground_lair" number_of_levels="100" dimension_x="31" dimension_y="31" entrance_to_level="1" difficulty_level="1" lighting="0" default_tile="1" background_tile="4" tile_outside_map="1" main_treasure="0" bottom_portal="map_valley2.xml" bottom_portal_target_x="15" bottom_portal_target_y="15" bottom_portal_tile="144" traps_per_level="3"/>
 </map>

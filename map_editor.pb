@@ -172,28 +172,28 @@ XIncludeFile "sound.pb"
 ;- globals
 Global map_editor_version$ = "0.001a"
 Global map_editor_preferences_file$ = "config\map_editor_preferences.xml" ; preferences xml file
-Global paint_tile.w = 1; tile ID of tile currently used for painting
-Global background_tile.w = 4 ; tile ID of tile currently used for background
-Global outside_tile.w = 0 ; tile ID of tile currently displayed outside the map boundaryl
-Global map_filename$ = "" ; filename of map file currently used
-Global map_changed.b ; flag: 1=recent changes to map have not been saved
-Global main_window_title$ = "Lost Labyrinth Portals Map Editor" ; main window title
-Global continue_painting.b ; mouse held down, continue to paint; 1=left mouse button, 2=right mouse button
-Global field_x.w, field_y.w ; x/y map coordinates for field parameter
-Global mouse_map_x.w, mouse_map_y.w ; x/y map coordinates for mouse pointer
-Global field_tile_type.w ; tile type of field currently edited
-Global map_portal_destination.map_struct ; map used to display portal destination
-Global select_paint_tile_window_pos_x.w = -1 ; x position of window to select paint tile
-Global select_paint_tile_window_pos_y.w = -1 ; y position of window to select paint tile
-Global new_map_tileset_definition$ = "standard_tileset.xml" ; filename of tileset definition file for new map
-Global new_map_tileset_image$ = "standard_tileset.png" ; filename of tileset image file for new map
-Global brush_rows.b ; number of rows in paint brush
-Global brush_columns.b ; number of columns in paint brush
-Global transformation_tile.w ; tile ID of new field after transformation
-Global message_tile.w=0 ; tile ID of image displayed with message displayed when entering field
-Global transformation_message_tile.w = 0; tile ID of image displayed with message in transformation
-Global place_monster_tile.w ; tile of currently selected monster
-Global place_monster_type.w ; type of currently selected monster
+Global paint_tile.w = 1                                                   ; tile ID of tile currently used for painting
+Global background_tile.w = 4                                              ; tile ID of tile currently used for background
+Global outside_tile.w = 0                                                 ; tile ID of tile currently displayed outside the map boundaryl
+Global map_filename$ = ""                                                 ; filename of map file currently used
+Global map_changed.b                                                      ; flag: 1=recent changes to map have not been saved
+Global main_window_title$ = "Lost Labyrinth Portals Map Editor"           ; main window title
+Global continue_painting.b                                                ; mouse held down, continue to paint; 1=left mouse button, 2=right mouse button
+Global field_x.w, field_y.w                                               ; x/y map coordinates for field parameter
+Global mouse_map_x.w, mouse_map_y.w                                       ; x/y map coordinates for mouse pointer
+Global field_tile_type.w                                                  ; tile type of field currently edited
+Global map_portal_destination.map_struct                                  ; map used to display portal destination
+Global select_paint_tile_window_pos_x.w = -1                              ; x position of window to select paint tile
+Global select_paint_tile_window_pos_y.w = -1                              ; y position of window to select paint tile
+Global new_map_tileset_definition$ = "standard_tileset.xml"               ; filename of tileset definition file for new map
+Global new_map_tileset_image$ = "standard_tileset.png"                    ; filename of tileset image file for new map
+Global brush_rows.b                                                       ; number of rows in paint brush
+Global brush_columns.b                                                    ; number of columns in paint brush
+Global transformation_tile.w                                              ; tile ID of new field after transformation
+Global message_tile.w=0                                                   ; tile ID of image displayed with message displayed when entering field
+Global transformation_message_tile.w = 0                                  ; tile ID of image displayed with message in transformation
+Global place_monster_tile.w                                               ; tile of currently selected monster
+Global place_monster_type.w                                               ; type of currently selected monster
 
 XIncludeFile "map_editor_procedures.pb"
 
@@ -397,7 +397,7 @@ Repeat
   If event = #PB_Event_Gadget And gadget = #GAGDET_BACKGROUND_TILE
     open_window_select_background_tile()
   EndIf
-
+  
   ; main window: open window to select new outside tile
   If event = #PB_Event_Gadget And gadget = #GADGET_IMAGE_TILE_OUTSIDE
     open_window_select_outside_tile()
@@ -515,7 +515,7 @@ Repeat
     EndIf
   EndIf
   
-    ; main window menu: save map as
+  ; main window menu: save map as
   If event = #PB_Event_Menu And menu_g = #MENUITEM_SAVE_AS
     new_map_filename$ = SaveFileRequester("Save map as", "map.xml", "XML File (*.xml)|*.xml|all files (*.*)|*.*", 0)
     If new_map_filename$ <> ""
@@ -526,7 +526,7 @@ Repeat
       map_changed = 0
     EndIf
   EndIf
- 
+  
   ; main window menu: create new map
   If event = #PB_Event_Menu And menu_g = #MENUITEM_NEW
     open_new_map_window()
@@ -624,7 +624,7 @@ Repeat
   If event = #PB_Event_Gadget And gadget = #GADGET_BUTTON_FIELD_PARAMETER_EDIT_TRANSFORMATION
     open_window_edit_transformation()
   EndIf
- 
+  
   
   ; field parameter window: delete transformation
   If event = #PB_Event_Gadget And gadget = #GADGET_BUTTON_FIELD_PARAMETER_DELETE_TRANSFORMATION
@@ -671,9 +671,8 @@ Repeat
   
 Until end_loop = 1
 save_map_editor_preferences()
-; IDE Options = PureBasic 4.30 (Windows - x86)
-; CursorPosition = 216
-; FirstLine = 193
-; Folding = -
+; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
+; CursorPosition = 672
+; FirstLine = 615
 ; Executable = map_editor.exe
 ; CompileSourceDirectory

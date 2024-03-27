@@ -5,6 +5,11 @@
 ; modified: 19.02.2009 Frank Malota <malota@web.de>
 ; modified: 13.02.2024 Peter Eismann
 
+
+
+;- Set LabyDebugFlag: 0 = off
+Global LabyDebugFlag = 1
+
 ;- sprite constants
 Enumeration
   #SPRITE_Characters
@@ -848,7 +853,7 @@ EndStructure
 
 
 ;- global variables 
-Global version_number$="3.0.1"
+Global version_number$="3.0.2"
 Global program_title$ = "Lost Labyrinth: Portals " + version_number$
 Global resources_pak_file$ = "resources.pak" ; name of the pack file that countains all resources (images & sounds)
 Global current_character.char_struct ; data for current character
@@ -889,8 +894,8 @@ Global silhouette.b = #False ; #True = male, #False = female
 Global startLastPoint.b = #True ; false = delete saved game
 Global item_identification_global.b = #True ; false = default = .b = #True ; false = delete saved game.b = #True ; false = delete saved game
 
-; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 886
-; FirstLine = 831
+; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
+; CursorPosition = 10
+; FirstLine = 6
 ; EnableXP
 ; DPIAware

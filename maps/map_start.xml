@@ -116,6 +116,5 @@
 	<transformation event="secret button found" x="16" y="6" tile_type="71" portal_mapfile="" portal_x="0" portal_y="0" message_line1="" message_line2="" message_tile="71" new_event="" triggered="0"/>
 	<monster type="4" xpos="16" ypos="9" hitpoints="8"/>
 	<item xpos="9" ypos="0" type="8"/>
-	<item xpos="9" ypos="7" type="8"/>
 	<dungeon name="Cellars" map_filename="map_cellars" xpos="9" ypos="6" number_of_levels="3" dimension_x="9" dimension_y="9" difficulty_level="1" lighting="8" default_tile="1" background_tile="4" tile_outside_map="1" bottom_portal="map_start.xml" bottom_portal_target_x="9" bottom_portal_target_y="6" bottom_portal_tile="144" traps_per_level="1"/>
 </map>

@@ -21,6 +21,7 @@ XIncludeFile "preferences.pb"
 XIncludeFile "messages.pb"
 XIncludeFile "map_handling.pb"
 XIncludeFile "menu.pb"
+XIncludeFile "debug.pb"
 XIncludeFile "graphics.pb"
 XIncludeFile "character.pb"
 XIncludeFile "monster.pb"
@@ -113,8 +114,8 @@ Define save_game_at_exit.b = 1 ; flag: save game when exiting
 Define key_lock.b = 0 ; flag: 1=keyboard locked
 Define update_equipment_boni.b = 0 ; flag; if set, update boni provided by equipment
 Define blocked_by_monster.b = 0 ; flag; 1=character is blocked by a monster
-Define dx.b = 0 ; xpos modification when moving character
-Define dy.b = 0 ; ypos modification when moving character
+Global dx.b = 0 ; xpos modification when moving character
+Global dy.b = 0 ; ypos modification when moving character
 Define modify_value.w = 0 ; modifier for attributes
 Define i.w = 0 ; default counter
 
@@ -491,7 +492,6 @@ EndIf
 
 End
 ; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 12
+; CursorPosition = 23
 ; Executable = Portals_3.0_64bit.exe
-; DisableDebugger
 ; CompileSourceDirectory

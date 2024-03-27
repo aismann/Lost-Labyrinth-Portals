@@ -99,6 +99,7 @@ Procedure load_sprites()
 EndProcedure
 
 
+
 ; draws the frame for the main screen
 Procedure draw_frame_main_screen()
   Protected frame.b = 1
@@ -340,7 +341,7 @@ Procedure draw_right_panel()
   Protected value$
   StartDrawing(ScreenOutput())
   DrawingFont(FontID(#FONT_VERDANA))
-  DrawText(416 + 16 + 2, 0, program_title$, RGB(255, 100, 0), RGB(0, 0, 0))
+  DrawText(416 + 16 + 2, 0, program_title$ , RGB(255, 100, 0), RGB(0, 0, 0))
   y = 86
   DrawingFont(#FONT_VERDANA)
   wrap_text(434, 34, "Location: " + current_map\name, 640 - 434, 16, $ffffff)
@@ -431,6 +432,7 @@ Procedure draw_main_screen_complete(*map.map_struct, x_offset.b=0, y_offset.b=0,
   draw_frame_main_screen() 
   draw_right_panel()
   draw_character(char_y_offset)
+  draw_debug_infos_4_Developers()
   FlipBuffers()
 EndProcedure
 
@@ -998,8 +1000,8 @@ Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
       
   EndSelect
 EndProcedure
-; IDE Options = PureBasic 6.10 beta 6 (Windows - x64)
-; CursorPosition = 69
-; FirstLine = 65
+; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
+; CursorPosition = 100
+; FirstLine = 97
 ; Folding = -------
 ; CompileSourceDirectory

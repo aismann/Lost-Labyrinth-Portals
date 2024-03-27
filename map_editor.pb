@@ -166,6 +166,8 @@ XIncludeFile "monster.pb"
 XIncludeFile "powers.pb"
 XIncludeFile "items.pb"
 XIncludeFile "sound.pb"
+;- debug fuction
+XIncludeFile "debug.pb"
 
 
 
@@ -672,7 +674,7 @@ Repeat
 Until end_loop = 1
 save_map_editor_preferences()
 ; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 672
-; FirstLine = 615
+; CursorPosition = 170
+; FirstLine = 153
 ; Executable = map_editor.exe
 ; CompileSourceDirectory

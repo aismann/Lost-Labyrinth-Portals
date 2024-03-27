@@ -446,10 +446,14 @@ EndProcedure
 
 ; open game screen in window
 Procedure open_windowed_screen()
-  If OpenWindow(0, 0, 0, 640, 480, program_title$, #PB_Window_SystemMenu | #PB_Window_SizeGadget| #PB_Window_ScreenCentered | #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget) = 0
+  If LabyDebugFlag >0 
+    wWidth = 1200
+  EndIf
+  
+  If OpenWindow(0, 0, 0, wWidth, wHeight, program_title$, #PB_Window_SystemMenu | #PB_Window_SizeGadget| #PB_Window_ScreenCentered | #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget) = 0
     error_message("Can't open program window!")
   EndIf
-  If OpenWindowedScreen(WindowID(0), 0, 0, 640, 480, 1, 0, 0) = 0
+  If OpenWindowedScreen(WindowID(0), 0, 0, wWidth, wHeight, 1, 0, 0) = 0
     error_message("Can't open windowed screen!") 
   EndIf    
 EndProcedure
@@ -457,7 +461,7 @@ EndProcedure
 
 ; open game in fullscreen modus
 Procedure open_fullscreen()
-  If OpenScreen(640, 480, 32, program_title$) = 0
+  If OpenScreen(wWidth, wHeight, 32, program_title$) = 0
     error_message("Can't open fullscreen!")
   EndIf
 EndProcedure
@@ -1001,7 +1005,7 @@ Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
   EndSelect
 EndProcedure
 ; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 100
-; FirstLine = 97
+; CursorPosition = 215
+; FirstLine = 207
 ; Folding = -------
 ; CompileSourceDirectory

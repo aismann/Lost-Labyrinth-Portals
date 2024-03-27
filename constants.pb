@@ -893,9 +893,15 @@ Global silhouette.b = #False ; #True = male, #False = female
 ;- easier game play
 Global startLastPoint.b = #True ; false = delete saved game
 Global item_identification_global.b = #True ; false = default = .b = #True ; false = delete saved game.b = #True ; false = delete saved game
+Global xDebug.i = 600 ; normal size of the window (no debug)
+Global wWidth.i = xDebug + 40 ;(600+40 =640)
+Global wHeight.i = 480
 
+
+;- Pre-Declarations
+Declare draw_debug_infos_4_Developers() 
 ; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 10
-; FirstLine = 6
+; CursorPosition = 896
+; FirstLine = 867
 ; EnableXP
 ; DPIAware

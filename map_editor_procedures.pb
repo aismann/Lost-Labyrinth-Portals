@@ -51,8 +51,8 @@ Procedure update_scrollarea()
     For x=0 To #MAP_DIMENSION_Y-1
       tile = read_map_tile_type(@current_map, x, y)
       If @current_map\tileset\tile_type_db[tile]\transparent = 1
-        ;DrawImage(ImageID(100+current_map\default_tile), x*32, y*32)
-        DrawImage(ImageID(100+tile), x*32, y*32)
+        DrawImage(ImageID(100+current_map\default_tile), x*32, y*32)
+        ;DrawImage(ImageID(100+tile), x*32, y*32)
       Else
         DrawImage(ImageID(100+tile), x*32, y*32)
       EndIf
@@ -1038,7 +1038,7 @@ Procedure editor_view_powers_data()
   EndIf
 EndProcedure
 ; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 1038
-; FirstLine = 982
+; CursorPosition = 54
+; FirstLine = 46
 ; Folding = --------
 ; CompileSourceDirectory

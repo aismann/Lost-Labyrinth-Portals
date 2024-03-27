@@ -21,14 +21,14 @@ XIncludeFile "preferences.pb"
 XIncludeFile "messages.pb"
 XIncludeFile "map_handling.pb"
 XIncludeFile "menu.pb"
-XIncludeFile "debug.pb"
 XIncludeFile "graphics.pb"
 XIncludeFile "character.pb"
 XIncludeFile "monster.pb"
 XIncludeFile "powers.pb"
 XIncludeFile "items.pb"
 XIncludeFile "sound.pb"
-
+;- debug fuction
+XIncludeFile "debug.pb"
 
 ;- set current directory to program file; uncomment before compiling final version
 ; SetCurrentDirectory(GetPathPart(ProgramFilename()))
@@ -492,6 +492,6 @@ EndIf
 
 End
 ; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 23
+; CursorPosition = 31
 ; Executable = Portals_3.0_64bit.exe
 ; CompileSourceDirectory

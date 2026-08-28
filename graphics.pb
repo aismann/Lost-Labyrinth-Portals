@@ -22,52 +22,52 @@ EndProcedure
 ; load all sprites into memory
 Procedure load_sprites()
   Protected i.w
-  If LoadSprite(#SPRITE_Characters, "graphics\characters.png") = 0
+  If LoadSprite(#SPRITE_Characters, "graphics\characters.png", #PB_Sprite_AlphaBlending) = 0
     error_message("load_sprites(): can't load character sprites!")
   EndIf
-  If LoadSprite(#SPRITE_Frame, "graphics\frame.png") = 0
+  If LoadSprite(#SPRITE_Frame, "graphics\frame.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): can't load frame sprites!")
   EndIf
-  If LoadSprite(#SPRITE_ABILITIES, "graphics\abilities.png") = 0
+  If LoadSprite(#SPRITE_ABILITIES, "graphics\abilities.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): can't load abilities sprites!")
   EndIf
-  If LoadSprite(#SPRITE_SPLASH, "graphics\splash.png") = 0
+  If LoadSprite(#SPRITE_SPLASH, "graphics\splash.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): can't load splash sprite!")
   EndIf
-  If LoadSprite(#SPRITE_MONSTER, "graphics\monster.png") = 0
+  If LoadSprite(#SPRITE_MONSTER, "graphics\monster.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load monster sprite!")
   EndIf
-  If LoadSprite(#SPRITE_MOUSEPOINTER, "graphics\mousepointer.png") = 0
+  If LoadSprite(#SPRITE_MOUSEPOINTER, "graphics\mousepointer.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load mouse pointer graphics!")
   EndIf
-  If LoadSprite(#SPRITE_BLOOD, "graphics\blood.png") = 0
+  If LoadSprite(#SPRITE_BLOOD, "graphics\blood.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load bloodspot image!")
   EndIf
-  If LoadSprite(#SPRITE_POWERS, "graphics\powers.png") = 0
+  If LoadSprite(#SPRITE_POWERS, "graphics\powers.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load powers image!")
   EndIf
-  If LoadSprite(#SPRITE_CURSOR, "graphics\cursor.png") = 0
+  If LoadSprite(#SPRITE_CURSOR, "graphics\cursor.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load cursor image!")
   EndIf
-  If LoadSprite(#SPRITE_STARS, "graphics\starsprites.png") = 0
+  If LoadSprite(#SPRITE_STARS, "graphics\starsprites.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot star sprites!")
   EndIf
-  If LoadSprite(#SPRITE_MISSILES, "graphics\missiles.png") = 0
+  If LoadSprite(#SPRITE_MISSILES, "graphics\missiles.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load missiles sprites!")
   EndIf
   For i=0 To 6
-    If LoadSprite(#SPRITE_LIGHT1 + i, "graphics\light" + Str(i+1) + ".png") = 0
+    If LoadSprite(#SPRITE_LIGHT1 + i, "graphics\light" + Str(i+1) + ".png", #PB_Sprite_AlphaBlending ) = 0
       error_message("load_sprites(): cannot load light radius sprite!")
     EndIf
   Next
-  If LoadSprite(#SPRITE_ITEMS, "graphics\items.png") = 0
+  If LoadSprite(#SPRITE_ITEMS, "graphics\items.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load item sprites!")
   EndIf
-  If LoadSprite(#SPRITE_FX, "graphics\fx.png") = 0
+  If LoadSprite(#SPRITE_FX, "graphics\fx.png", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load fx sprites!")
   EndIf
   
-  If LoadSprite(#SPRITE_SILHOUETTE, "graphics\Silhouette.jpg") = 0
+  If LoadSprite(#SPRITE_SILHOUETTE, "graphics\Silhouette.jpg", #PB_Sprite_AlphaBlending ) = 0
     error_message("load_sprites(): cannot load Silhouette sprites!")
   EndIf
   
@@ -83,11 +83,11 @@ Procedure load_sprites()
   item_tiles_rows = Int(SpriteHeight(#SPRITE_ITEMS) / 32)
   fx_tiles_columns = Int(SpriteWidth(#SPRITE_FX) / 32)
   fx_tiles_rows = Int(SpriteHeight(#SPRITE_FX) / 32)
-  CreateSprite(#SPRITE_FADEOUT, 416, 416)
+  CreateSprite(#SPRITE_FADEOUT, 416, 416, #PB_Sprite_AlphaBlending)
   StartDrawing(SpriteOutput(#SPRITE_FADEOUT))
   Box(0, 0, 416, 416, RGB(1,1,1))
   StopDrawing()
-  CreateSprite(#SPRITE_FADEOUT_TOTAL, 640, 480)
+  CreateSprite(#SPRITE_FADEOUT_TOTAL, 640, 480, #PB_Sprite_AlphaBlending)
   StartDrawing(SpriteOutput(#SPRITE_FADEOUT_TOTAL))
   Box(0, 0, 640, 480, RGB(1,1,1))
   StopDrawing()
@@ -615,7 +615,7 @@ EndProcedure
 
 ; creates a screenshot and saves it into a file
 Procedure screenshot(filename$)
-  If GrabSprite(#SPRITE_SCREENSHOT, 0, 0, 640, 480) = 0
+  If GrabSprite(#SPRITE_SCREENSHOT, 0, 0, 640, 480, #PB_Sprite_AlphaBlending ) = 0
     error_message("screenshot(): could not grab screenshot!")
   EndIf
   If SaveSprite(#SPRITE_SCREENSHOT, filename$, #PB_ImagePlugin_JPEG) = 0
@@ -1004,8 +1004,8 @@ Procedure animation(name$, x.b = 6, y.b = 6, animation_parameter.w = 0)
       
   EndSelect
 EndProcedure
-; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 215
-; FirstLine = 207
+; IDE Options = PureBasic 6.41 beta 4 (Windows - x64)
+; CursorPosition = 24
+; FirstLine = 20
 ; Folding = -------
 ; CompileSourceDirectory

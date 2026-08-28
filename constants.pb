@@ -8,7 +8,7 @@
 
 
 ;- Set LabyDebugFlag: 0 = off
-Global LabyDebugFlag = 1
+Global LabyDebugFlag = 0
 
 ;- sprite constants
 Enumeration
@@ -900,8 +900,7 @@ Global wHeight.i = 480
 
 ;- Pre-Declarations
 Declare draw_debug_infos_4_Developers() 
-; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 896
-; FirstLine = 867
+; IDE Options = PureBasic 6.41 beta 4 (Windows - x64)
+; CursorPosition = 10
 ; EnableXP
 ; DPIAware

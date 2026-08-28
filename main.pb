@@ -5,9 +5,9 @@
 ; modified: 26.01.2009 Frank Malota <malota@web.de>
 ; total number of hours of programming: 128
 ; --------------------------------------------
-; Switch to PureBasic 6.0 and Github
-; modified: 202206 Peter Eismann
-; total number of hours of programming: 10
+; Switch to PureBasic 6.0 and Github modified: 202206 Peter Eismann
+; Switch to PureBasic 6.41  modified: 202608 Peter Eismann
+; total number of hours of programming: 12
 ;-
 ;- Gold = e.g.:	<field x="16" y="11">9</field>
 ;-
@@ -491,7 +491,9 @@ If FileSize("savegame\character.xml") > 0
 EndIf
 
 End
-; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 31
-; Executable = Portals_3.0_64bit.exe
+; IDE Options = PureBasic 6.41 (Windows - x86)
+; CursorPosition = 30
+; FirstLine = 3
+; Executable = Portals_3.0_32bit.exe
+; DisableDebugger
 ; CompileSourceDirectory

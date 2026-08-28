@@ -198,9 +198,10 @@ Procedure draw_debug_infos_4_Developers()
   StopDrawing()
   
 EndProcedure
-; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
+; IDE Options = PureBasic 6.41 (Windows - x64)
 ; CursorPosition = 120
 ; FirstLine = 100
 ; Folding = -
 ; EnableXP
 ; DPIAware
+; Executable = Portals_3.0_64bit.exe

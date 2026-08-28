@@ -424,7 +424,7 @@ Procedure load_tileset(*tileset.tileset_struct, load_sprite.b=1, load_image.b=0)
     *tileset\image_loaded = 1
   EndIf
   If load_sprite = 1
-    *tileset\sprite = LoadSprite(#PB_Any, "tilesets\" + GetFilePart(*tileset\image_filename$))
+    *tileset\sprite = LoadSprite(#PB_Any, "tilesets\" + GetFilePart(*tileset\image_filename$),#PB_Sprite_AlphaBlending)
     *tileset\columns = Int(SpriteWidth(*tileset\sprite) / 32)
     *tileset\rows = Int(SpriteHeight(*tileset\sprite) / 32)
     *tileset\sprite_loaded = 1
@@ -2063,9 +2063,9 @@ Procedure.b los(x1.b, y1.b, x2.b, y2.b)
   Protected rc.b = 0
   ProcedureReturn rc
 EndProcedure
-; IDE Options = PureBasic 6.10 LTS beta 9 (Windows - x64)
-; CursorPosition = 476
-; FirstLine = 464
+; IDE Options = PureBasic 6.41 beta 4 (Windows - x64)
+; CursorPosition = 426
+; FirstLine = 795
 ; Folding = ----------
 ; Executable = Portals_3.0_64bit.exe
 ; CompileSourceDirectory

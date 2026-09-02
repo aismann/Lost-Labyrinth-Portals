@@ -72,8 +72,9 @@ To compile/run, just use the PureBasic IDE, that's very fast and also simple for
 'Lost Labyrinth: Portals' 2.0 
 - Written by Frank.Malota (PureBasic 4.30)
 
-### Lost Labyrinth (no active links found)
-* Lost Labyrinth written by Markus Dobele (PureBasic)
+### Lost Labyrinth
+* Lost Labyrinth written by Markus Dobele (PureBasic) [Lost Labyrinth](https://github.com/Cebion/lost_labyrinth)
+  
 * Lost Labyrinth written by Frank Malota (Blitz Basic)
 
 ### Lost Labyrinth DX 
